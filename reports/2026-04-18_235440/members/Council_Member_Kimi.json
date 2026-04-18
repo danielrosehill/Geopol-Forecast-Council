@@ -1,0 +1,87 @@
+{
+  "forecasts": {
+    "24h": [
+      {
+        "prediction": "Pakistan's Foreign Minister announces that US and Iranian negotiators will meet for a third round of talks in Islamabad on April 20 or 21, 2026, before the April 22 deadline.",
+        "supporting_reasoning": "Pakistani officials are actively shuttling between Tehran and Gulf capitals, and Egypt's Foreign Minister explicitly stated Cairo and Islamabad are working toward a 'final agreement.' Both Washington and Tehran need to signal diplomatic momentum to avoid the 'fighting resumes' scenario Trump threatened for April 22.",
+        "historical_precedent_supporting": "2015 JCPOA negotiations where Omani and other mediators facilitated last-minute US-Iran ministerial meetings in Lausanne hours before self-imposed deadlines to prevent diplomatic collapse.",
+        "historical_precedent_counterveiling": "January 2020 aftermath of the Soleimani strike, where diplomatic channels between US and Iran froze completely for three weeks despite Qatari and Omani mediation efforts to de-escalate.",
+        "change_factor": "Trump tweets explicit cancellation of all talks or threatens immediate military strikes on Iranian nuclear facilities if Hormuz is not reopened unilaterally within 24 hours.",
+        "confidence": 0.55
+      },
+      {
+        "prediction": "The Israel Defense Forces confirm conducting at least one additional airstrike in Lebanon targeting Hezbollah infrastructure, citing self-defense provisions of the April 17 ceasefire agreement.",
+        "supporting_reasoning": "The IDF already conducted strikes on April 18 (the first day of the ceasefire) following the death of reservist Barak Kalfon. Netanyahu has rejected Hezbollah's terms and Israeli security officials confirm preparations for resumed fighting are underway, suggesting continued low-intensity operations are likely.",
+        "historical_precedent_supporting": "August 2006 Lebanon War ceasefire (UNSCR 1701) where both Israel and Hezbollah conducted dozens of 'defensive' strikes in the first 48 hours of the nominal truce, each claiming self-defense exceptions.",
+        "historical_precedent_counterveiling": "November 2024 Gaza ceasefire where the IDF largely refrained from airstrikes for 42 days despite Hamas provocations and tunnel operations, prioritizing diplomatic momentum and hostage release.",
+        "change_factor": "Netanyahu issues a public order to the IDF Chief of Staff to halt all offensive operations in Lebanon to facilitate the Pakistan-mediated negotiations.",
+        "confidence": 0.6
+      },
+      {
+        "prediction": "US Central Command confirms at least one incident of warning shots fired by US Navy vessels at IRGC gunboats, or reports IRGC forces boarding an additional commercial vessel, in the Strait of Hormuz.",
+        "supporting_reasoning": "Iran reimposed Hormuz closure on April 18 and IRGC gunboats have already fired on ships. The dual blockade dynamic (US blockading Iran, Iran blockading global traffic) creates high-density naval proximity where tactical encounters escalate rapidly, especially with Khamenei's 'new bitter defeats' rhetoric.",
+        "historical_precedent_supporting": "April 2020 incident where US Navy vessels fired warning shots at IRGC gunboats conducting 'dangerous and harassing approaches' near Kuwaiti territorial waters during heightened tensions.",
+        "historical_precedent_counterveiling": "1987-1988 Tanker War phase where despite hundreds of attacks on commercial shipping, the US and Iran avoided direct naval gunfire exchanges for 14 months until Operation Praying Mantis.",
+        "change_factor": "Iran unilaterally announces reopening of Hormuz to all commercial traffic except Israeli-flagged vessels, reducing naval confrontation risk.",
+        "confidence": 0.45
+      }
+    ],
+    "1w": [
+      {
+        "prediction": "By April 25, 2026, Israel has formally announced the launch of a major ground military operation in Lebanon (involving division-level deployment) following the expiration of the April 22 ceasefire deadline without a US-Iran comprehensive agreement.",
+        "supporting_reasoning": "Trump explicitly linked the April 22 deadline to resumed fighting. Netanyahu has rejected Hezbollah's ceasefire terms, and Israeli security officials state preparations to resume fighting are underway. The April 18 incidents (IDF reservist killed, UNIFIL peacekeeper dead) suggest the ceasefire is already operationally collapsed.",
+        "historical_precedent_supporting": "July 2006 Lebanon War where Israel launched 'Operation Change of Direction' (ground invasion) 48 hours after a 48-hour ceasefire attempt collapsed due to continued rocket fire and cross-border raids.",
+        "historical_precedent_counterveiling": "November 2013 Geneva Interim Agreement on Iran's nuclear program where parties negotiated past multiple 'final' deadlines over six months without military escalation, despite Israeli threats to act unilaterally.",
+        "change_factor": "Iran accepts a 20-year moratorium on uranium enrichment above 3.67% and agrees to Hormuz reopening by April 22, satisfying Trump's stated conditions for extending the deadline.",
+        "confidence": 0.5
+      },
+      {
+        "prediction": "The United States and Iran sign an interim framework agreement by April 25 that extends the Lebanon ceasefire for 30 days and establishes a phased Hormuz reopening in exchange for partial US sanctions relief (specifically on oil exports), while deferring comprehensive nuclear restrictions to future negotiations.",
+        "supporting_reasoning": "Both sides face economic pressure from the dual blockade (global oil prices spiking, Iranian economy collapsing). Pakistan and Egypt are actively mediating. Trump wants a deal for domestic political purposes but comprehensive nuclear terms take months to negotiate; an interim deal provides face-saving off-ramp from the April 22 cliff.",
+        "historical_precedent_supporting": "November 2013 Joint Plan of Action (JPOA) where Iran and P5+1 agreed to limited constraints and partial sanctions relief for six months while negotiating the comprehensive JCPOA, preventing war during the interim.",
+        "historical_precedent_counterveiling": "May 2021 Gaza conflict where a proposed 30-day ceasefire extension collapsed after 48 hours because core issues (prisoner exchange, reconstruction funding) could not be sequenced separately from immediate violence cessation.",
+        "change_factor": "Hezbollah conducts a mass-casualty rocket attack on Haifa or Tel Aviv before April 22, eliminating diplomatic space for any agreement and forcing Israeli military response.",
+        "confidence": 0.4
+      },
+      {
+        "prediction": "France announces the withdrawal or significant drawdown (greater than 200 personnel) of its UNIFIL contingent by April 25, citing security concerns following the April 18 killing of a French peacekeeper.",
+        "supporting_reasoning": "Macron directly accused Hezbollah of the ambush, creating domestic political pressure in France to avoid further casualties. UNIFIL's mandate is already compromised by the active conflict, and France has historically been sensitive to peacekeeping casualties in Lebanon (1983 precedent).",
+        "historical_precedent_supporting": "February 1984 when France withdrew its Multinational Force contingent from Lebanon four months after the 1983 Beirut barracks bombing killed 58 French paratroopers, despite UN mandate remaining active.",
+        "historical_precedent_counterveiling": "France's continued participation in Operation Barkhane in Mali from 2013-2022 despite 53 French soldiers killed over nine years, showing willingness to sustain casualties for strategic interests.",
+        "change_factor": "Hezbollah formally accepts responsibility for the UNIFIL death, apologizes to France, and offers compensation to the peacekeeper's family, satisfying Macron's demand for accountability.",
+        "confidence": 0.35
+      }
+    ],
+    "1m": [
+      {
+        "prediction": "A comprehensive nuclear agreement is signed between the US and Iran by May 18, 2026, including a 20-year uranium enrichment moratorium, full Hormuz reopening, and US commitment to lift oil sanctions, with the Lebanon ceasefire converted to a permanent truce under international monitoring.",
+        "supporting_reasoning": "Trump delayed his China trip to mid-May, signaling sustained focus. Iran needs economic relief from the blockade; the US wants to avoid a two-front war (Lebanon and Hormuz) while focusing on China. Pakistan's mediation has established trust, and the April 22 deadline creates forcing function for comprehensive terms.",
+        "historical_precedent_supporting": "July 2015 JCPOA finalization after 20 months of negotiations, where intense deadline pressure (originally July 2014) forced compromises on enrichment limits and sanctions relief timelines.",
+        "historical_precedent_counterveiling": "2003-2005 EU3 (UK/France/Germany) negotiations with Iran which failed to produce a comprehensive deal despite multiple rounds and temporary suspension agreements, due to irreconcilable differences on enrichment rights.",
+        "change_factor": "Israel conducts a successful airstrike on Iran's Fordow or Natanz enrichment facilities between April 22-May 1, destroying critical infrastructure and eliminating Iranian incentive to negotiate while under attack.",
+        "confidence": 0.25
+      },
+      {
+        "prediction": "Israeli ground forces have advanced to or established positions beyond the Litani River in southern Lebanon in a sustained military operation lasting more than 14 days, with the Strait of Hormuz remaining closed to commercial traffic and Brent crude oil prices trading above $120/barrel.",
+        "supporting_reasoning": "If the April 22 deadline passes without a deal, Netanyahu's stated goal is to enforce UNSCR 1701 (pushing Hezbollah north of the Litani). The IDF has prepared for resumed fighting. Iran will likely keep Hormuz closed as leverage during active Israeli operations against its proxy.",
+        "historical_precedent_supporting": "June 1982 'Operation Peace for Galilee' where Israeli forces advanced to the outskirts of Beirut within one week, and the 2006 war where IDF reached the Litani within 34 days despite fierce resistance.",
+        "historical_precedent_counterveiling": "2023-2024 Gaza war (Operation Iron Swords) where Israeli forces struggled for months to clear Hamas from dense urban terrain, suggesting similar difficulties in Hezbollah's fortified southern Lebanon strongholds might prevent rapid Litani advance.",
+        "change_factor": "Hezbollah agrees to withdraw all military forces north of the Litani River under UN supervision and allows Lebanese Army deployment to the border, obviating the need for Israeli ground advance.",
+        "confidence": 0.35
+      },
+      {
+        "prediction": "Iranian-backed militias (Kataib Hezbollah or Harakat Hezbollah al-Nujaba) conduct a coordinated attack on a US military facility in Syria (specifically Al-Tanf garrison or Conoco gas field) resulting in at least one confirmed US service member fatality by May 18.",
+        "supporting_reasoning": "Iran has used Iraqi proxies to attack US forces before when unable to strike directly. The London arson attacks (April 18) suggest Iranian willingness to expand geographic scope. Syria offers a pressure point where Iran can hurt the US without triggering direct homeland strikes. US criticism of Israeli Syria policy (Barrack statement) may signal reduced US resolve, inviting testing.",
+        "historical_precedent_supporting": "March 2020 Camp Taji attack where Kataib Hezbollah rocket strike killed two US and one UK service member; January 2024 Tower 22 attack in Jordan killing three US soldiers.",
+        "historical_precedent_counterveiling": "June 2019 Gulf of Oman tanker attacks where Iran deliberately avoided targeting US Navy personnel or vessels, limiting attacks to commercial shipping to avoid triggering Article 5 or massive US retaliation.",
+        "change_factor": "US Central Command publicly announces that any attack on US personnel by Iranian proxies will be treated as an attack by Iran itself, with pre-authorized retaliatory strikes on IRGC bases in Iran.",
+        "confidence": 0.3
+      }
+    ]
+  },
+  "overall_confidence": 0.45,
+  "overall_notes": "Forecasting is complicated by opacity regarding the Hezbollah-Iran command relationship and the potential for rapid, non-linear policy shifts by the Trump administration. The April 22 deadline creates a binary branching point that makes medium-term predictions particularly uncertain.",
+  "_member": "Council_Member_Kimi",
+  "_model": "moonshotai/kimi-k2.5",
+  "_lineage": "Moonshot"
+}

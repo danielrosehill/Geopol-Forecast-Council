@@ -1,0 +1,87 @@
+{
+  "forecasts": {
+    "24h": [
+      {
+        "prediction": "The US Navy will conduct a freedom of navigation operation or escort mission near the Strait of Hormuz that results in a non-kinetic standoff or warning shots with IRGC gunboats.",
+        "supporting_reasoning": "With the Strait closed and Trump calling the move 'cute' while maintaining a blockade, the US must demonstrate it does not recognize Iranian sovereignty over the waterway to prevent a fait accompli before the April 22 deadline.",
+        "historical_precedent_supporting": "Operation Praying Mantis (1988) showed US willingness to use force to keep the Strait open during the Tanker War.",
+        "historical_precedent_counterveiling": "The 2019 seizure of the Stena Impero by Iran where the US and UK opted for diplomatic and secondary sanctions rather than immediate kinetic intervention.",
+        "change_factor": "A public announcement by Pakistan of a breakthrough 'interim maritime protocol' within the next 12 hours.",
+        "confidence": 0.65
+      },
+      {
+        "prediction": "Israel will conduct at least one targeted airstrike in Syria against IRGC or Hezbollah assets, despite the Lebanon ceasefire.",
+        "supporting_reasoning": "The SITREP notes Israeli security officials are preparing to resume fighting and the IDF has already struck Lebanon; Syria remains a 'gray zone' where Israel feels less constrained by the Lebanon-specific truce.",
+        "historical_precedent_supporting": "Israel's 'Campaign Between the Wars' (MABAM) which involves frequent strikes in Syria even during periods of relative calm in Lebanon.",
+        "historical_precedent_counterveiling": "The US public rebuke via Tom Barrack regarding Israeli policy in Syria may force a temporary Israeli pause to avoid further alienating the Trump administration.",
+        "change_factor": "A direct private warning from the White House to Netanyahu to freeze all regional strikes until the April 22 deadline.",
+        "confidence": 0.55
+      },
+      {
+        "prediction": "Oil prices (Brent Crude) will rise by at least 2% in the next 24-hour trading cycle.",
+        "supporting_reasoning": "The reimposition of the Hormuz closure on April 18 and the failure of the 21-hour Islamabad talks to produce an immediate reopening will trigger market anxiety over supply security.",
+        "historical_precedent_supporting": "The 2019 Abqaiq\u2013Khurais attack which caused a 14% spike in oil prices overnight due to Middle East supply fears.",
+        "historical_precedent_counterveiling": "Global recessionary fears or high US inventory data could offset the geopolitical risk premium.",
+        "change_factor": "Saudi Arabia or the UAE announcing an immediate increase in production to be exported via pipelines bypassing the Strait.",
+        "confidence": 0.7
+      }
+    ],
+    "1w": [
+      {
+        "prediction": "On or before April 22, President Trump will announce a 'framework for a deal' that extends the Lebanon ceasefire by at least 30 days in exchange for a partial lifting of the US naval blockade.",
+        "supporting_reasoning": "Trump\u2019s 'really well' comment and the Pakistan/Egypt mediation efforts suggest a desire for a 'win.' A temporary extension avoids the 'fighting resumes' threat while keeping pressure on Iran.",
+        "historical_precedent_supporting": "The 2018 Singapore Summit with North Korea where a high-level framework was announced to forestall immediate conflict despite lack of technical detail.",
+        "historical_precedent_counterveiling": "The 2015 JCPOA withdrawal shows Trump's willingness to walk away from deals he deems 'weak' if Iran does not concede on the nuclear moratorium.",
+        "change_factor": "A major Hezbollah-linked mass casualty attack on IDF forces that makes the ceasefire politically untenable for Netanyahu.",
+        "confidence": 0.45
+      },
+      {
+        "prediction": "Hezbollah will officially declare the Lebanon ceasefire 'null and void' following continued IDF 'self-defense' strikes.",
+        "supporting_reasoning": "The death of the IDF reservist and the UNIFIL peacekeeper indicates that local commanders are not adhering to the truce; Hezbollah cannot maintain its domestic 'resistance' credibility if it allows IDF strikes to continue without response.",
+        "historical_precedent_supporting": "The collapse of the 2006 ceasefire multiple times before UN Resolution 1701 was fully implemented.",
+        "historical_precedent_counterveiling": "Iran may order Hezbollah to absorb strikes to avoid sabotaging the Islamabad negotiations which seek to lift the US blockade on Iran itself.",
+        "change_factor": "The deployment of Lebanese Armed Forces (LAF) to the border as a buffer, supported by US/French funding.",
+        "confidence": 0.6
+      },
+      {
+        "prediction": "The US will designate a specific Iranian-linked entity in Europe as a terrorist organization following the London arson attacks.",
+        "supporting_reasoning": "The SITREP mentions arson attacks in London with 'possible links' to Iran; the US and UK typically coordinate on 'naming and shaming' to increase leverage during negotiations.",
+        "historical_precedent_supporting": "The designation of the IRGC as a Foreign Terrorist Organization (FTO) in 2019.",
+        "historical_precedent_counterveiling": "The UK might resist the designation to keep diplomatic channels open in London for the Islamabad process.",
+        "change_factor": "Evidence emerging that the arson attacks were 'lone wolf' incidents rather than IRGC-directed.",
+        "confidence": 0.5
+      }
+    ],
+    "1m": [
+      {
+        "prediction": "Israel will launch a large-scale ground operation into Southern Lebanon to create a 5-10km 'buffer zone' if the April 22 deadline passes without a permanent Hezbollah withdrawal.",
+        "supporting_reasoning": "Netanyahu has already rejected the current terms and security officials are preparing; the death of an engineer from Rafael (a key defense asset) provides the domestic political capital for an escalation.",
+        "historical_precedent_supporting": "The 1982 Lebanon War, which began as a limited 'Peace for Galilee' operation to push back PLO forces.",
+        "historical_precedent_counterveiling": "Pressure from the Trump administration to avoid a 'forever war' that could disrupt global oil markets and the US economy.",
+        "change_factor": "Hezbollah voluntarily withdrawing its heavy weapons north of the Litani River.",
+        "confidence": 0.4
+      },
+      {
+        "prediction": "Iran will resume uranium enrichment to 60% or higher if the US naval blockade is not fully lifted by the mid-May China trip.",
+        "supporting_reasoning": "Iran\u2019s 'dual blockade' strategy is its only leverage. If the Islamabad talks fail to yield sanctions relief, Iran historically responds by advancing its nuclear clock to force a new crisis.",
+        "historical_precedent_supporting": "Iran's 2021 move to 60% enrichment following the Natanz sabotage incident.",
+        "historical_precedent_counterveiling": "China could pressure Iran to maintain the status quo to ensure the mid-May summit with Trump is successful.",
+        "change_factor": "The IAEA reporting a 'breakthrough' in monitoring access that delays the need for enrichment escalation.",
+        "confidence": 0.55
+      },
+      {
+        "prediction": "A 'maritime corridor' agreement will be signed, involving Pakistan and Turkey as guarantors for neutral shipping in the Strait of Hormuz.",
+        "supporting_reasoning": "The SITREP highlights Pakistan's role and Tom Barrack's praise of Turkey; both are 'middle powers' that can provide the face-saving mechanism for both Trump and Khamenei to de-escalate without appearing to retreat.",
+        "historical_precedent_supporting": "The Black Sea Grain Initiative (2022) where Turkey and the UN brokered a corridor between two warring parties (Russia/Ukraine).",
+        "historical_precedent_counterveiling": "Iran\u2019s insistence that it alone controls the Strait as stated by the National Security Council.",
+        "change_factor": "A direct military clash in the Strait that sinks a major vessel, making 'neutral' guarantees impossible.",
+        "confidence": 0.35
+      }
+    ]
+  },
+  "overall_confidence": 0.52,
+  "overall_notes": "The forecast is heavily dependent on the April 22 deadline. Trump's 'deal-maker' persona suggests a preference for a theatrical framework agreement, but the friction on the ground in Lebanon (IDF/UNIFIL deaths) is moving faster than the diplomacy in Islamabad.",
+  "_member": "Council_Member_Gemini",
+  "_model": "google/gemini-3-flash-preview",
+  "_lineage": "Google"
+}

@@ -1,0 +1,87 @@
+{
+  "forecasts": {
+    "1m": [
+      {
+        "change_factor": "A significant de-escalatory statement from Supreme Leader Khamenei directly linking Hormuz reopening to a verifiable, permanent ceasefire in Lebanon, broadcast on Iranian state media.",
+        "confidence": 0.35,
+        "historical_precedent_counterveiling": "The 2019-2021 'shadow war' period, where tit-for-tat attacks between Iran/Israel persisted despite no major conventional conflict, showing a high tolerance for sustained, low-level hostilities.",
+        "historical_precedent_supporting": "The 2021 Israel-Hamas ceasefire brokered by Egypt, which, despite subsequent flare-ups, established a durable enough calm to allow for reconstruction and indirect negotiations.",
+        "prediction": "The US and Iran reach a limited, interim agreement that reopens the Strait of Hormuz in exchange for a partial easing of the US naval blockade and a formal extension of the Lebanon ceasefire, but without resolving the nuclear enrichment issue.",
+        "supporting_reasoning": "The economic costs of the dual blockades are unsustainable for all parties, creating a powerful incentive for a narrow deal. Pakistan and Egypt's sustained mediation, combined with Trump's transactional focus on oil prices and a 'win' before his China trip, will drive a pragmatic, partial solution that kicks the nuclear can down the road."
+      },
+      {
+        "change_factor": "An overt, kinetic US military action inside Iran (e.g., airstrike on IRGC naval base) in response to a major maritime incident.",
+        "confidence": 0.4,
+        "historical_precedent_counterveiling": "The 2020 US assassination of Qasem Soleimani, which was a massive escalation but did not trigger a full-scale US-Iran war, as both sides subsequently calibrated responses to avoid direct conflict.",
+        "historical_precedent_supporting": "The 1987-88 'Tanker War' during the Iran-Iraq War, where US naval engagements with Iranian forces (Operation Praying Mantis) escalated significantly over months within the confined geography of the Gulf.",
+        "prediction": "The maritime confrontation escalates into a sustained period of tit-for-tat naval engagements in the Persian Gulf, featuring US/Coalition interdiction of IRGC vessels and Iranian missile/ drone attacks on commercial shipping linked to US allies, but stopping short of all-out war.",
+        "supporting_reasoning": "The re-imposed Hormuz closure and Trump's insistence on maintaining the US blockade create a high-probability environment for miscalculation and collision. Both sides have demonstrated a willingness to use limited force (IRGC gunboats firing, US blockade). The dynamic is reminiscent of the Tanker War, where escalation occurred in phases rather than a single explosion."
+      },
+      {
+        "change_factor": "A public, joint US-Israel statement affirming a unified position on red lines for Iran's nuclear program and Hezbollah's disarmament.",
+        "confidence": 0.6,
+        "historical_precedent_counterveiling": "The 2015 US-Iran nuclear deal (JCPOA), which was concluded over strong Israeli objections, demonstrating Washington's willingness to pursue deals that diverge from Israeli preferences.",
+        "historical_precedent_supporting": "The US-Israel rift during the 1991 Madrid Conference and subsequent Oslo process, where public US pressure on Israel regarding settlements and Palestinian negotiations created sustained diplomatic friction.",
+        "prediction": "The US-Israel strategic divergence deepens publicly, with the US concluding a deal with Iran that Israel vocally rejects, leading to Netanyahu authorizing unilateral military actions in Lebanon or Syria that Washington condemns.",
+        "supporting_reasoning": "Tom Barrack's public criticism is a clear signal. Trump's primary focus appears to be a deal with Iran (for economic and legacy reasons), while Netanyahu is committed to fighting Iran and has rejected Hezbollah's terms. This fundamental misalignment, absent a transformative event, will result in the US and Israel pursuing visibly different paths, with Israel acting more independently in its immediate neighborhood."
+      }
+    ],
+    "1w": [
+      {
+        "change_factor": "A direct, high-level communication (e.g., phone call) between Trump and Netanyahu resulting in a public display of unity.",
+        "confidence": 0.55,
+        "historical_precedent_counterveiling": "The rapid collapse of the May 2021 Israel-Hamas ceasefire in its first days due to localized clashes and provocations.",
+        "historical_precedent_supporting": "The repeated short-term truces during the 2006 Israel-Hezbollah War, which frequently broke down within days but were repeatedly re-established under international pressure.",
+        "prediction": "The Lebanon ceasefire officially collapses before April 22, with Israel launching a large-scale aerial campaign against Hezbollah targets in southern Lebanon and Beirut, but holding back from a major ground invasion.",
+        "supporting_reasoning": "The ceasefire is already nominal, with an IDF reservist killed and IDF strikes conducted. Netanyahu has rejected Hezbollah's terms and Israeli officials are preparing to fight. The April 22 deadline set by Trump acts as a trigger, not a barrier, for Israel to resume operations it views as necessary for deterrence, likely beginning with air power."
+      },
+      {
+        "change_factor": "The IRGC Navy seizes a commercial vessel flagged to a major US ally (e.g., UK, Japan) in the Strait of Hormuz.",
+        "confidence": 0.5,
+        "historical_precedent_counterveiling": "The 2019 Iranian seizure of the British-flagged Stena Impero, which led to a tense but contained diplomatic crisis and did not spiral into broader conflict.",
+        "historical_precedent_supporting": "The 2023 Houthi seizures of commercial ships in the Red Sea, which demonstrated the willingness of Iran-aligned actors to escalate maritime coercion and the complexity of military responses.",
+        "prediction": "The US announces the formation of a multinational naval task force (beyond the existing blockade) specifically to escort commercial shipping through the Strait of Hormuz, with several European and Arab states publicly joining.",
+        "supporting_reasoning": "Iran's re-closure of the Strait and firing on ships creates an immediate crisis for global shipping and energy markets. The US has historically responded to such challenges with coalition-building (e.g., Operation Prosperity Guardian for the Red Sea). Trump's 'full force' blockade rhetoric and the global economic stakes make a visible, multilateral military response to secure the waterway highly likely within a week."
+      },
+      {
+        "change_factor": "A public walkback of Tom Barrack's comments by the White House or Secretary of State, reaffirming unwavering support for Israel.",
+        "confidence": 0.65,
+        "historical_precedent_counterveiling": "The 2014 crisis in US-Israel relations over Netanyahu's Congress speech, which involved deep personal and political friction but did not result in a fundamental policy shift during active conflict.",
+        "historical_precedent_supporting": "The frequent, public disagreements between the US and Israel during the 1982 Lebanon War regarding the siege of Beirut and links to the Sabra and Shatila massacre.",
+        "prediction": "US-Israel diplomatic friction intensifies, evidenced by another senior US official (e.g., Secretary of State) publicly criticizing an Israeli military or policy decision, possibly regarding strikes in Syria or treatment of Palestinian issues linked to the conflict.",
+        "supporting_reasoning": "Tom Barrack's public rebuke is unlikely to be a one-off. It signals an administration willing to pressure Israel publicly to manage regional relationships (Turkey, Syria) and possibly to gain leverage for a deal with Iran. This tactic will likely continue as the US tries to corral Israeli actions that could derail negotiations."
+      }
+    ],
+    "24h": [
+      {
+        "change_factor": "An official joint statement from the Pakistani and Egyptian foreign ministries announcing a breakthrough and schedule for signing an agreement.",
+        "confidence": 0.3,
+        "historical_precedent_counterveiling": "The collapse of the 2023 Israel-Hamas truce after a single day due to a disputed rocket attack, showing how quickly ceasefires can unravel.",
+        "historical_precedent_supporting": "The initial 72-hour humanitarian ceasefire in the 2014 Gaza War, which largely held for its brief duration despite deep mistrust, due to intense international pressure.",
+        "prediction": "The Lebanon ceasefire holds in name but sees at least two more significant kinetic incidents (e.g., rocket fire, IED, airstrike) attributed to either Hezbollah or the IDF, with both sides citing self-defense.",
+        "supporting_reasoning": "The ceasefire is fragile and already breached. The killing of the IDF reservist and the French peacekeeper creates strong incentives for retaliatory actions. Both sides have forces in close proximity and a history of tit-for-tat strikes. The 'self-defense' provisions will be invoked to justify continued low-level violence, preventing total collapse but making the truce effectively non-existent on the ground."
+      },
+      {
+        "change_factor": "A statement from Iran's National Security Council or Supreme Leader offering a specific, verifiable confidence-building measure (e.g., allowing a neutral observer ship through Hormuz).",
+        "confidence": 0.7,
+        "historical_precedent_counterveiling": "The rapid de-escalation following Iran's April 2024 missile and drone attack on Israel, where both sides quickly stepped back from the brink.",
+        "historical_precedent_supporting": "The 2019 downing of a US drone by Iran, which led to a immediate, sharp spike in tensions and retaliatory threats from the US, defining the next several days of crisis.",
+        "prediction": "Tensions in the Strait of Hormuz escalate further, with at least one more incident of IRGC gunboats firing warning shots or attempting to board a merchant vessel, and a corresponding increase in US naval patrols and surveillance in the area.",
+        "supporting_reasoning": "Iran has declared it will hold the Strait until 'the war fully ends,' and the IRGC has already fired on ships. The US maintains its 'full force' blockade. This standoff creates a high likelihood of daily provocative actions as both sides demonstrate resolve and test the other's boundaries, with maritime forces in close contact."
+      },
+      {
+        "change_factor": "President Trump tweets an unequivocal ultimatum giving Iran a 12-hour deadline to reopen the Strait or face military action.",
+        "confidence": 0.6,
+        "historical_precedent_counterveiling": "The muted US diplomatic response to the 2023 Houthi Red Sea attacks in their initial weeks, showing a preference for deliberation over immediate retaliation.",
+        "historical_precedent_supporting": "The immediate, high-profile US and European diplomatic condemnations following the 2020 Beirut port explosion, which focused intense international scrutiny on Lebanon's government.",
+        "prediction": "France, backed by other European Union members, publicly calls for an emergency UN Security Council meeting to address the killing of the French UNIFIL peacekeeper and the destabilization of southern Lebanon.",
+        "supporting_reasoning": "President Macron has directly accused Hezbollah. The killing of a UN peacekeeper is a significant event that typically triggers a strong diplomatic response from the contributing nation and the UN. France will use this to apply international pressure on Hezbollah and its backers, and to assert its diplomatic role in Lebanon."
+      }
+    ]
+  },
+  "overall_confidence": 0.45,
+  "overall_notes": "The forecast is characterized by high volatility and multiple interdependent flashpoints (Lebanon, Hormuz, diplomacy). Predictions are highly sensitive to the April 22 deadline and the outcome of the US-Iran talks, which remain opaque. The load-bearing uncertainty of whether Hezbollah acts independently is particularly consequential and difficult to assess from available reporting.",
+  "_member": "Council_Member_DeepSeek",
+  "_model": "deepseek/deepseek-v3.2",
+  "_lineage": "DeepSeek"
+}

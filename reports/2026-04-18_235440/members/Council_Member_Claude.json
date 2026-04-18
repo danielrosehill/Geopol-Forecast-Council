@@ -1,0 +1,98 @@
+{
+  "forecast": {
+    "horizons": [
+      {
+        "horizon": "24h",
+        "predictions": [
+          {
+            "prediction": "At least one additional kinetic incident in Lebanon (IDF strike, Hezbollah rocket/device, or UNIFIL-adjacent violence) occurs within 24 hours, further eroding the nominal ceasefire before any diplomatic resolution is reached.",
+            "supporting_reasoning": "The ceasefire is already nominal: an IDF reservist was killed, IDF conducted strikes on Hezbollah operatives, and a French UNIFIL peacekeeper was killed \u2014 all within the first 24 hours of the truce. The pattern of tit-for-tat under 'self-defense' provisions creates a near-certain continuation of low-level violence. Neither Hezbollah nor IDF has demonstrated restraint.",
+            "historical_precedent_supporting": "The 2006 Lebanon ceasefire (UNSCR 1701) saw repeated violations within days of its announcement, with both sides invoking self-defense clauses to justify continued operations.",
+            "historical_precedent_counterveiling": "The 2024 Lebanon ceasefire (November 2024) held for several weeks despite initial skepticism, suggesting ceasefires can sometimes stabilize faster than the initial chaos implies.",
+            "change_factor": "If France deploys additional UNIFIL reinforcements or publicly demands a ceasefire monitoring mechanism with teeth, Hezbollah may temporarily reduce provocations to avoid European diplomatic isolation.",
+            "confidence": 0.82
+          },
+          {
+            "prediction": "Iran does not reopen the Strait of Hormuz within 24 hours; IRGC gunboats conduct at least one additional harassment or warning-shot incident against commercial or naval vessels.",
+            "supporting_reasoning": "Iran's National Security Council has explicitly stated it will hold the strait until 'the war fully ends.' Khamenei's warning of 'new bitter defeats' signals an assertive posture. With no deal imminent and the April 22 deadline still days away, Iran has no incentive to concede Hormuz leverage before extracting concessions. IRGC operational tempo in the strait has been elevated.",
+            "historical_precedent_supporting": "During the 1987-1988 Tanker War, Iran repeatedly harassed shipping in the Gulf even under US naval pressure (Operation Earnest Will), using asymmetric harassment as sustained coercive leverage.",
+            "historical_precedent_counterveiling": "In 2019-2020, Iran occasionally de-escalated maritime provocations rapidly when diplomatic back-channels opened, suggesting tactical flexibility when talks are live.",
+            "change_factor": "If Pakistan brokers a specific written US commitment to ease the naval blockade on Iranian ports, Iran might announce a 48-hour 'humanitarian pause' on Hormuz harassment as a confidence-building measure.",
+            "confidence": 0.78
+          },
+          {
+            "prediction": "No framework agreement is announced in the next 24 hours; talks continue but produce only a joint statement of 'progress' or procedural commitments rather than substantive terms.",
+            "supporting_reasoning": "The core nuclear issue \u2014 Trump's demand for zero enrichment versus Iran's rejection of a 20-year moratorium \u2014 remains unresolved after 21 hours of Islamabad talks. The gap is structural, not procedural. Pakistan and Egypt are still shuttling rather than convening a final session. A 24-hour window is insufficient to bridge this gap, but both sides have incentive to keep talks alive to avoid being blamed for breakdown before April 22.",
+            "historical_precedent_supporting": "The 2015 JCPOA negotiations repeatedly produced 'progress' statements and deadline extensions (Lausanne, Vienna) before a final deal, with the last 24-48 hours before each deadline producing only procedural advances.",
+            "historical_precedent_counterveiling": "The 1994 Agreed Framework with North Korea was reached relatively quickly once political will aligned, suggesting rapid closure is possible when leaders decide to move.",
+            "change_factor": "If Trump directly calls Khamenei or authorizes a back-channel with a specific enrichment compromise offer (e.g., third-country enrichment), the probability of a framework announcement rises sharply.",
+            "confidence": 0.72
+          }
+        ]
+      },
+      {
+        "horizon": "1w",
+        "predictions": [
+          {
+            "prediction": "The April 22 Lebanon ceasefire deadline passes without a comprehensive US-Iran deal, triggering resumed large-scale Israeli military operations in Lebanon and a formal Israeli declaration that the ceasefire has ended.",
+            "supporting_reasoning": "Netanyahu has already rejected Hezbollah's ceasefire terms and Israeli security officials are preparing for resumed fighting. Trump's April 22 deadline is explicit and public \u2014 backing down without a deal would be a significant credibility loss. The nuclear gap (zero enrichment vs. Iran's position) cannot realistically be bridged in 4 days given 21 hours of talks produced nothing. Israel has both the political will and operational readiness to resume.",
+            "historical_precedent_supporting": "In August 2006, the Lebanon ceasefire held only because both sides were exhausted; in 2014 Gaza, multiple humanitarian ceasefires collapsed within hours when political conditions weren't met, leading to resumed operations.",
+            "historical_precedent_counterveiling": "The November 2024 Lebanon ceasefire held despite similar skepticism, and Trump has shown willingness to extend deadlines when talks appear productive (his China trip delay suggests sustained diplomatic focus).",
+            "change_factor": "If Iran accepts a 'freeze-for-freeze' interim arrangement \u2014 pausing enrichment above 20% in exchange for partial US blockade relief \u2014 Trump could declare enough progress to extend the April 22 deadline by another week.",
+            "confidence": 0.48
+          },
+          {
+            "prediction": "A limited interim US-Iran agreement is announced before or shortly after April 22, covering Hormuz reopening and a partial US blockade pause, but explicitly deferring the nuclear question \u2014 allowing Trump to claim a win while fighting in Lebanon continues at reduced intensity.",
+            "supporting_reasoning": "Both Trump and Iranian negotiators have incentive to avoid full resumption of hostilities. Trump's 'really well' characterization and the Pakistan/Egypt shuttle diplomacy suggest a face-saving partial deal is being constructed. The Hormuz-blockade swap is the most tractable element \u2014 both sides can claim defensive posture while trading economic relief. The nuclear issue gets 'parked' for a later track.",
+            "historical_precedent_supporting": "The 2013 Geneva interim agreement (JPOA) with Iran separated immediate confidence-building measures (enrichment pause, sanctions relief) from the comprehensive nuclear question, buying time for further negotiations.",
+            "historical_precedent_counterveiling": "Trump has explicitly stated Iran must never enrich uranium and has framed this as a comprehensive deal requirement, making a partial agreement politically difficult for him to sell domestically without appearing to capitulate.",
+            "change_factor": "If Saudi Arabia or UAE publicly endorses a partial deal framework and offers economic incentives to Iran (e.g., oil revenue escrow), it provides Trump political cover to accept a phased approach.",
+            "confidence": 0.38
+          },
+          {
+            "prediction": "Iran-linked proxy attacks on European or Gulf targets escalate within the week, including at least one significant incident beyond the London arson attacks \u2014 likely targeting Israeli or US diplomatic or commercial interests in a third country.",
+            "supporting_reasoning": "The London arson attacks signal Iran is activating proxy networks in Europe. As military pressure on Iran intensifies and diplomatic talks stall, the IRGC Quds Force historically expands the conflict envelope through proxies to raise costs for adversaries without direct escalation. The week-long window with no deal and continued blockade pressure creates strong incentive for this.",
+            "historical_precedent_supporting": "In 2012, Iran-linked operatives conducted attacks or attempted attacks on Israeli targets in Bulgaria, India, Georgia, Thailand, and Azerbaijan simultaneously \u2014 a clear pattern of proxy escalation under sanctions pressure.",
+            "historical_precedent_counterveiling": "Iran has sometimes restrained proxy networks during active negotiations to preserve diplomatic goodwill, as seen during portions of the 2013-2015 JCPOA negotiation period.",
+            "change_factor": "If the UK publicly attributes the London arson attacks to Iran and expels Iranian diplomats, Iran may temporarily halt European proxy operations to avoid triggering a broader Western coalition response.",
+            "confidence": 0.52
+          }
+        ]
+      },
+      {
+        "horizon": "1m",
+        "predictions": [
+          {
+            "prediction": "A formal US-Iran nuclear framework agreement is signed or announced by mid-May, structured around third-country enrichment or a managed enrichment cap, with the Strait of Hormuz fully reopened and US naval blockade lifted \u2014 but with Israeli non-participation and continued low-level Lebanon hostilities.",
+            "supporting_reasoning": "Trump's delayed China trip to mid-May signals the White House has allocated roughly a month to resolve this. Pakistan and Egypt are actively mediating. The economic shock from dual blockades creates pressure on both sides. A deal that allows Trump to claim Iran will 'never have a nuclear weapon' while Iran retains some civilian nuclear capacity is the most likely landing zone. Israel's exclusion from the deal and continued Lebanon friction is the price.",
+            "historical_precedent_supporting": "The 2015 JCPOA was reached after years of negotiations but accelerated sharply in the final weeks when political will aligned; the 2013 JPOA showed interim deals can be structured quickly when the economic pain is acute.",
+            "historical_precedent_counterveiling": "The Trump administration withdrew from the JCPOA in 2018, and Trump's stated position (zero enrichment) is structurally more demanding than the JCPOA's terms, making a deal harder to reach than in 2015.",
+            "change_factor": "If Iran's economy shows acute signs of collapse (currency crisis, fuel shortages, public unrest) within the month, Khamenei's negotiating position softens significantly and a deal becomes more likely on US terms.",
+            "confidence": 0.28
+          },
+          {
+            "prediction": "Full-scale Israeli military operations resume in Lebanon within the month, with IDF ground forces re-entering southern Lebanon and Israeli airstrikes on Hezbollah infrastructure in the Bekaa Valley \u2014 while the US-Iran diplomatic track continues in parallel without halting Israeli operations.",
+            "supporting_reasoning": "Netanyahu has already rejected ceasefire terms and is preparing for resumed fighting. The ceasefire is nominal and deteriorating. The US-Israel divergence on Syria/Turkey policy suggests Washington may not restrain Israel on Lebanon if a US-Iran deal is in progress. Israel has demonstrated willingness to act unilaterally when it perceives existential threats from Hezbollah.",
+            "historical_precedent_supporting": "In 2006, Israel resumed full-scale operations in Lebanon after initial ceasefire attempts failed; in 2024, Israel expanded operations in Gaza despite US pressure for restraint, demonstrating operational independence.",
+            "historical_precedent_counterveiling": "US pressure has historically constrained Israeli operations at critical junctures \u2014 the 1973 ceasefire, the 1982 Beirut siege halt \u2014 suggesting Washington can impose limits when strategically motivated.",
+            "change_factor": "If the US explicitly conditions continued military aid or intelligence sharing on Israeli restraint in Lebanon as part of the Iran deal framework, Netanyahu faces a genuine constraint that could prevent full resumption.",
+            "confidence": 0.52
+          },
+          {
+            "prediction": "The Strait of Hormuz remains partially or fully disrupted for the entire month, with global oil prices sustaining above pre-crisis levels and at least one major shipping company announcing permanent rerouting around the Cape of Good Hope \u2014 marking a structural shift in global energy logistics.",
+            "supporting_reasoning": "Iran has explicitly tied Hormuz reopening to 'the war fully ending' \u2014 a condition that will not be met within a month given the Lebanon front and nuclear impasse. Even a partial deal is unlikely to fully resolve the maritime dimension. Shipping companies make rerouting decisions based on insurance costs and risk assessments that lag diplomatic developments by weeks. The economic shock is already propagating.",
+            "historical_precedent_supporting": "The 2021-2024 Red Sea/Houthi crisis demonstrated that sustained maritime threat environments cause lasting rerouting decisions by commercial shipping, with Cape of Good Hope traffic increasing 40%+ even after intermittent de-escalation.",
+            "historical_precedent_counterveiling": "The 1988 Tanker War ended relatively quickly once the US demonstrated naval superiority and Iran calculated the economic cost of continued closure; shipping returned to normal patterns within months.",
+            "change_factor": "If the US Navy conducts a decisive kinetic operation against IRGC naval assets in the strait (sinking or disabling multiple gunboats), Iran's ability to enforce closure degrades rapidly and shipping companies reassess risk.",
+            "confidence": 0.61
+          }
+        ]
+      }
+    ],
+    "overall_confidence": 0.31,
+    "overall_notes": "This forecast operates under extreme uncertainty across all horizons. The April 22 deadline is the single most consequential near-term variable and its resolution (or non-resolution) will cascade through all subsequent predictions. The structural gap between Trump's zero-enrichment demand and Iran's position makes a comprehensive deal within a month unlikely, but partial arrangements are possible. The Lebanon ceasefire is assessed as effectively nominal. Key model risks: (1) a surprise back-channel breakthrough that produces a deal faster than anticipated; (2) a major kinetic escalation (US strike on Iranian nuclear facility, or Iranian missile strike on US naval asset) that resets the entire conflict dynamic; (3) domestic political collapse in Iran that changes the negotiating calculus entirely. Confidence scores reflect genuine uncertainty \u2014 this is a highly fluid multi-actor crisis with several simultaneous flashpoints and no dominant stabilizing mechanism."
+  },
+  "_member": "Council_Member_Claude",
+  "_model": "anthropic/claude-sonnet-4.6",
+  "_lineage": "Anthropic"
+}

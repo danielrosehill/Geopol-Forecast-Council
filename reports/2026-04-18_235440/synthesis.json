@@ -1,0 +1,288 @@
+{
+  "by_horizon": {
+    "24h": {
+      "headline": "The Lebanon ceasefire is nominal and deteriorating, Hormuz remains closed with active IRGC harassment, and diplomacy produces only procedural signals \u2014 no breakthrough in 24 hours.",
+      "top_predictions": [
+        {
+          "prediction": "At least one additional kinetic incident occurs in Lebanon (IDF airstrike, Hezbollah device/rocket, or UNIFIL-adjacent violence) within 24 hours, further eroding the nominal ceasefire under invoked self-defense provisions.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_DeepSeek",
+            "Council_Member_Claude",
+            "Council_Member_Kimi"
+          ],
+          "mean_confidence": 0.6975,
+          "consensus_strength": "strong",
+          "supporting_rationale": "The ceasefire is already nominal: an IDF reservist was killed, IDF conducted strikes on Hezbollah operatives, and a French UNIFIL peacekeeper was killed \u2014 all within the first 24 hours of the truce. The pattern of tit-for-tat under 'self-defense' provisions creates near-certain continuation of low-level violence. Netanyahu has rejected Hezbollah's terms and Israeli officials confirm preparations for resumed fighting. The 2006 Lebanon ceasefire (UNSCR 1701) saw repeated violations within days, with both sides invoking self-defense clauses.",
+          "counterveiling_rationale": "The November 2024 Lebanon ceasefire held for several weeks despite initial skepticism, suggesting ceasefires can sometimes stabilize faster than initial chaos implies. The November 2023 Gaza pause held for its full 7-day duration because both sides had strong short-term incentives \u2014 a dynamic partially absent here but not entirely.",
+          "watch_trigger": "Hezbollah publicly announces withdrawal of forces south of the Litani River, or France deploys additional UNIFIL reinforcements with a credible monitoring mechanism, removing the IDF's stated casus belli."
+        },
+        {
+          "prediction": "Iran does not reopen the Strait of Hormuz within 24 hours; IRGC gunboats conduct at least one additional harassment, warning-shot, or boarding incident against commercial or naval vessels.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_DeepSeek",
+            "Council_Member_Claude",
+            "Council_Member_Kimi",
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.636,
+          "consensus_strength": "strong",
+          "supporting_rationale": "Iran's National Security Council has explicitly stated it will hold the strait until 'the war fully ends.' Khamenei's warning of 'new bitter defeats' signals an assertive posture. IRGC gunboats already fired on ships on April 18. With no deal imminent and the April 22 deadline still days away, Iran has no incentive to concede Hormuz leverage before extracting concessions. During the 1987\u20131988 Tanker War, Iran repeatedly harassed shipping even under US naval pressure, using asymmetric harassment as sustained coercive leverage.",
+          "counterveiling_rationale": "In 2019\u20132020, Iran occasionally de-escalated maritime provocations rapidly when diplomatic back-channels opened. In July 2024, Iran calculated that full closure would alienate key economic partners (China, India) whose oil imports depended on the waterway \u2014 the same calculation could restrain the IRGC now. A Gulf state (Oman or Qatar) could broker a temporary maritime de-escalation arrangement.",
+          "watch_trigger": "Pakistan brokers a specific written US commitment to ease the naval blockade on Iranian ports, prompting Iran to announce a 48-hour humanitarian pause on Hormuz harassment as a confidence-building measure."
+        },
+        {
+          "prediction": "No framework agreement is announced in the next 24 hours; talks continue but produce only a joint statement of 'progress' or procedural commitments (e.g., announcement of a next meeting date) rather than substantive terms.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_Claude",
+            "Council_Member_Kimi"
+          ],
+          "mean_confidence": 0.59,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "The core nuclear issue \u2014 Trump's demand for zero enrichment versus Iran's rejection of a 20-year moratorium \u2014 remains unresolved after 21 hours of Islamabad talks. The gap is structural, not procedural. Pakistan and Egypt are still shuttling rather than convening a final session. A 24-hour window is insufficient to bridge this gap, but both sides have incentive to keep talks alive to avoid being blamed for breakdown before April 22. The 2015 JCPOA negotiations repeatedly produced 'progress' statements and deadline extensions before a final deal.",
+          "counterveiling_rationale": "The 1994 Agreed Framework with North Korea was reached relatively quickly once political will aligned. Before the 2015 JCPOA, mediators repeatedly announced next-round dates as signaling mechanisms to maintain momentum even when substantive gaps remained large. Iran may see Hormuz leverage as more useful than another meeting.",
+          "watch_trigger": "Trump directly calls Khamenei or authorizes a back-channel with a specific enrichment compromise offer (e.g., third-country enrichment), sharply raising the probability of a framework announcement."
+        },
+        {
+          "prediction": "France, backed by EU members, publicly calls for an emergency UN Security Council meeting to address the killing of the French UNIFIL peacekeeper and the destabilization of southern Lebanon.",
+          "members_raising": [
+            "Council_Member_DeepSeek"
+          ],
+          "mean_confidence": 0.6,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "Macron directly accused Hezbollah of the ambush. The killing of a UN peacekeeper is a significant event that typically triggers a strong diplomatic response from the contributing nation and the UN. France will use this to apply international pressure on Hezbollah and its backers and to assert its diplomatic role in Lebanon.",
+          "counterveiling_rationale": "France may prefer bilateral pressure on Lebanon's government and quiet diplomacy over a UNSC session that could be vetoed or diluted by Russia and China.",
+          "watch_trigger": "Hezbollah formally accepts responsibility for the UNIFIL death and offers accountability measures, reducing Macron's domestic pressure to escalate diplomatically."
+        },
+        {
+          "prediction": "Oil prices (Brent Crude) rise by at least 2% in the next 24-hour trading cycle.",
+          "members_raising": [
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.7,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "The reimposition of the Hormuz closure on April 18 and the failure of the 21-hour Islamabad talks to produce an immediate reopening will trigger market anxiety over supply security. The 2019 Abqaiq\u2013Khurais attack caused a 14% spike in oil prices overnight due to Middle East supply fears.",
+          "counterveiling_rationale": "Global recessionary fears or high US inventory data could offset the geopolitical risk premium. Saudi Arabia or the UAE could announce an immediate production increase via pipelines bypassing the Strait.",
+          "watch_trigger": "Saudi Arabia or UAE announces immediate activation of spare production capacity and pipeline rerouting to Yanbu, offsetting the supply constraint."
+        }
+      ],
+      "sharp_disagreements": [
+        "Council_Member_GLM assigns 0.55 confidence to IDF conducting additional Lebanon strikes (framed as a prediction), while Council_Member_Claude assigns 0.82 to the broader kinetic incident cluster \u2014 reflecting disagreement on how certain continued violence is.",
+        "Council_Member_GLM assigns only 0.40 to a commercial vessel being fired upon or detained in Hormuz, while Council_Member_Claude assigns 0.78 to continued IRGC harassment \u2014 a meaningful gap on the severity and certainty of maritime escalation within 24 hours.",
+        "Council_Member_DeepSeek predicts the Lebanon ceasefire 'holds in name' with only two more incidents (confidence 0.30 on a breakthrough), implying relative stability, while Council_Member_Claude and Council_Member_Kimi assess the ceasefire as effectively collapsed \u2014 a framing disagreement on whether the truce retains nominal value."
+      ]
+    },
+    "1w": {
+      "headline": "The April 22 deadline is the dominant inflection point: most members expect either ceasefire collapse and resumed Israeli operations or a narrow interim deal that defers the nuclear question, with maritime and proxy escalation continuing regardless.",
+      "top_predictions": [
+        {
+          "prediction": "The Lebanon ceasefire officially collapses or is formally declared void by at least one party by April 25, with Israel launching large-scale aerial operations against Hezbollah targets in southern Lebanon and Beirut.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_DeepSeek",
+            "Council_Member_Claude",
+            "Council_Member_Kimi",
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.536,
+          "consensus_strength": "strong",
+          "supporting_rationale": "Netanyahu has already rejected Hezbollah's ceasefire terms and Israeli security officials are preparing for resumed fighting. Trump's April 22 ultimatum is explicit and public \u2014 backing down without a deal would be a significant credibility loss. The nuclear gap cannot realistically be bridged in 4 days given 21 hours of talks produced nothing. Israel has both political will and operational readiness to resume. The 2006 Lebanon ceasefire held only because both sides were exhausted; in 2014 Gaza, multiple humanitarian ceasefires collapsed within hours when political conditions weren't met.",
+          "counterveiling_rationale": "The November 2024 Lebanon ceasefire held despite similar skepticism. Trump has shown willingness to extend deadlines when talks appear productive (his China trip delay signals sustained diplomatic focus). The April 2024 Iran-Israel escalation cycle produced a ceasefire extended multiple times beyond initial expiry because both parties calculated formal collapse was worse than a nominal truce.",
+          "watch_trigger": "Iran accepts a 'freeze-for-freeze' interim arrangement \u2014 pausing enrichment above 20% in exchange for partial US blockade relief \u2014 giving Trump enough to declare progress and extend the April 22 deadline."
+        },
+        {
+          "prediction": "Trump publicly announces an extension of the April 22 deadline or a limited interim US-Iran agreement covering Hormuz reopening and a partial US blockade pause, deferring the nuclear question and allowing Trump to claim a 'win' without a comprehensive deal.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_Claude",
+            "Council_Member_Kimi",
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.4175,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "Trump has a pattern of setting dramatic deadlines and then extending them when the cost of following through exceeds the cost of delay. He characterized talks as 'really well' while threatening escalation \u2014 a classic positioning move. The Pakistan/Egypt mediation track provides cover for 'progress' claims. The 2013 Geneva JPOA separated immediate confidence-building measures from the comprehensive nuclear question, buying time for further negotiations. The 2018 Singapore Summit with North Korea announced a high-level framework to forestall immediate conflict despite lack of technical detail.",
+          "counterveiling_rationale": "Trump's 2018 withdrawal from the JCPOA was executed on a hard deadline with no extension, demonstrating that when he calculates domestic political benefits of toughness outweigh diplomatic costs, he follows through. Trump has explicitly stated Iran must never enrich uranium, making a partial agreement politically difficult to sell domestically without appearing to capitulate.",
+          "watch_trigger": "Iran makes a visible, verifiable concession on Strait of Hormuz transit (e.g., allowing a specific flagged convoy through), or Saudi Arabia/UAE publicly endorses a partial deal framework, giving Trump political cover to accept a phased approach."
+        },
+        {
+          "prediction": "US-Israel diplomatic friction intensifies publicly, with at least one additional senior US official (Secretary of State or equivalent) publicly criticizing an Israeli military or policy decision regarding Syria, Lebanon, or Palestinian issues.",
+          "members_raising": [
+            "Council_Member_DeepSeek",
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.65,
+          "consensus_strength": "weak",
+          "supporting_rationale": "Tom Barrack's public rebuke of Israeli Syria/Turkey policy was unprecedented and is unlikely to be a one-off. It signals an administration willing to pressure Israel publicly to manage regional relationships and gain leverage for a deal with Iran. The US-Israel rift during the 1982 Lebanon War regarding the siege of Beirut and Sabra and Shatila established a precedent for public US criticism during active Israeli operations.",
+          "counterveiling_rationale": "The White House may walk back Barrack's comments to reaffirm unwavering support for Israel, especially if Netanyahu threatens to act unilaterally in ways that embarrass Washington. The 2014 crisis in US-Israel relations involved deep friction but did not result in a fundamental policy shift during active conflict.",
+          "watch_trigger": "A direct, high-level Trump-Netanyahu phone call resulting in a public display of unity, or a White House walkback of Barrack's comments by the Secretary of State."
+        },
+        {
+          "prediction": "Iran-linked proxy attacks on European or Gulf targets escalate within the week, including at least one significant incident beyond the London arson attacks targeting Israeli or US diplomatic or commercial interests in a third country.",
+          "members_raising": [
+            "Council_Member_Claude"
+          ],
+          "mean_confidence": 0.52,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "The London arson attacks signal Iran is activating proxy networks in Europe. As military pressure on Iran intensifies and diplomatic talks stall, the IRGC Quds Force historically expands the conflict envelope through proxies to raise costs for adversaries without direct escalation. In 2012, Iran-linked operatives conducted attacks on Israeli targets in Bulgaria, India, Georgia, Thailand, and Azerbaijan simultaneously \u2014 a clear pattern of proxy escalation under sanctions pressure.",
+          "counterveiling_rationale": "Iran has sometimes restrained proxy networks during active negotiations to preserve diplomatic goodwill, as seen during portions of the 2013\u20132015 JCPOA negotiation period. If the UK publicly attributes the London arson attacks to Iran and expels Iranian diplomats, Iran may temporarily halt European proxy operations.",
+          "watch_trigger": "UK publicly attributes the London arson attacks to Iran and expels Iranian diplomats, prompting Iran to temporarily halt European proxy operations to avoid triggering a broader Western coalition response."
+        },
+        {
+          "prediction": "Brent crude oil closes at least 15% above its April 18 closing price on at least one trading day before April 25.",
+          "members_raising": [
+            "Council_Member_GLM"
+          ],
+          "mean_confidence": 0.5,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "The dual blockade \u2014 US blocking Iranian exports, Iran blocking Hormuz transit \u2014 is an unprecedented constraint on global oil supply. Roughly 20% of global oil transits Hormuz. If the blockade persists through April 22 without resolution, markets will price in sustained disruption. After the September 2019 Abqaiq-Khurais attack, Brent spiked roughly 15% in a single day despite the disruption being partial and temporary.",
+          "counterveiling_rationale": "In January 2024, despite Houthi attacks disrupting Red Sea shipping for weeks, Brent crude did not spike 15% above pre-crisis levels because markets had substantial spare capacity and strategic reserves. Saudi Arabia activating spare production capacity and routing shipments via the East-West pipeline to Yanbu could moderate the shock.",
+          "watch_trigger": "Saudi Arabia announces activation of significant spare production capacity and pipeline rerouting to Yanbu, offsetting the Hormuz supply constraint."
+        },
+        {
+          "prediction": "The US announces the formation of a multinational naval task force specifically to escort commercial shipping through the Strait of Hormuz, with several European and Arab states publicly joining.",
+          "members_raising": [
+            "Council_Member_DeepSeek"
+          ],
+          "mean_confidence": 0.5,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "Iran's re-closure of the Strait and firing on ships creates an immediate crisis for global shipping and energy markets. The US has historically responded to such challenges with coalition-building (e.g., Operation Prosperity Guardian for the Red Sea). Trump's 'full force' blockade rhetoric and the global economic stakes make a visible, multilateral military response to secure the waterway highly likely within a week.",
+          "counterveiling_rationale": "The IRGC Navy seizing a commercial vessel flagged to a major US ally could trigger a more unilateral US response rather than coalition-building. European states may resist joining a task force that could be seen as escalatory during active negotiations.",
+          "watch_trigger": "IRGC Navy seizes a commercial vessel flagged to a major US ally (UK, Japan), forcing a more immediate and potentially unilateral US military response rather than coalition formation."
+        }
+      ],
+      "sharp_disagreements": [
+        "Council_Member_Claude assigns 0.48 to ceasefire collapse and resumed large-scale Israeli operations, while Council_Member_DeepSeek assigns 0.55 and Council_Member_Kimi assigns 0.50 \u2014 moderate disagreement on probability, but all below 0.55, reflecting genuine uncertainty about whether the April 22 deadline triggers full resumption or a partial deal.",
+        "Council_Member_Claude assigns 0.38 to a limited interim US-Iran agreement before/after April 22, while Council_Member_Gemini assigns 0.45 and Council_Member_Kimi assigns 0.40 \u2014 members broadly agree this is possible but below-even probability, with disagreement on whether Trump can politically sell a partial deal.",
+        "Council_Member_Gemini predicts Hezbollah formally declares the ceasefire 'null and void' (confidence 0.60), while Council_Member_DeepSeek predicts Israel launches a large-scale aerial campaign (confidence 0.55) \u2014 these are compatible but reflect different framings of who formally ends the truce first.",
+        "Council_Member_Kimi predicts France announces a significant UNIFIL drawdown (confidence 0.35), a prediction not raised by other members, representing a divergent assessment of French strategic calculus."
+      ]
+    },
+    "1m": {
+      "headline": "Over one month, the dominant trajectories are resumed full-scale Israeli operations in Lebanon and sustained Hormuz disruption, with a comprehensive nuclear deal assessed as unlikely but a narrow interim arrangement possible \u2014 and US-Israel divergence deepening regardless of outcome.",
+      "top_predictions": [
+        {
+          "prediction": "Full-scale Israeli military operations resume in Lebanon within the month, with IDF ground forces re-entering southern Lebanon and Israeli airstrikes on Hezbollah infrastructure in the Bekaa Valley, while the US-Iran diplomatic track continues in parallel without halting Israeli operations.",
+          "members_raising": [
+            "Council_Member_Claude",
+            "Council_Member_Kimi",
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.4567,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "Netanyahu has already rejected ceasefire terms and is preparing for resumed fighting. The ceasefire is nominal and deteriorating. The US-Israel divergence on Syria/Turkey policy suggests Washington may not restrain Israel on Lebanon if a US-Iran deal is in progress. Israel has demonstrated willingness to act unilaterally \u2014 in 2006, Israel resumed full-scale operations after initial ceasefire attempts failed; in 2024, Israel expanded Gaza operations despite US pressure for restraint. The death of a Rafael engineer provides domestic political capital for escalation.",
+          "counterveiling_rationale": "US pressure has historically constrained Israeli operations at critical junctures \u2014 the 1973 ceasefire, the 1982 Beirut siege halt. If the US explicitly conditions continued military aid or intelligence sharing on Israeli restraint in Lebanon as part of the Iran deal framework, Netanyahu faces a genuine constraint. Pressure from the Trump administration to avoid a 'forever war' that could disrupt global oil markets and the US economy may also restrain Israel.",
+          "watch_trigger": "The US explicitly conditions continued military aid or intelligence sharing on Israeli restraint in Lebanon as part of the Iran deal framework, or Hezbollah voluntarily withdraws heavy weapons north of the Litani River under UN supervision."
+        },
+        {
+          "prediction": "The Strait of Hormuz remains partially or fully disrupted for the entire month, with global oil prices sustaining above pre-crisis levels and at least one major shipping company announcing permanent rerouting around the Cape of Good Hope, marking a structural shift in global energy logistics.",
+          "members_raising": [
+            "Council_Member_Claude",
+            "Council_Member_GLM"
+          ],
+          "mean_confidence": 0.48,
+          "consensus_strength": "weak",
+          "supporting_rationale": "Iran has explicitly tied Hormuz reopening to 'the war fully ending' \u2014 a condition that will not be met within a month given the Lebanon front and nuclear impasse. Even a partial deal is unlikely to fully resolve the maritime dimension. Shipping companies make rerouting decisions based on insurance costs and risk assessments that lag diplomatic developments by weeks. The 2021\u20132024 Red Sea/Houthi crisis demonstrated that sustained maritime threat environments cause lasting rerouting decisions, with Cape of Good Hope traffic increasing 40%+ even after intermittent de-escalation.",
+          "counterveiling_rationale": "The 1988 Tanker War ended relatively quickly once the US demonstrated naval superiority and Iran calculated the economic cost of continued closure; shipping returned to normal patterns within months. A mutual de-escalation arrangement \u2014 Iran reopens Hormuz, US eases blockade to allow some Iranian exports \u2014 is the most plausible off-ramp that lets both sides claim victory.",
+          "watch_trigger": "The US Navy conducts a decisive kinetic operation against IRGC naval assets in the strait (sinking or disabling multiple gunboats), degrading Iran's ability to enforce closure and prompting shipping companies to reassess risk."
+        },
+        {
+          "prediction": "The US-Israel strategic divergence deepens publicly, with the US concluding or advancing a deal with Iran that Israel vocally rejects, leading to Netanyahu authorizing unilateral military actions in Lebanon or Syria that Washington publicly condemns or criticizes.",
+          "members_raising": [
+            "Council_Member_DeepSeek",
+            "Council_Member_GLM"
+          ],
+          "mean_confidence": 0.525,
+          "consensus_strength": "weak",
+          "supporting_rationale": "Tom Barrack's public criticism is a clear signal of an administration willing to pressure Israel to manage regional relationships. Any US-Iran deal will inevitably include provisions Israel opposes (sanctions relief without full nuclear dismantlement, recognition of Iranian regional interests). Netanyahu's 2015 speech to Congress opposing the JCPOA demonstrated his willingness to create a public US-Israel rift over Iran deal terms he considered inadequate. Israeli security officials already express skepticism about Iranian compromise.",
+          "counterveiling_rationale": "The 2020 Abraham Accords showed Netanyahu is capable of subordinating his Iran hawkishness to broader strategic alignment with Washington when he calculates the US relationship is more valuable than any single deal's terms. Trump could offer Netanyahu a major bilateral concession (formal US recognition of Israeli sovereignty in the Golan Heights, or a massive arms package) as compensation for accepting a deal Netanyahu dislikes.",
+          "watch_trigger": "Trump offers Netanyahu a major bilateral concession as compensation for accepting a deal Netanyahu dislikes, or a public joint US-Israel statement affirming unified red lines for Iran's nuclear program and Hezbollah's disarmament."
+        },
+        {
+          "prediction": "A limited interim US-Iran agreement is reached that reopens the Strait of Hormuz in exchange for partial easing of the US naval blockade and a formal extension of the Lebanon ceasefire, but without resolving the nuclear enrichment issue \u2014 allowing both sides to claim a partial win.",
+          "members_raising": [
+            "Council_Member_GLM",
+            "Council_Member_DeepSeek",
+            "Council_Member_Claude"
+          ],
+          "mean_confidence": 0.3267,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "The economic costs of dual blockades are unsustainable for all parties over a month. Global recession risks generate intense pressure from Gulf states, China, India, and Europe on both Washington and Tehran. Iran needs oil revenue. The US faces domestic political pressure over gas prices. Pakistan-Egypt mediation has institutional momentum. The 2016 Iran sanctions relief under the JCPOA and the 2013 JPOA both provide templates for reciprocal easing. Trump's transactional focus on oil prices and a 'win' before his China trip will drive a pragmatic, partial solution.",
+          "counterveiling_rationale": "The 1980s Tanker War persisted for years despite enormous economic costs, because neither side could find a face-saving formula and domestic hardliners blocked compromise. Trump has explicitly stated Iran must never enrich uranium, making any partial deal that leaves enrichment unresolved politically difficult to sell. A major naval engagement between US and Iranian forces could harden domestic politics in both countries, making mutual de-escalation politically impossible.",
+          "watch_trigger": "A significant de-escalatory statement from Supreme Leader Khamenei directly linking Hormuz reopening to a verifiable, permanent ceasefire in Lebanon, broadcast on Iranian state media, or Saudi Arabia/UAE publicly endorsing a partial deal framework."
+        },
+        {
+          "prediction": "Iran's government announces or implements a domestic security crackdown with reported arrests of 100+ individuals described as dissidents, opposition figures, or internal opponents, as the regime consolidates after surviving weeks of external conflict.",
+          "members_raising": [
+            "Council_Member_GLM"
+          ],
+          "mean_confidence": 0.5,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "The SITREP explicitly notes Iranians fear a post-war government crackdown and the regime appears entrenched after surviving weeks of conflict. The IRGC's wartime assertiveness strengthens its domestic position. After the 1980\u201388 Iran-Iraq War, the Iranian regime conducted extensive purges of leftist and opposition groups. After the 2009 Green Movement and 2022 Mahsa Amini protests, the regime arrested thousands once it regained control.",
+          "counterveiling_rationale": "After the 2015 JCPOA, Iran experienced a brief opening with reduced repression as the regime sought to claim the deal as a popular victory \u2014 a negotiated end to the current conflict could produce a similar temporary liberalization. A hardline IRGC faction attempting a power challenge against Khamenei could redirect security resources inward against internal rivals rather than civil society.",
+          "watch_trigger": "A hardline faction within the IRGC attempts a coup or power challenge against Khamenei, forcing the regime to redirect security resources inward against internal rivals rather than against civil society."
+        },
+        {
+          "prediction": "Iran resumes uranium enrichment to 60% or higher if the US naval blockade is not fully lifted by mid-May, using nuclear escalation as leverage to force a new crisis.",
+          "members_raising": [
+            "Council_Member_Gemini"
+          ],
+          "mean_confidence": 0.55,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "Iran's 'dual blockade' strategy is its only leverage. If the Islamabad talks fail to yield sanctions relief, Iran historically responds by advancing its nuclear clock to force a new crisis. Iran's 2021 move to 60% enrichment following the Natanz sabotage incident established this as a credible escalatory tool.",
+          "counterveiling_rationale": "China could pressure Iran to maintain the status quo to ensure the mid-May summit with Trump is successful. The IAEA reporting a 'breakthrough' in monitoring access could delay the need for enrichment escalation.",
+          "watch_trigger": "IAEA reports a breakthrough in monitoring access that delays the need for enrichment escalation, or China publicly pressures Iran to maintain the nuclear status quo ahead of the Trump-China summit."
+        }
+      ],
+      "sharp_disagreements": [
+        "Council_Member_Claude assigns 0.28 to a formal US-Iran nuclear framework agreement by mid-May, while Council_Member_Kimi assigns 0.25 \u2014 both very low \u2014 but Council_Member_Gemini implicitly treats a comprehensive deal as more plausible by assigning 0.55 to Iran resuming 60% enrichment only if no deal is reached, reflecting a different baseline assessment of deal probability.",
+        "Council_Member_Claude assigns 0.61 to sustained Hormuz disruption for the entire month, while Council_Member_GLM assigns 0.35 to Hormuz reopening with mutual de-escalation \u2014 these are not strictly contradictory but reflect meaningfully different assessments of whether economic pressure produces a maritime deal within a month.",
+        "Council_Member_Kimi predicts a comprehensive nuclear agreement signed by May 18 (confidence 0.25) and also Israeli ground forces advancing beyond the Litani (confidence 0.35) \u2014 these are presented as alternative scenarios, but the combination reflects the widest range of outcomes among any single member.",
+        "Council_Member_Gemini predicts a Pakistan-Turkey maritime corridor agreement (confidence 0.35), a specific institutional mechanism not raised by other members, representing a divergent view on the form of any maritime de-escalation."
+      ]
+    }
+  },
+  "cross_horizon_themes": [
+    "The April 22 ceasefire deadline is the single most consequential near-term variable across all horizons: its resolution or non-resolution cascades through Lebanon operations, US-Iran diplomacy, and maritime dynamics simultaneously.",
+    "The Lebanon ceasefire is assessed as nominal across all horizons \u2014 the question is not whether it holds but how quickly and visibly it collapses, and whether the collapse is managed or chaotic.",
+    "The dual blockade dynamic (US blockading Iranian shipping, Iran blockading global oil transit) creates unsustainable economic pressure that drives all parties toward some form of partial de-escalation, but the timeline and terms remain deeply contested.",
+    "US-Israel strategic divergence is a persistent theme across all horizons, with the gap between Washington's deal-seeking posture and Netanyahu's confrontational posture widening as the diplomatic track advances.",
+    "Iran's use of asymmetric leverage \u2014 Hormuz closure, proxy networks in Europe, nuclear escalation threats \u2014 is a consistent pattern across all horizons, with the IRGC maintaining operational assertiveness regardless of diplomatic track status.",
+    "The nuclear enrichment impasse (Trump's zero-enrichment demand vs. Iran's rejection of a 20-year moratorium) is structurally unresolvable in the near term and forces all diplomatic outcomes toward partial or interim arrangements rather than comprehensive deals."
+  ],
+  "convergent_signals": [
+    "All four members agree the Lebanon ceasefire is effectively nominal and that additional kinetic incidents are near-certain within 24 hours.",
+    "All members agree Iran will not reopen the Strait of Hormuz within 24 hours and that IRGC harassment of commercial/naval vessels will continue.",
+    "All members agree no comprehensive US-Iran framework agreement will be announced within 24 hours; at best, procedural progress or a next-meeting announcement.",
+    "All members agree the April 22 deadline creates a genuine binary inflection point that will cascade across all three conflict tracks.",
+    "All members agree that a comprehensive nuclear deal within one month is unlikely given the structural gap between US and Iranian positions on enrichment.",
+    "All members agree that US-Israel alignment is under visible strain and that this divergence will deepen as the US pursues a deal Iran that Israel opposes.",
+    "All members agree that the economic shock from the dual blockade creates pressure toward some form of partial maritime de-escalation within a month, even if the nuclear issue remains unresolved."
+  ],
+  "contested_signals": [
+    "Whether the April 22 deadline triggers full resumption of Israeli operations or a Trump deadline extension: members are split roughly evenly, with no consensus on which outcome is more likely.",
+    "Whether a limited interim US-Iran agreement (Hormuz-for-blockade-pause swap) is achievable within a week: members range from 0.38 to 0.45 confidence, reflecting genuine uncertainty about Trump's willingness to accept a partial deal.",
+    "Whether Iran will escalate to 60% uranium enrichment within a month if no deal is reached: Council_Member_Gemini assigns 0.55, while other members do not explicitly predict this, reflecting disagreement on Iran's nuclear escalation calculus.",
+    "Whether the Strait of Hormuz remains fully disrupted for the entire month (Council_Member_Claude, 0.61) versus reopening via mutual de-escalation (Council_Member_GLM, 0.35) \u2014 a direct disagreement on the maritime outcome.",
+    "Whether Hezbollah is acting independently versus under Iranian direction: members note this as a key uncertainty that materially affects ceasefire viability assessments but do not converge on an answer.",
+    "Whether France will draw down its UNIFIL contingent (Council_Member_Kimi, 0.35) \u2014 a prediction not raised by other members, reflecting divergent assessments of French strategic calculus."
+  ],
+  "watchlist_triggers": [
+    "Hezbollah publicly announces withdrawal of forces south of the Litani River under UN supervision \u2014 would remove IDF's stated casus belli for self-defense strikes and potentially stabilize the ceasefire.",
+    "Iran's Supreme Leader issues a statement explicitly ruling out further negotiations before the US lifts its naval blockade \u2014 would collapse the diplomatic track entirely.",
+    "Pakistan brokers a specific written US commitment to ease the naval blockade on Iranian ports \u2014 would enable Iran to announce a confidence-building maritime pause.",
+    "Trump directly calls Khamenei or authorizes a back-channel with a specific enrichment compromise offer (e.g., third-country enrichment) \u2014 would sharply raise probability of a framework announcement.",
+    "Iran accepts a 'freeze-for-freeze' interim arrangement (pausing enrichment above 20% in exchange for partial US blockade relief) \u2014 would give Trump enough to declare progress and extend the April 22 deadline.",
+    "Saudi Arabia or UAE publicly endorses a partial deal framework and offers economic incentives to Iran (e.g., oil revenue escrow) \u2014 would provide Trump political cover to accept a phased approach.",
+    "A major Hezbollah-linked mass-casualty attack on IDF forces or Israeli cities \u2014 would make the ceasefire politically untenable for Netanyahu and eliminate diplomatic space for any agreement.",
+    "A major naval engagement between US and Iranian forces producing significant casualties \u2014 would harden domestic politics in both countries and make mutual de-escalation politically impossible.",
+    "The US explicitly conditions continued military aid or intelligence sharing on Israeli restraint in Lebanon as part of the Iran deal framework \u2014 would create a genuine constraint on Netanyahu's operational independence.",
+    "Israel conducts a successful airstrike on Iran's Fordow or Natanz enrichment facilities \u2014 would reset the entire conflict dynamic and eliminate Iranian incentive to negotiate.",
+    "Iran's economy shows acute signs of collapse (currency crisis, fuel shortages, public unrest) \u2014 would soften Khamenei's negotiating position significantly.",
+    "UK publicly attributes the London arson attacks to Iran and expels Iranian diplomats \u2014 would either prompt Iranian restraint of European proxy operations or trigger further escalation.",
+    "Saudi Arabia announces activation of significant spare production capacity and pipeline rerouting to Yanbu \u2014 would moderate the oil price shock and reduce economic pressure driving both sides toward a deal.",
+    "A direct private warning from the White House to Netanyahu to freeze all regional strikes until the April 22 deadline \u2014 would temporarily constrain IDF operations in Syria and Lebanon."
+  ],
+  "calibration_note": "This forecast operates under extreme uncertainty across all horizons. Several tail risks are low-probability but high-consequence and are not adequately captured in the main predictions: (1) A US airstrike on Iranian nuclear facilities (Fordow, Natanz) \u2014 assessed as unlikely within a month but would reset the entire conflict dynamic, potentially triggering Iranian missile strikes on US naval assets and Gulf infrastructure; (2) An Iranian missile or drone strike that sinks or severely damages a US Navy vessel in the Persian Gulf \u2014 would trigger a massive US military response and likely end the diplomatic track entirely; (3) Domestic political collapse or a coup attempt within Iran \u2014 would change the negotiating calculus entirely and is essentially unforecastable from open-source reporting; (4) A Hezbollah mass-casualty attack on Israeli population centers (Haifa, Tel Aviv) using precision missiles \u2014 would eliminate any remaining political space for ceasefire and likely trigger Israeli strikes on Iranian territory. This forecast is NOT a prediction that any comprehensive US-Iran nuclear deal will be reached within a month \u2014 the structural gap between Trump's zero-enrichment demand and Iran's position makes this unlikely, and members' confidence scores (0.25\u20130.28) reflect this. This forecast is also NOT an assessment of the underlying merits of any party's legal or political claims regarding the Hormuz closure, the ceasefire self-defense provisions, or the UNIFIL killing attribution. Confidence scores are deliberately modest throughout, reflecting a genuinely fluid multi-actor crisis with no dominant stabilizing mechanism and several simultaneous flashpoints where a single tactical incident could cascade into strategic escalation."
+}
