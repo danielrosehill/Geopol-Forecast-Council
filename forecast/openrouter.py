@@ -36,7 +36,10 @@ def call(model: str, system: str, user: str, temperature: float = 0.3,
         }
     r = httpx.post(OPENROUTER_URL, headers=_headers(), json=body, timeout=timeout)
     r.raise_for_status()
-    return r.json()["choices"][0]["message"]["content"]
+    content = r.json()["choices"][0]["message"].get("content")
+    if not content:
+        raise ValueError("empty content from model")
+    return content
 
 
 def _extract_json(raw: str) -> dict:
@@ -60,6 +63,11 @@ def call_json(model: str, system: str, user: str, temperature: float = 0.3,
         return _extract_json(raw)
     except httpx.HTTPStatusError as e:
         if response_schema is not None and e.response.status_code in (400, 422):
+            raw = call(model, system, user, temperature=temperature, response_schema=None)
+            return _extract_json(raw)
+        raise
+    except ValueError:
+        if response_schema is not None:
             raw = call(model, system, user, temperature=temperature, response_schema=None)
             return _extract_json(raw)
         raise

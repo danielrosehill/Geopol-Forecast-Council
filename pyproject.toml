@@ -13,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 forecast = "forecast.__main__:main"
+forecast-accuracy = "forecast.accuracy.__main__:cli"
 
 [build-system]
 requires = ["setuptools>=68"]

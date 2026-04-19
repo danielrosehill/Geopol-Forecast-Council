@@ -1,0 +1,392 @@
+{
+  "signals": {
+    "24h": [
+      {
+        "signal": "Commercial Tanker AIS Darkening vs. Anchorage Accumulation at Hormuz Entry Points",
+        "signal_class": "maritime",
+        "interpretation": "Increased AIS silence rates (>40% of fleet) combined with anchorage buildup at Fujairah and Bandar Abbas indicates Iran is enforcing a kinetic blockade, raising escalation risk. Decreased silence with normal transit velocity suggests Iran is selectively enforcing or bluffing, allowing diplomatic space. False-signal trap: Vessels may intentionally disable AIS to avoid being targeted (security protocol) while still transiting, creating phantom 'closure' metrics; verify with actual satellite imagery of anchorage areas.",
+        "monitoring_strategy": "Query MarineTraffic API for AIS gaps every 6 hours for vessels >50,000 DWT transiting the Strait of Hormuz (Fujairah to Bandar Abbas corridor). Threshold: >15% increase in 'dark' vessels over 24h baseline. Cross-check with Sentinel-2 satellite imagery of Fujairah Outer Anchorage (25.08\u00b0N 56.33\u00b0E) for vessel count verification, and Lloyd's List market reports for cargo delays.",
+        "sources": [
+          {
+            "name": "MarineTraffic",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "paid",
+            "type": "ais_shipping",
+            "language": "multi"
+          },
+          {
+            "name": "Sentinel Hub",
+            "url": "https://apps.sentinel-hub.com",
+            "access_tier": "freemium",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "TankerTrackers (Twitter/X)",
+            "url": "https://twitter.com/TankerTrackers",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "Lloyd's List Intelligence",
+            "url": "https://lloydslist.maritimeintelligence.informa.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly tests whether Iran's threatened Hormuz closure is operational reality or political theater; load-bearing for the survival of the nominal ceasefire and the US blockade response.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "US Carrier Strike Group Sortie Generation Rates (F/A-18E/F & F-35C)",
+        "signal_class": "air",
+        "interpretation": "Sustained high sortie rates (>80 combat air patrol or strike training missions per day from CVN-72/75) indicates preparation for kinetic strikes against Iranian targets. Normal training tempo (<30 sorties/day) suggests deterrent posture without imminent attack. False-signal trap: High sortie rates may reflect routine cyclic operations or pilot qualification requirements rather than combat preparation; distinguish by mission profile (armed vs. clean wings) and NOTAM correlation.",
+        "monitoring_strategy": "Scrape ADS-B Exchange for Mode-S transponder codes associated with VFA-22, VFA-94, VMFA-314 (F-35C) and correlate with carrier positions (USNI Fleet Tracker). Monitor every 4 hours. Threshold: >50% increase in daily sortie count over 7-day rolling average. Cross-check with pilot social media (Instagram geotags from Bahrain/Qatar bases) and CENTCOM press releases for exercise announcements.",
+        "sources": [
+          {
+            "name": "ADS-B Exchange",
+            "url": "https://www.adsbexchange.com",
+            "access_tier": "free",
+            "type": "adsb_flight",
+            "language": "en"
+          },
+          {
+            "name": "USNI News Fleet Tracker",
+            "url": "https://news.usni.org/fleet-tracker",
+            "access_tier": "free",
+            "type": "think_tank",
+            "language": "en"
+          },
+          {
+            "name": "Instagram OSINT (Pilot Geotags)",
+            "url": "https://www.instagram.com",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "CENTCOM",
+            "url": "https://www.centcom.mil",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          }
+        ],
+        "rationale": "Reveals US intent to escalate or de-escalate the kinetic phase beyond the current blockade, directly relevant to whether the conflict expands to Iranian homeland targets.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "Hezbollah MLRS Launcher Thermal Signatures in South Lebanon UNIFIL Zone",
+        "signal_class": "satellite",
+        "interpretation": "Detection of new Multiple Launch Rocket System positions or thermal exhaust in Ayta ash-Shab, Bint Jbeil, or Maroun al-Ras indicates preparation for coordinated offensive against Israel. Absence of military hardware in historical launch sites suggests Hezbollah is maintaining the ceasefire. False-signal trap: Agricultural vehicles or civilian trucks with similar radar/thermal signatures may be misidentified; require multi-spectral confirmation (visible + SWIR) and correlation with UNIFIL ground patrol reports.",
+        "monitoring_strategy": "Task Planet Labs SkySat or Maxar WorldView-3 for daily revisit over 10 key villages in Sector West (UNIFIL). Use change detection algorithms comparing to February 2026 baseline. Threshold: Any new launcher-sized objects (>6m length) in open terrain. Cross-check with UNIFIL public incident reports and Lebanese Army Twitter for de-escalation announcements.",
+        "sources": [
+          {
+            "name": "Planet Labs",
+            "url": "https://www.planet.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "Maxar Technologies",
+            "url": "https://www.maxar.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "UNIFIL Public Affairs",
+            "url": "https://unifil.unmissions.org",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "EUMETSAT",
+            "url": "https://www.eumetsat.int",
+            "access_tier": "free",
+            "type": "satcom",
+            "language": "en"
+          }
+        ],
+        "rationale": "Tests whether Hezbollah is preparing to open a second major front as per load-bearing uncertainty #3, which would collapse the Israel-Lebanon ceasefire and draw in European forces.",
+        "novelty_self_score": 0.7
+      },
+      {
+        "signal": "CISA/FBI Joint Cybersecurity Advisory Velocity on Iranian APTs",
+        "signal_class": "cyber",
+        "interpretation": "Emergency directive (ED) or critical infrastructure-specific advisory on CyberAv3ngers or APT42 indicates imminent destructive cyberattack on US/EU energy/water sectors. Routine information sharing (AA-series) suggests espionage-only activity. False-signal trap: Advisory publication timing may follow bureaucratic review cycles (Tuesdays/Thursdays) rather than threat spikes; verify with Recorded Future threat intel on Iranian infrastructure provisioning.",
+        "monitoring_strategy": "Monitor CISA.gov RSS feed and FBI FLASH bulletins for keywords 'Iran', 'CyberAv3ngers', 'APT42', 'destructive'. Check every 6 hours. Threshold: Upgrade from 'AA' (analysis) to 'ED' (emergency directive) or specific ICS-CERT alert. Cross-check with GreyNoise sensor data for scanning activity from Iranian IP ranges and Shodan exposure scans of US critical infrastructure.",
+        "sources": [
+          {
+            "name": "CISA.gov Alerts",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "FBI FLASH Bulletins",
+            "url": "https://www.ic3.gov",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Recorded Future",
+            "url": "https://www.recordedfuture.com",
+            "access_tier": "paid",
+            "type": "api",
+            "language": "en"
+          },
+          {
+            "name": "GreyNoise Intelligence",
+            "url": "https://www.greynoise.io",
+            "access_tier": "freemium",
+            "type": "api",
+            "language": "en"
+          }
+        ],
+        "rationale": "The ceasefire framework explicitly excludes cyber operations; a spike in advisories signals exploitation of this gap and potential for asymmetric escalation.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "Hebrew-Language IDF Reservist Telegram Channel Mobilization Chatter",
+        "signal_class": "social",
+        "interpretation": "Spike in 'Tzav 8' (emergency call-up) notifications and northern border deployment discussions indicates imminent IDF ground operation in Lebanon. Routine garrison complaints and training schedules suggest holding pattern. False-signal trap: Scheduled reserve drills or April/May training cycle announcements may be misread as combat mobilization; verify with official IDF Spokesperson Telegram channel for 'routine exercise' confirmations.",
+        "monitoring_strategy": "Monitor Hebrew-language Telegram channels (e.g., '\u05d7\u05d3\u05e9\u05d5\u05ea \u05e6\u05d1\u05d0 \u05d5\u05d1\u05d9\u05d8\u05d7\u05d5\u05df', '\u05e6\u05d4\"\u05dc - \u05d4\u05de\u05d7\u05e0\u05d4 \u05d4\u05e2\u05d1\u05e8\u05d9') using NLP sentiment analysis for keywords '\u05e6\u05e4\u05d5\u05df' (north), '\u05dc\u05d1\u05e0\u05d5\u05df' (Lebanon), '\u05e6\u05d5 8'. Scan every 2 hours. Threshold: >3 sigma increase in mobilization-related posts over 48h baseline. Cross-check with N12 News and Walla! military correspondent reports for official confirmation.",
+        "sources": [
+          {
+            "name": "Telegram (IDF Unofficial Channels)",
+            "url": "https://t.me",
+            "access_tier": "free",
+            "type": "social",
+            "language": "he"
+          },
+          {
+            "name": "N12 News (Mako)",
+            "url": "https://www.mako.co.il/news-military",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "he"
+          },
+          {
+            "name": "Walla! News",
+            "url": "https://news.walla.co.il",
+            "access_tier": "freemium",
+            "type": "news_outlet",
+            "language": "he"
+          },
+          {
+            "name": "IDF Spokesperson Unit",
+            "url": "https://www.idf.il",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "he"
+          }
+        ],
+        "rationale": "Provides early warning of Israeli intent to escalate in Lebanon following the April 18 reservist death and Hezbollah IED incidents, which would collapse the separate Israel-Lebanon ceasefire track.",
+        "novelty_self_score": 0.6
+      }
+    ],
+    "1w": [
+      {
+        "signal": "Brent Crude Futures Curve Backwardation (Front-Month vs. 3-Month Spread)",
+        "signal_class": "energy",
+        "interpretation": "Steep backwardation (front month premium >$5/bbl over 3-month) indicates market pricing prolonged Hormuz closure and supply disruption. Contango or flattening curve suggests trader confidence in diplomatic resolution within weeks. False-signal trap: Super-contango from floating storage arbitrage or SPR release rumors may distort the signal; verify with physical cargo differentials (Dubai/Oman) and VLCC freight rates.",
+        "monitoring_strategy": "Pull daily settlement prices for Brent Jun 26 (front) and Sep 26 (3-month) contracts from ICE Futures Europe. Calculate spread. Monitor weekly. Threshold: Backwardation widening >$2/bbl week-over-week. Cross-check with Energy Intelligence cargo tracking and OPEC+ production policy statements for supply-side confounders.",
+        "sources": [
+          {
+            "name": "ICE Futures Europe",
+            "url": "https://www.theice.com/products/219/Brent-Crude-Futures",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "Bloomberg Terminal",
+            "url": "https://www.bloomberg.com/professional",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "Energy Intelligence",
+            "url": "https://www.energyintel.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Reuters Eikon",
+            "url": "https://www.refinitiv.com/en/products/eikon-trading-software",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          }
+        ],
+        "rationale": "Market consensus on the duration of Hormuz closure and likelihood of US-Iran binding agreement, aggregating private intelligence on diplomatic progress and military posture.",
+        "novelty_self_score": 0.3
+      },
+      {
+        "signal": "IRGC Internal Security Force (FARAJA) Deployment Density in Tehran and Kurdish Cities",
+        "signal_class": "domestic_political",
+        "interpretation": "High concentration of FARAJA anti-riot vehicles and Basij paramilitary at Azadi Square, Enghelab Street, and in Sanandaj/Mahabad indicates regime anticipation of major protests post-Khamenei death. Normal traffic patterns suggest successful suppression or no unrest. False-signal trap: Nowruz holiday security deployments or traffic police for Ramadan preparations may be misread as protest suppression; verify with NetBlocks internet shutdown correlation.",
+        "monitoring_strategy": "Weekly Sentinel-2 change detection over key Tehran intersections (35.7\u00b0N 51.4\u00b0E) and Sanandaj city center. Count military-style vehicle concentrations. Threshold: >20% increase in vehicle density at known protest nodes. Cross-check with NetBlocks internet disruption metrics and HRANA protest casualty reports.",
+        "sources": [
+          {
+            "name": "Sentinel Hub",
+            "url": "https://apps.sentinel-hub.com",
+            "access_tier": "freemium",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "NetBlocks",
+            "url": "https://netblocks.org",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "HRANA (Human Rights Activists News Agency)",
+            "url": "https://www.hrana.org",
+            "access_tier": "free",
+            "type": "ngo",
+            "language": "fa"
+          },
+          {
+            "name": "IranWire",
+            "url": "https://iranwire.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "fa"
+          }
+        ],
+        "rationale": "Tests load-bearing uncertainty #5 regarding internal Iranian stability and whether unrest disrupts IRGC command coherence, potentially altering Iran's negotiating posture.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "US Treasury OFAC SDN Designations on Iranian Tanker Networks",
+        "signal_class": "legal",
+        "interpretation": "Mass designation (>15 vessels or front companies per week) of NITC, IRISL, or 'ghost fleet' operators signals intensification of the US naval blockade and financial warfare. Absence of new designations suggests tacit easing to facilitate diplomacy. False-signal trap: Routine sanctions maintenance (anniversaries of previous designations) may be misread as escalation; distinguish by target novelty and Treasury press release language ('disrupting Hormuz-related revenues').",
+        "monitoring_strategy": "Monitor Treasury.gov 'Resource Center/Sanctions' RSS feed for 'Iran' and 'maritime' tags. Weekly aggregation. Threshold: >10 new SDNs in single tranche related to oil shipping. Cross-check with Windward maritime intelligence for vessel behavioral changes (dark activity, flag hopping) and Lloyd's List for insurance market reactions.",
+        "sources": [
+          {
+            "name": "US Treasury OFAC",
+            "url": "https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information/iran-sanctions",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Windward Maritime Intelligence",
+            "url": "https://www.windward.ai",
+            "access_tier": "paid",
+            "type": "ais_shipping",
+            "language": "en"
+          },
+          {
+            "name": "Lloyd's List Intelligence",
+            "url": "https://lloydslist.maritimeintelligence.informa.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Equasis",
+            "url": "https://www.equasis.org",
+            "access_tier": "free",
+            "type": "database",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly indicates whether the US maintains or lifts the naval blockade of Iran-linked shipping (load-bearing uncertainty #1), which determines Hormuz reopening.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "French/UK Naval Asset Movements to UNIFIL Maritime Task Force",
+        "signal_class": "maritime",
+        "interpretation": "Movement of French Mistral-class amphibious assault ships (Tonnerre/Dixmude) or Type 45 destroyers toward Lebanese territorial waters indicates European response to French peacekeeper killing and potential enforcement action. Static posture in Toulon/Cadiz suggests diplomatic-only response. False-signal trap: Scheduled NATO exercise MEDSHARK or port visit to Beirut for humanitarian aid may be misread as combat deployment; verify with French Ministry of Armed Forces mission statements.",
+        "monitoring_strategy": "Track AIS for French Navy hulls L9014 (Tonnerre), L9015 (Dixmude) and UK HMS Diamond/Duncan via MarineTraffic. Monitor French MoD press releases weekly. Threshold: Entry into Eastern Med UNIFIL AOR or holding pattern off Cyprus. Cross-check with NATO MARCOM schedules and UNIFIL maritime task force rotation announcements.",
+        "sources": [
+          {
+            "name": "MarineTraffic (Military Vessels)",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "paid",
+            "type": "ais_shipping",
+            "language": "en"
+          },
+          {
+            "name": "French Ministry of Armed Forces",
+            "url": "https://www.defense.gouv.fr",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "fr"
+          },
+          {
+            "name": "NATO Maritime Command",
+            "url": "https://mc.nato.int",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Twitter @IntelCrab",
+            "url": "https://twitter.com/IntelCrab",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          }
+        ],
+        "rationale": "Tests load-bearing uncertainty #6 regarding whether the French peacekeeper killing triggers European military entry into the Lebanon conflict, expanding the war beyond bilateral Iran-Israel-US.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "Egyptian-Pakistani Diplomatic Shuttle Frequency (VIP Flight Tracking)",
+        "signal_class": "diplomatic",
+        "interpretation": "Daily or bidirectional VIP flights (Pakistani AF Gulfstream/EGYPTAIR VIP) between Cairo, Islamabad, Tehran, and Doha indicate urgent mediation push to secure binding agreement before ceasefire collapse. Gaps >72 hours suggest talks stalled. False-signal trap: Routine OIC coordination on Gaza or humanitarian aid flights may be misread as Iran-US mediation; verify with Foreign Ministry statements mentioning 'final agreement' or 'nuclear deal'.",
+        "monitoring_strategy": "Monitor ADS-B Exchange for Pakistani Air Force (PAF) GLF4/5 (registrations J-755, J-756) and EGYPTAIR VIP A320/B737 (SU-GGG, SU-GGE) flying to Doha, Muscat, or Tehran. Track Egyptian MFA and Pakistani ISPR Twitter for 'shuttle diplomacy' keywords. Weekly aggregation. Threshold: >3 high-level visits per week. Cross-check with Al Jazeera diplomatic desk reporting and flight manifests.",
+        "sources": [
+          {
+            "name": "ADS-B Exchange (VIP Tracking)",
+            "url": "https://www.adsbexchange.com",
+            "access_tier": "free",
+            "type": "adsb_flight",
+            "language": "en"
+          },
+          {
+            "name": "Egyptian Foreign Ministry (Twitter)",
+            "url": "https://twitter.com/MfaEgypt",
+            "access_tier": "free",
+            "type": "social",
+            "language": "ar"
+          },
+          {
+            "name": "Pakistan ISPR",
+            "url": "https://www.ispr.gov.pk",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Al Jazeera Diplomatic Correspondent",
+            "url": "https://www.aljazeera.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly monitors progress toward a binding US-Iran agreement (load-bearing uncertainty #2) and the credibility of the Egypt-Pakistan mediation track claimed by both capitals.",
+        "novelty_self_score": 0.7
+      }
+    ]
+  },
+  "overall_notes": "Signals selected prioritize observable, falsifiable indicators over narrative analysis. The 24h horizon focuses on tactical military and maritime indicators capable of triggering immediate escalation (Hormuz closure reality, carrier sorties, Hezbollah posture). The 1w horizon focuses on structural and diplomatic indicators (sanctions policy, European posture, domestic Iranian stability) that determine whether the conflict stabilizes or expands. All signals include specific cross-checks to mitigate deception (AIS spoofing, routine exercises, bureaucratic timing) inherent in high-tension OSINT environments.",
+  "_member": "Council_Member_Kimi",
+  "_model": "moonshotai/kimi-k2.5",
+  "_lineage": "Moonshot"
+}

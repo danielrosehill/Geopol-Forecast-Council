@@ -25,4 +25,15 @@ Across all horizons also produce:
 - **watchlist_triggers** — union of member change_factors, deduplicated.
 - **calibration_note** — flag any tail risks that are low-probability-high-consequence, and state plainly what this forecast is not.
 
+If a `# Prior run` section is present in the input, also produce **delta_vs_prior**:
+
+- **prior_run_id** — copy verbatim from the input.
+- **prior_run_as_of** — the `as_of` field from the prior Council Head output.
+- **circumstance_changes** — bullet the material changes between the prior SITREP and the current one. Focus on facts on the ground (kinetic events, diplomatic moves, market signals), not framing differences. Each bullet should be falsifiable.
+- **lens_shifts** — how the council's *analytical posture* moved. Include: predictions raised this run that no prior member raised; predictions dropped from the prior run; mean-confidence movements (>0.15) on matched predictions; consensus-strength changes (e.g. moderate→strong). Match predictions across runs by semantic overlap, not exact wording.
+- **vindicated_signals** — prior predictions or watch-triggers that intervening events have corroborated. Cite the corroborating element from the current SITREP.
+- **falsified_signals** — prior predictions or watch-triggers that intervening events have contradicted. Same citation rule.
+
+If the prior run is absent, omit `delta_vs_prior` entirely. Do not invent a prior. Within `delta_vs_prior`, return empty arrays for sub-sections with no genuine content rather than padding.
+
 Return a single JSON object matching the provided schema.

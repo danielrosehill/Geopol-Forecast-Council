@@ -1,0 +1,33 @@
+{
+  "predictions": [
+    {
+      "prediction": "Pakistani Prime Minister Shehbaz Sharif will announce by April 20, 2026, 23:42 UTC that Iran and the US have agreed to extend the ceasefire deadline beyond April 22, establishing a new expiry date no earlier than April 25.",
+      "supporting_reasoning": "Pakistan has invested significant diplomatic capital in the Islamabad talks and faces strong domestic and regional incentives to prevent collapse over the Touska incident. Both Tehran and Washington benefit from appearing open to diplomacy while preparing military options, and the 48-hour window before the original deadline creates pressure for a face-saving extension. Ghalibaf's warning about halting talks is likely leverage to extract concessions rather than final policy, given Iran's interest in avoiding full-scale war while its missile recovery is incomplete.",
+      "historical_precedent_supporting": "November 2023 Gaza humanitarian pause extensions brokered by Qatar and Egypt, where deadlines were repeatedly extended by 24-48 hours under international pressure to avoid immediate resumption of hostilities despite ongoing violations.",
+      "historical_precedent_counterveiling": "January 2020 aftermath of the Soleimani assassination, where Iran rejected diplomatic overtures and conducted direct military retaliation within 72 hours without seeking or accepting ceasefire extensions.",
+      "change_factor": "Iranian Foreign Ministry issues a formal ultimatum demanding immediate release of the Touska and compensation before April 20, 12:00 UTC.",
+      "confidence": 0.3
+    },
+    {
+      "prediction": "Iranian-backed Iraqi militias (Kataib Hezbollah or Asaib Ahl al-Haq) will claim responsibility for rocket, drone, or missile attacks against US military facilities in Iraq or Syria, resulting in confirmed damage to infrastructure or personnel casualties reported by CENTCOM or Iraqi security forces.",
+      "supporting_reasoning": "Iran has historically used proxy forces for rapid retaliation that provides plausible deniability while signaling resolve. The Touska seizure constitutes a direct kinetic humiliation requiring response to satisfy domestic hardliners, but Tehran risks losing strategic advantage if it expends restored missile stocks prematurely before April 22. Militia attacks satisfy the publicly vowed 'retaliation' without triggering immediate US strategic bombing of Iranian territory.",
+      "historical_precedent_supporting": "January 2020 Kataib Hezbollah attacks on the US Embassy Baghdad and subsequent rocket attacks on Al-Asad and Taji bases following the Soleimani strike; December 2023 drone attacks on Erbil airbase by Iranian proxies during the Gaza war.",
+      "historical_precedent_counterveiling": "September 2019 Aramco attacks where Iran conducted direct complex strikes from Iranian territory rather than proxy actions, accepting higher escalation risk for greater strategic impact; June 2019 Iranian restraint on proxy actions after the US drone shootdown to avoid immediate war.",
+      "change_factor": "US Central Command announces a 72-hour suspension of blockade enforcement activities in the Persian Gulf.",
+      "confidence": 0.35
+    },
+    {
+      "prediction": "The Islamic Revolutionary Guard Corps Navy will seize a commercial tanker vessel flagged to the United Kingdom, Israel, or Argentina in the Strait of Hormuz or Persian Gulf, holding the crew for at least 24 hours as direct tit-for-tat retaliation for the Touska seizure.",
+      "supporting_reasoning": "The Touska incident creates a symmetry logic that Iran has historically exploited\u2014responding to maritime interdiction with maritime interdiction. Seizing a vessel flagged to a US ally (particularly Argentina given President Milei's April 19 signing of the Isaac Accords) provides proportional retaliation without immediate kinetic exchange. The IRGCN has assets positioned near Hormuz and can execute this within hours while maintaining the fiction of 'inspection' or 'environmental violations,' satisfying the Supreme Leader's requirement for visible retaliation while preserving the Islamabad talks.",
+      "historical_precedent_supporting": "July 2019 seizure of the British-flagged Stena Impero two weeks after UK forces seized the Iranian Grace 1 tanker at Gibraltar; April 2023 seizure of the Marshall Islands-flagged Advantage Sweet immediately following US sanctions enforcement actions against Iranian shipping.",
+      "historical_precedent_counterveiling": "June 2019 Iranian restraint following the US downing of an Iranian drone over the Strait of Hormuz, where despite having capability to seize vessels, Tehran chose diplomatic protest to avoid naval war; 2021 Natanz sabotage response limited to enrichment escalation rather than maritime interdiction.",
+      "change_factor": "Pakistan convenes an emergency trilateral meeting in Islamabad including Vice President Vance and Speaker Ghalibaf within 6 hours to address the Touska incident.",
+      "confidence": 0.25
+    }
+  ],
+  "overall_confidence": 0.4,
+  "overall_notes": "The Touska seizure compresses the decision cycle for Iranian leadership, forcing an immediate choice between rapid retaliation and diplomatic patience. The 24-hour horizon captures initial reactions, but major strategic decisions regarding the April 22 deadline likely extend beyond this window. Confidence is tempered by contradictory reporting on Iran's actual military recovery status and the ambiguity of Pakistani mediator optimism versus principal pessimism.",
+  "_member": "Council_Member_Kimi",
+  "_model": "moonshotai/kimi-k2.5",
+  "_lineage": "Moonshot"
+}

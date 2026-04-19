@@ -37,13 +37,46 @@ def _member_user_msg(scenario: str, horizons: list[str], head_out: dict) -> str:
     )
 
 
-def _author_user_msg(scenario: str, horizons: list[str], head_out: dict, members: list[dict]) -> str:
-    return (
+def _author_user_msg(scenario: str, horizons: list[str], head_out: dict, members: list[dict],
+                     prior: dict | None = None) -> str:
+    base = (
         f"# Scenario\n\n{scenario}\n\n"
         f"# Horizons\n\n{', '.join(horizons)}\n\n"
         f"# Council Head output\n\n{_json.dumps(head_out, indent=2)}\n\n"
         f"# Member outputs\n\n{_json.dumps(members, indent=2)}"
     )
+    if prior:
+        base += (
+            f"\n\n# Prior run (for delta analysis)\n\n"
+            f"## prior_run_id\n\n{prior['run_id']}\n\n"
+            f"## Prior Council Head output\n\n{_json.dumps(prior['head'], indent=2)}\n\n"
+            f"## Prior synthesis\n\n{_json.dumps(prior['synthesis'], indent=2)}\n\n"
+            "Populate `delta_vs_prior` in your output. If no meaningful change applies "
+            "to a sub-array, return an empty list rather than fabricating items."
+        )
+    return base
+
+
+def _find_prior_run(current_dir: Path) -> dict | None:
+    """Most-recent completed run before current_dir. Returns {run_id, head, synthesis} or None."""
+    reports = current_dir.parent
+    candidates = sorted(
+        [d for d in reports.iterdir() if d.is_dir() and d.name != current_dir.name],
+        key=lambda d: d.name, reverse=True,
+    )
+    for d in candidates:
+        head_p = d / "head.json"
+        syn_p = d / "synthesis.json"
+        if head_p.exists() and syn_p.exists():
+            try:
+                return {
+                    "run_id": d.name,
+                    "head": _json.loads(head_p.read_text()),
+                    "synthesis": _json.loads(syn_p.read_text()),
+                }
+            except Exception:
+                continue
+    return None
 
 
 def _remap_horizon_list(lst: list) -> dict:
@@ -71,6 +104,14 @@ def _normalise_member(out: dict, horizons: list[str]) -> dict:
         if isinstance(out.get(alt), dict):
             out["forecasts"] = out[alt]
             return out
+
+    # Single-horizon flat-list (predictions: [...] with only one horizon requested).
+    if len(horizons) == 1:
+        for alt in ("predictions", "forecasts", "items"):
+            v = out.get(alt)
+            if isinstance(v, list) and v and isinstance(v[0], dict) and "prediction" in v[0]:
+                out["forecasts"] = {horizons[0]: v}
+                return out
 
     # List of {horizon, predictions} at top level.
     for key in ("forecasts", "horizons", "predictions"):
@@ -294,10 +335,15 @@ def run_forecast(
         synthesis = _json.loads(synthesis_path.read_text())
     else:
         a_schema = author_schema(horizons)
+        prior = _find_prior_run(run_dir)
+        if prior:
+            print(f"[author] prior run for delta: {prior['run_id']}")
+        else:
+            print("[author] no prior run; delta analysis skipped")
         print(f"[author] {report_author.model} writing synthesis…")
         synthesis = call_json(
             report_author.model, AUTHOR_PROMPT,
-            _author_user_msg(scenario, horizons, head_out, members_out),
+            _author_user_msg(scenario, horizons, head_out, members_out, prior=prior),
             temperature=0.2, response_schema=a_schema,
         )
         synthesis_path.write_text(_json.dumps(synthesis, indent=2))

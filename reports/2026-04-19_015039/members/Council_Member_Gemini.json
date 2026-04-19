@@ -1,0 +1,245 @@
+{
+  "overall_notes": "The 24h horizon focuses on immediate kinetic triggers and tactical positioning in the Strait of Hormuz, while the 1w horizon shifts toward the sustainability of the Iranian regime and the potential for a 'shadow war' escalation via cyber and regional proxy movements.",
+  "signals": {
+    "24h": [
+      {
+        "signal": "CentCom/NAVCENT 'Notice to Mariners' (NOTAM) and IMSC advisories",
+        "signal_class": "maritime",
+        "interpretation": "Increased frequency of 'Security Threats' or 'Harassment' alerts indicates a transition from symbolic blockade to active kinetic engagement (boarding/seizure). Decreased alerts suggest a quiet de-escalation or a tactical pause for negotiations. Trap: A lack of alerts could simply mean commercial traffic has completely ceased (self-sanctioning), masking continued IRGC presence.",
+        "monitoring_strategy": "Scrape NAVCENT and UKMTO RSS feeds every 2 hours. A 'meaningful movement' is 3+ reported incidents within a 12-hour window.",
+        "sources": [
+          {
+            "name": "United Kingdom Maritime Trade Operations (UKMTO)",
+            "url": "https://www.ukmto.org",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "U.S. Naval Forces Central Command News",
+            "url": "https://www.cusnc.navy.mil",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly monitors the most acute flashpoint mentioned in the SITREP: the closure of the Strait of Hormuz and the US counter-blockade.",
+        "novelty_self_score": 0.3
+      },
+      {
+        "signal": "Flight tracking of 'Glow' and 'Bolt' callsigns (USAF/USN ISR) over Lebanon/Syria",
+        "signal_class": "air",
+        "interpretation": "High-density orbits of RC-135 or MQ-9 platforms over the 'Yellow Line' suggest imminent IDF strikes or expected Hezbollah retaliation. Withdrawal of ISR suggests a return to ceasefire monitoring. Trap: Platforms may go 'dark' (ADS-B off) during high-intensity operations, making a 'quiet' sky a false indicator of peace.",
+        "monitoring_strategy": "Monitor ADS-B Exchange filters for HEX codes associated with 5th Fleet and IAF assets. 4+ hours of continuous orbit in a 10km radius counts as meaningful.",
+        "sources": [
+          {
+            "name": "ADS-B Exchange",
+            "url": "https://adsbexchange.com",
+            "access_tier": "free",
+            "type": "adsb_flight",
+            "language": "en"
+          },
+          {
+            "name": "Itay Blumental (Military Correspondent)",
+            "url": "https://twitter.com/ItayBlumental",
+            "access_tier": "free",
+            "type": "social",
+            "language": "he"
+          }
+        ],
+        "rationale": "Essential for tracking the 'fragile' Lebanon front where the first post-ceasefire strikes have already occurred.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "Shadowserver/NetBlocks 'Network Connectivity' metrics for Tehran/Isfahan",
+        "signal_class": "cyber",
+        "interpretation": "A sharp drop (downward) indicates IRGC-ordered 'kill-switch' maneuvers to preempt or respond to internal unrest following Khamenei's death. Normalization suggests regime confidence. Trap: Partial outages may be caused by Israeli cyberattacks on infrastructure rather than domestic repression.",
+        "monitoring_strategy": "Check NetBlocks real-time charts and IODA (Internet Outage Detection and Analysis) every 4 hours. A 20% drop in BGP announcements is a critical signal.",
+        "sources": [
+          {
+            "name": "NetBlocks",
+            "url": "https://netblocks.org",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "IODA (Internet Outage Detection and Analysis)",
+            "url": "https://ioda.inet.tu-berlin.de",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly addresses the load-bearing uncertainty regarding internal Iranian unrest and IRGC command coherence.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "US-Israel 'Yellow Line' terminology in Hebrew-language military briefings",
+        "signal_class": "military",
+        "interpretation": "Expansion of the 'Yellow Line' definition to include 'free-fire zones' indicates a shift to a permanent buffer zone (Gaza model). Retraction or lack of mention suggests the line is a temporary tactical posture. Trap: The term may be used psychologically to deter Hezbollah return without actual physical enforcement.",
+        "monitoring_strategy": "Daily review of IDF Spokesperson (Daniel Hagari) briefings and Hebrew military analysts on Telegram. Look for the specific phrase 'Kav Tzahov' (Yellow Line).",
+        "sources": [
+          {
+            "name": "IDF Official Telegram",
+            "url": "https://t.me/idfofficial",
+            "access_tier": "free",
+            "type": "social",
+            "language": "he"
+          },
+          {
+            "name": "Haaretz Military News",
+            "url": "https://www.haaretz.co.il",
+            "access_tier": "registration",
+            "type": "news_outlet",
+            "language": "he"
+          }
+        ],
+        "rationale": "The SITREP notes Israel has established this line; its enforcement determines if the Lebanon ceasefire survives.",
+        "novelty_self_score": 0.7
+      },
+      {
+        "signal": "Iranian Rial (IRR) / US Dollar (USD) 'Bonbast' open-market rate",
+        "signal_class": "economic",
+        "interpretation": "Rapid depreciation (upward IRR/USD) indicates public panic over the 'fragile limbo' and potential for new strikes. Stability suggests the 'Pakistan talks' are being priced in as a success. Trap: The regime often injects hard currency to artificially stabilize the rate during crises.",
+        "monitoring_strategy": "Monitor Bonbast.com every 6 hours. A move of >5% in 24h is a 'panic' signal.",
+        "sources": [
+          {
+            "name": "Bonbast",
+            "url": "https://www.bonbast.com",
+            "access_tier": "free",
+            "type": "market_data",
+            "language": "en"
+          }
+        ],
+        "rationale": "Economic sentiment is the most sensitive proxy for the Iranian public's belief in the regime's survival post-Khamenei.",
+        "novelty_self_score": 0.4
+      }
+    ],
+    "1w": [
+      {
+        "signal": "Sentinel-2/Planet imagery of IRGC 'Fast-Attack Craft' (FAC) piers at Bandar Abbas",
+        "signal_class": "satellite",
+        "interpretation": "Empty piers (upward deployment) indicate a sustained maritime guerrilla campaign. High pier occupancy indicates the 'Hormuz closure' is more rhetorical or being used as a bargaining chip. Trap: Boats can be moved to camouflaged coastal caves/tunnels not visible to standard EO satellites.",
+        "monitoring_strategy": "Weekly comparison of high-res imagery (3-5m) focusing on IRGC Navy bases. 50%+ change in vessel count is the threshold.",
+        "sources": [
+          {
+            "name": "Sentinel Hub EO Browser",
+            "url": "https://apps.sentinel-hub.com/eo-browser/",
+            "access_tier": "free",
+            "type": "satcom",
+            "language": "multi"
+          },
+          {
+            "name": "Planet Labs (SkySat)",
+            "url": "https://www.planet.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          }
+        ],
+        "rationale": "Monitors the physical reality of Iran's threat to the Strait of Hormuz over a week-long window.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "CISA/FBI 'Flash Alerts' for Unit 702/CyberAv3ngers activity",
+        "signal_class": "cyber",
+        "interpretation": "A surge in alerts targeting US/EU water/energy sectors indicates Iran is using 'non-kinetic' escalation to bypass ceasefire terms. A lull suggests the 'Pakistan talks' include a quiet cyber-truce. Trap: CyberAv3ngers may be 'patriotic' hackers acting without IRGC orders, creating a false attribution.",
+        "monitoring_strategy": "Weekly review of CISA's 'Known Exploited Vulnerabilities' catalog and FBI Private Industry Notifications (PINs).",
+        "sources": [
+          {
+            "name": "CISA Alerts",
+            "url": "https://www.cisa.gov/news-events/alerts",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Mandiant (Google Cloud) Intelligence",
+            "url": "https://www.mandiant.com/resources",
+            "access_tier": "freemium",
+            "type": "other",
+            "language": "en"
+          }
+        ],
+        "rationale": "Directly addresses the SITREP's note that the ceasefire framework ignores cyber operations.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "Pakistan Ministry of Foreign Affairs (MOFA) 'Joint Statements' with Saudi/UAE",
+        "signal_class": "diplomatic",
+        "interpretation": "Statements mentioning 'regional stability' and 'maritime security' indicate the Pakistan-led mediation is gaining Gulf buy-in. Silence or 'unilateral' visits suggest the Pakistan track is failing. Trap: Pakistan may issue optimistic statements to bolster its own diplomatic prestige despite no actual progress.",
+        "monitoring_strategy": "Daily check of MOFA Pakistan press releases. Cross-reference with SPA (Saudi Press Agency) for alignment.",
+        "sources": [
+          {
+            "name": "Ministry of Foreign Affairs Pakistan",
+            "url": "https://mofa.gov.pk",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Saudi Press Agency (SPA)",
+            "url": "https://www.spa.gov.sa",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "Pakistan is the primary mediator; their ability to bridge the US-Iran gap is the only current path to a binding agreement.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "Hezbollah 'Martyr' funeral announcements in Southern Lebanon (via Al-Manar)",
+        "signal_class": "social",
+        "interpretation": "An uptick in funerals without corresponding IDF strike reports suggests Hezbollah is suffering 'accidental' casualties while preparing IEDs/missiles (indicating escalation). A decrease suggests adherence to the ceasefire. Trap: Hezbollah may delay funeral announcements to hide casualty counts from Israeli intelligence.",
+        "monitoring_strategy": "Daily scan of Al-Manar (Arabic version) and Hezbollah-affiliated Telegram channels (e.g., 'Lebanon News').",
+        "sources": [
+          {
+            "name": "Al-Manar TV News",
+            "url": "https://www.almanar.com.lb",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "ar"
+          },
+          {
+            "name": "War Monit (Telegram)",
+            "url": "https://t.me/warmonit",
+            "access_tier": "free",
+            "type": "social",
+            "language": "multi"
+          }
+        ],
+        "rationale": "High-confidence indicator of ground-level friction in Lebanon that could trigger a broader breakdown.",
+        "novelty_self_score": 0.8
+      },
+      {
+        "signal": "WTI/Brent Crude 'Time Spreads' (Front-month vs 3-month)",
+        "signal_class": "energy",
+        "interpretation": "Widening 'backwardation' (front-month much higher) indicates the market is pricing in a physical disruption of Hormuz. 'Contango' or flat spreads suggest the market believes Trump's 'talks are going well' rhetoric. Trap: Strategic Petroleum Reserve (SPR) releases by the US can artificially suppress front-month prices, masking the risk.",
+        "monitoring_strategy": "Daily check of CME Group or ICE futures curves. A spread widening of >$1.00/bbl in a week is a high-alert signal.",
+        "sources": [
+          {
+            "name": "CME Group Energy Products",
+            "url": "https://www.cmegroup.com",
+            "access_tier": "freemium",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "OilPrice.com Intelligence",
+            "url": "https://oilprice.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "The global market's 'skin in the game' is a more objective measure of the Hormuz threat than political rhetoric.",
+        "novelty_self_score": 0.5
+      }
+    ]
+  },
+  "_member": "Council_Member_Gemini",
+  "_model": "google/gemini-3-flash-preview",
+  "_lineage": "Google"
+}

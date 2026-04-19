@@ -1,0 +1,910 @@
+{
+  "horizons": [
+    {
+      "horizon": "24h",
+      "signals": [
+        {
+          "signal": "IRGC gunboat sortie frequency and geographic pattern in Strait of Hormuz AIS/ADSB gap zones",
+          "signal_class": "maritime",
+          "interpretation": "Increased IRGC fast-boat activity, especially north of the median line or in the TSS (Traffic Separation Scheme) lanes, signals Iran is actively enforcing the closure and escalation risk is high. Decreased sortie tempo or withdrawal to anchorage positions near Bandar Abbas suggests Iran may be signaling a willingness to de-escalate or allow selective passage. False-signal trap: AIS gaps caused by Iranian jamming or spoofing may be misread as vessel compliance or absence of IRGC presence when the reverse is true; cross-check with Sentinel-1 SAR imagery and MarineTraffic anomaly alerts before concluding.",
+          "monitoring_strategy": "Pull MarineTraffic and VesselFinder AIS feeds every 2 hours for the Hormuz chokepoint bounding box (55.5\u201357.5\u00b0E, 25.5\u201327\u00b0N). Flag any vessel broadcasting distress (AIS flag 1) or going dark after entering the TSS. Cross-check with Windward or Pole Star commercial maritime intelligence for IRGC patrol vessel tracks. Threshold: three or more commercial vessels going dark or diverting within a 6-hour window constitutes meaningful movement. Corroborate with Lloyd's List Intelligence vessel-status updates.",
+          "sources": [
+            {
+              "name": "MarineTraffic",
+              "url": "https://www.marinetraffic.com",
+              "access_tier": "freemium",
+              "type": "ais_shipping",
+              "language": "en"
+            },
+            {
+              "name": "VesselFinder",
+              "url": "https://www.vesselfinder.com",
+              "access_tier": "freemium",
+              "type": "ais_shipping",
+              "language": "en"
+            },
+            {
+              "name": "Lloyd's List Intelligence",
+              "url": "https://lloydslist.maritimeintelligence.informa.com",
+              "access_tier": "paid",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "Windward Maritime AI",
+              "url": "https://windward.ai",
+              "access_tier": "paid",
+              "type": "dashboard",
+              "language": "en"
+            },
+            {
+              "name": "Copernicus Emergency Management Service (Sentinel-1 SAR)",
+              "url": "https://emergency.copernicus.eu",
+              "access_tier": "free",
+              "type": "satcom",
+              "language": "en"
+            }
+          ],
+          "rationale": "The Hormuz closure is the single most acute kinetic flashpoint in the SITREP; IRGC sortie patterns are the most direct observable indicator of whether Iran is escalating enforcement or creating space for negotiation. AIS gaps are a known Iranian tactic and must be monitored as a primary signal.",
+          "novelty_self_score": 0.55
+        },
+        {
+          "signal": "Iranian state media (IRNA, Press TV, Tasnim) framing of Ghalibaf statements vs. back-channel diplomatic language from Egypt/Pakistan mediators",
+          "signal_class": "diplomatic",
+          "interpretation": "If Iranian state media shifts from maximalist language ('war must fully end') to conditional framing ('pending verification of blockade suspension'), this signals internal authorization for a compromise. If Egyptian or Pakistani foreign ministry readouts use phrases like 'framework agreement' or 'confidence-building measures,' it suggests mediators have a draft text in circulation. Downward movement \u2014 hardening language, references to 'resistance' or 'martyrdom,' or silence from Ghalibaf \u2014 signals negotiating track is stalling. False-signal trap: Iranian state media is routinely used for domestic audience management and may project hardness even when back-channel progress is real; always triangulate with mediator-side statements.",
+          "monitoring_strategy": "Monitor IRNA and Tasnim RSS feeds every 30 minutes for keyword clusters: 'blockade,' 'ceasefire,' 'Ghalibaf,' 'Hormuz,' 'agreement.' Simultaneously monitor Egypt's MFA (@MFA_Spokesperson on X) and Pakistan's MOFA press releases. Use Google Translate API for Persian-language feeds. Threshold: any shift in conditional language within a 6-hour window warrants escalation to senior analyst. Cross-check with Reuters and AFP wire services for independent confirmation before treating as real.",
+          "sources": [
+            {
+              "name": "IRNA (Islamic Republic News Agency)",
+              "url": "https://en.irna.ir",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "Tasnim News Agency",
+              "url": "https://www.tasnimnews.com/en",
+              "access_tier": "free",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "Egypt Ministry of Foreign Affairs \u2013 Official Spokesperson",
+              "url": "https://www.mfa.gov.eg",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "ar"
+            },
+            {
+              "name": "Pakistan Ministry of Foreign Affairs",
+              "url": "https://mofa.gov.pk",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "Reuters World News RSS",
+              "url": "https://feeds.reuters.com/reuters/worldNews",
+              "access_tier": "free",
+              "type": "rss",
+              "language": "en"
+            }
+          ],
+          "rationale": "The diplomatic track is the primary mechanism by which the Hormuz closure could be resolved without kinetic escalation; state media framing is the fastest open-source indicator of Iranian leadership's authorized negotiating posture.",
+          "novelty_self_score": 0.35
+        },
+        {
+          "signal": "Brent crude front-month vs. 3-month futures spread (contango/backwardation shift) and tanker freight rates (VLCC Middle East Gulf routes)",
+          "signal_class": "economic",
+          "interpretation": "A sudden spike into steep backwardation (spot premium over forward) combined with a surge in VLCC freight rates on the AG-East route (TD3C) signals markets are pricing in sustained Hormuz disruption and supply shock. A flattening or move toward contango signals markets expect the closure to be short-lived or that alternative routing is absorbing supply. False-signal trap: Saudi Arabia or UAE announcing emergency production increases or strategic reserve releases can suppress spot prices even during genuine closure, masking the severity of disruption.",
+          "monitoring_strategy": "Check ICE Brent futures term structure on TradingEconomics or Investing.com every 4 hours. Monitor Baltic Exchange VLCC TD3C (AG-Japan) and TD1 (AG-US Gulf) rates daily via Baltic Exchange or Clarksons. Threshold: backwardation exceeding $3/bbl or VLCC rates rising >20% within 24 hours constitutes meaningful movement. Cross-check with S&P Global Commodity Insights tanker market commentary.",
+          "sources": [
+            {
+              "name": "ICE Brent Futures (via Investing.com)",
+              "url": "https://www.investing.com/commodities/brent-oil",
+              "access_tier": "freemium",
+              "type": "market_data",
+              "language": "en"
+            },
+            {
+              "name": "Baltic Exchange",
+              "url": "https://www.balticexchange.com",
+              "access_tier": "paid",
+              "type": "market_data",
+              "language": "en"
+            },
+            {
+              "name": "S&P Global Commodity Insights",
+              "url": "https://www.spglobal.com/commodityinsights",
+              "access_tier": "paid",
+              "type": "market_data",
+              "language": "en"
+            },
+            {
+              "name": "TradingEconomics \u2013 Crude Oil",
+              "url": "https://tradingeconomics.com/commodity/crude-oil",
+              "access_tier": "freemium",
+              "type": "market_data",
+              "language": "en"
+            }
+          ],
+          "rationale": "Energy markets are the fastest-reacting open-source signal for how the global financial system is pricing Hormuz disruption severity; divergence between political statements and market pricing reveals which actors have better information.",
+          "novelty_self_score": 0.4
+        },
+        {
+          "signal": "CyberAv3ngers and IRGC-linked threat actor activity on industrial control system (ICS) honeypots and CISA/sector ISAC advisories",
+          "signal_class": "cyber",
+          "interpretation": "New CISA emergency directives, WaterISAC or E-ISAC bulletins, or credible reporting of CyberAv3ngers claiming successful ICS intrusions within 24 hours signals Iran is using the kinetic pause to open a cyber escalation track \u2014 consistent with the SITREP's identification of this as an unaddressed ceasefire vector. Silence or absence of new advisories suggests cyber operations remain at persistent-access/pre-positioning phase rather than destructive execution. False-signal trap: hacktivist groups sympathetic to Iran may claim attacks that are exaggerated or fabricated; always require corroboration from the targeted sector's ISAC or a CISA advisory before treating as state-level action.",
+          "monitoring_strategy": "Subscribe to CISA Known Exploited Vulnerabilities (KEV) catalog RSS and CISA Alerts RSS; check every 4 hours. Monitor WaterISAC member alerts (registration required) and E-ISAC portal. Track CyberAv3ngers Telegram channel and affiliated handles on X for claimed operations. Use Shodan or Censys to check for new exposure of vulnerable Unitronics PLCs or similar ICS devices (known CyberAv3ngers targets). Threshold: any new CISA emergency directive or sector ISAC bulletin citing Iranian-linked actors within 24 hours.",
+          "sources": [
+            {
+              "name": "CISA Alerts and Advisories RSS",
+              "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "WaterISAC",
+              "url": "https://www.waterisac.org",
+              "access_tier": "registration",
+              "type": "ngo",
+              "language": "en"
+            },
+            {
+              "name": "Shodan",
+              "url": "https://www.shodan.io",
+              "access_tier": "freemium",
+              "type": "api",
+              "language": "en"
+            },
+            {
+              "name": "Recorded Future (Insikt Group blog)",
+              "url": "https://www.recordedfuture.com/research",
+              "access_tier": "freemium",
+              "type": "think_tank",
+              "language": "en"
+            },
+            {
+              "name": "E-ISAC (Electricity ISAC)",
+              "url": "https://www.eisac.com",
+              "access_tier": "registration",
+              "type": "ngo",
+              "language": "en"
+            }
+          ],
+          "rationale": "The ceasefire framework explicitly contains no cyber provisions per the SITREP; Iranian cyber actors have both motive and established capability to escalate destructively during kinetic pauses, making 24-hour monitoring of ICS-focused threat activity load-bearing.",
+          "novelty_self_score": 0.5
+        },
+        {
+          "signal": "Hebrew-language social media (X, Telegram) activity tied to IDF reservist call-up orders and unit-level mobilization chatter",
+          "signal_class": "social",
+          "interpretation": "A surge in Hebrew-language posts referencing 'tzav 8' (emergency call-up orders), specific brigade or division designations being activated, or soldiers posting farewell content signals Israel is preparing for a significant kinetic operation \u2014 either in Lebanon or against Iran. Decreased chatter or posts about soldiers returning home signals de-escalation on the Israeli side. False-signal trap: IDF conducts routine readiness exercises that generate similar social signals; cross-check with official IDF Spokesperson statements and whether specific unit types (e.g., naval commandos, air defense) are mentioned, which would indicate operational rather than exercise mobilization.",
+          "monitoring_strategy": "Monitor Hebrew-language X accounts using TweetDeck or Brandwatch with keyword filters: '\u05e6\u05d5 8' (tzav 8), '\u05d2\u05d9\u05d5\u05e1' (mobilization), unit numbers (e.g., '36th Division,' 'Golani'). Monitor key IDF-adjacent Telegram channels (e.g., 'IDF Updates' aggregators). Check IDF Spokesperson (@IDFSpokesperson) every 2 hours. Threshold: five or more independent accounts referencing the same unit or order type within a 4-hour window. Cross-check against Israeli news outlets (Haaretz, Ynet) for corroboration.",
+          "sources": [
+            {
+              "name": "IDF Spokesperson (X / Twitter)",
+              "url": "https://twitter.com/IDFSpokesperson",
+              "access_tier": "free",
+              "type": "social",
+              "language": "en"
+            },
+            {
+              "name": "Haaretz",
+              "url": "https://www.haaretz.com",
+              "access_tier": "paid",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "Ynet News",
+              "url": "https://www.ynetnews.com",
+              "access_tier": "free",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "Brandwatch (social listening)",
+              "url": "https://www.brandwatch.com",
+              "access_tier": "paid",
+              "type": "dashboard",
+              "language": "multi"
+            },
+            {
+              "name": "Telegram (IDF/Israeli military aggregator channels)",
+              "url": "https://telegram.org",
+              "access_tier": "free",
+              "type": "social",
+              "language": "he"
+            }
+          ],
+          "rationale": "Israeli reservist mobilization is the most reliable leading indicator of imminent IDF offensive action; Hebrew social media has historically leaked mobilization signals hours before official announcements, making it a critical 24-hour watch item given IDF's approved operational plans for both Lebanon and Iran contingencies.",
+          "novelty_self_score": 0.45
+        }
+      ]
+    },
+    {
+      "horizon": "1w",
+      "signals": [
+        {
+          "signal": "Satellite imagery (commercial SAR and optical) of Bandar Abbas naval base, IRGC fast-boat staging areas, and Iranian air defense radar sites",
+          "signal_class": "satellite",
+          "interpretation": "Increased vessel density at Bandar Abbas, new fast-boat staging on the northern Hormuz shore, or repositioning of S-300/Bavar-373 radar emitters signals Iran is preparing for sustained enforcement of the Hormuz closure or anticipating US/Israeli strikes. Dispersal of naval assets away from Bandar Abbas into smaller Gulf ports (e.g., Jask, Chabahar) signals Iran is hardening against a decapitation strike on its naval force. False-signal trap: Iran routinely conducts naval exercises that look identical to pre-conflict staging; require corroboration with SIGINT-adjacent open sources (e.g., unusual radar emissions reported by amateur radio monitors) before concluding offensive intent.",
+          "monitoring_strategy": "Task Planet Labs PlanetScope or Maxar WorldView for daily revisit of Bandar Abbas (56.28\u00b0E, 27.18\u00b0N) and Jask naval base. Use Sentinel-1 SAR (free, 6-day revisit) for vessel counting in anchorage areas. Subscribe to Middlebury Institute's commercial imagery analysis or follow @detresfa_ on X for crowd-sourced satellite analysis. Threshold: >20% change in vessel count or new construction/revetment activity at any site within 72 hours. Cross-check with OSINT analysts on X (e.g., @Capt_Navy, @MT_Anderson) who routinely annotate Iranian naval imagery.",
+          "sources": [
+            {
+              "name": "Planet Labs (PlanetScope)",
+              "url": "https://www.planet.com",
+              "access_tier": "paid",
+              "type": "satcom",
+              "language": "en"
+            },
+            {
+              "name": "Sentinel Hub (ESA Copernicus)",
+              "url": "https://www.sentinel-hub.com",
+              "access_tier": "freemium",
+              "type": "satcom",
+              "language": "en"
+            },
+            {
+              "name": "@detresfa_ (OSINT satellite analyst, X)",
+              "url": "https://twitter.com/detresfa_",
+              "access_tier": "free",
+              "type": "social",
+              "language": "en"
+            },
+            {
+              "name": "Middlebury Institute \u2013 James Martin Center for Nonproliferation Studies",
+              "url": "https://www.nonproliferation.org",
+              "access_tier": "free",
+              "type": "think_tank",
+              "language": "en"
+            },
+            {
+              "name": "Maxar Technologies (SecureWatch)",
+              "url": "https://www.maxar.com",
+              "access_tier": "paid",
+              "type": "satcom",
+              "language": "en"
+            }
+          ],
+          "rationale": "Over a 1-week horizon, satellite imagery of Iranian naval and air defense infrastructure provides the most reliable structural indicator of whether Iran is preparing for sustained conflict or repositioning for a negotiated settlement; changes in physical posture lag political statements by 24\u201372 hours but are harder to fake.",
+          "novelty_self_score": 0.45
+        },
+        {
+          "signal": "Iranian domestic internet shutdown index and mobile data traffic anomalies (IRGC-linked censorship escalation)",
+          "signal_class": "domestic_political",
+          "interpretation": "A nationwide or regional internet shutdown in Iran (particularly in Tehran, Isfahan, or Khuzestan) within the 1-week window signals the IRGC is suppressing protest coordination following Khamenei's death \u2014 consistent with SITREP's high-confidence assessment of imminent unrest. Partial shutdowns targeting specific platforms (Instagram, WhatsApp) signal managed dissent rather than acute crisis. No shutdowns or restoration of previously throttled services signals the regime feels internally secure enough to allow information flow, possibly because protests have not materialized at scale. False-signal trap: Iran routinely throttles internet during Friday prayers or anniversaries; check whether timing correlates with a political event before inferring protest suppression.",
+          "monitoring_strategy": "Monitor NetBlocks (real-time internet disruption tracker) and IODA (Internet Outage Detection and Analysis) dashboards daily. Subscribe to NetBlocks Twitter/X alerts (@netblocks). Cross-check with OONI (Open Observatory of Network Interference) data for Iran. Monitor 1218.ir (Iranian internet freedom tracker) if accessible. Threshold: any nationwide connectivity drop >30% sustained for >2 hours, or blocking of a major platform not previously blocked. Corroborate with Iranian diaspora social media (Persian-language X, Instagram) for protest reporting.",
+          "sources": [
+            {
+              "name": "NetBlocks",
+              "url": "https://netblocks.org",
+              "access_tier": "free",
+              "type": "ngo",
+              "language": "en"
+            },
+            {
+              "name": "IODA (Internet Outage Detection and Analysis \u2013 Georgia Tech)",
+              "url": "https://ioda.inetintel.cc.gatech.edu",
+              "access_tier": "free",
+              "type": "dashboard",
+              "language": "en"
+            },
+            {
+              "name": "OONI (Open Observatory of Network Interference)",
+              "url": "https://ooni.org",
+              "access_tier": "free",
+              "type": "ngo",
+              "language": "en"
+            },
+            {
+              "name": "Iran International (Persian-language opposition outlet)",
+              "url": "https://www.iranintl.com/en",
+              "access_tier": "free",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "1420 (YouTube channel \u2013 Iranian street interviews)",
+              "url": "https://www.youtube.com/@1420channel",
+              "access_tier": "free",
+              "type": "social",
+              "language": "fa"
+            }
+          ],
+          "rationale": "Internal Iranian unrest is identified as a load-bearing uncertainty that could disrupt IRGC command coherence; internet shutdowns are the Iranian state's most consistent and observable first response to domestic mobilization, making them the leading indicator of whether the protest threshold has been crossed.",
+          "novelty_self_score": 0.5
+        },
+        {
+          "signal": "US military airlift and sealift activity: C-17/C-5 flight patterns into Diego Garcia, Al Udeid, and Ramstein; USNS prepositioning vessel movements",
+          "signal_class": "military",
+          "interpretation": "A sustained increase in heavy airlift (C-17, C-5) sorties into Diego Garcia or Al Udeid Air Base, combined with USNS fast sealift ships departing Diego Garcia or Rota, signals the US is surging additional munitions, equipment, or forces consistent with the reported 10,000-troop deployment. Decreased tempo or return flights of empty airlifters signals the surge is completing rather than accelerating. False-signal trap: routine rotational deployments and scheduled exercises generate similar airlift signatures; cross-check with CENTCOM press releases and Congressional notifications (Section 506 drawdown authority) to distinguish surge from routine.",
+          "monitoring_strategy": "Monitor ADS-B Exchange and FlightAware for USAF special mission callsigns (RCH, REACH, ATLAS) filing to OBBI (Bahrain), OTBH (Al Udeid), DIEG (Diego Garcia). Check daily. Monitor MarineTraffic for USNS vessel movements (T-AKE, T-AOE class). Subscribe to CENTCOM press releases RSS. Threshold: >10 heavy airlift sorties per 24-hour period into any single Gulf base, sustained over 3 days. Cross-check with Haaretz defense reporting and Breaking Defense.",
+          "sources": [
+            {
+              "name": "ADS-B Exchange",
+              "url": "https://www.adsbexchange.com",
+              "access_tier": "freemium",
+              "type": "adsb_flight",
+              "language": "en"
+            },
+            {
+              "name": "FlightAware",
+              "url": "https://www.flightaware.com",
+              "access_tier": "freemium",
+              "type": "adsb_flight",
+              "language": "en"
+            },
+            {
+              "name": "US CENTCOM Press Releases",
+              "url": "https://www.centcom.mil/MEDIA/PRESS-RELEASES",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "Breaking Defense",
+              "url": "https://breakingdefense.com",
+              "access_tier": "freemium",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "MarineTraffic (USNS vessel tracking)",
+              "url": "https://www.marinetraffic.com",
+              "access_tier": "freemium",
+              "type": "ais_shipping",
+              "language": "en"
+            }
+          ],
+          "rationale": "The SITREP reports a 10,000-troop US deployment surge; tracking the airlift and sealift execution of that surge over 1 week reveals whether the US is genuinely preparing for extended combat operations or using the deployment as diplomatic leverage, which is the key variable for whether talks succeed.",
+          "novelty_self_score": 0.5
+        },
+        {
+          "signal": "UNIFIL and Lebanese Armed Forces (LAF) incident reporting frequency and French diplomatic escalation indicators post-peacekeeper killing",
+          "signal_class": "diplomatic",
+          "interpretation": "An increase in UNIFIL daily incident reports citing Hezbollah activity, combined with French diplomatic escalation (emergency UN Security Council session, French naval assets repositioning to eastern Mediterranean), signals the peacekeeper killing is triggering a broader European re-engagement that could either stabilize (more monitoring presence) or escalate (French-Israeli friction) the Lebanon track. Silence from UNIFIL or French de-escalatory statements signals Paris has chosen to absorb the incident rather than escalate. False-signal trap: UNIFIL incident reports are often delayed 24\u201372 hours and may undercount incidents due to access restrictions; absence of reports does not equal absence of incidents.",
+          "monitoring_strategy": "Monitor UNIFIL official website and @UNIFIL_ on X for daily situation reports (SITREPs). Monitor French MFA (@francediplo_EN) and \u00c9lys\u00e9e Palace press releases for language escalation. Check UN Security Council meeting calendar (UN Web TV) for emergency sessions. Monitor French naval vessel movements via MarineTraffic (French Navy hull prefixes 'D' for destroyers, 'L' for amphibious). Threshold: any UNSC emergency session called within 72 hours of the peacekeeper killing, or French naval assets entering Lebanese territorial waters. Cross-check with L'Orient Today (Lebanese English-language outlet).",
+          "sources": [
+            {
+              "name": "UNIFIL Official Website",
+              "url": "https://unifil.unmissions.org",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "UNIFIL (@UNIFIL_ on X)",
+              "url": "https://twitter.com/UNIFIL_",
+              "access_tier": "free",
+              "type": "social",
+              "language": "en"
+            },
+            {
+              "name": "French Ministry of Foreign Affairs (@francediplo_EN)",
+              "url": "https://www.diplomatie.gouv.fr/en",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "en"
+            },
+            {
+              "name": "L'Orient Today",
+              "url": "https://www.lorientlejour.com/en",
+              "access_tier": "freemium",
+              "type": "news_outlet",
+              "language": "en"
+            },
+            {
+              "name": "UN Web TV (Security Council meetings)",
+              "url": "https://webtv.un.org",
+              "access_tier": "free",
+              "type": "gov_bulletin",
+              "language": "multi"
+            }
+          ],
+          "rationale": "The killing of a French UNIFIL peacekeeper is a potential escalation trigger that could draw European actors into the conflict and destabilize the Lebanon ceasefire track; over a 1-week horizon, French diplomatic and military responses are the key observable that determines whether this incident is contained or catalytic.",
+          "novelty_self_score": 0.4
+        },
+        {
+          "signal": "Persian-language Telegram channel sentiment and content analysis: IRGC-affiliated channels vs. reformist/opposition channels post-Khamenei death",
+          "signal_class": "social",
+          "interpretation": "A shift in IRGC-affiliated Telegram channels toward martyrdom narratives, calls for 'revenge,' or lionization of new leadership figures signals the regime is consolidating around a hardline successor posture and military escalation is more likely. Reformist or opposition channels showing increased coordination, protest call-outs, or sharing of protest logistics signals domestic unrest is approaching an organized threshold. Silence or heavy moderation across both channel types signals active IRGC suppression of the information environment. False-signal trap: IRGC-linked channels are known to run coordinated inauthentic behavior campaigns; a sudden surge in pro-regime content may be astroturfing rather than genuine mobilization.",
+          "monitoring_strategy": "Use Telegram monitoring tools (Telepathy, TGStat) to track follower counts, posting frequency, and engagement rates for 10\u201315 key Persian-language channels spanning IRGC-affiliated (e.g., Tasnim Telegram, Sepah News), reformist (e.g., Kalameh), and diaspora opposition (e.g., Iran International Telegram). Monitor daily. Use keyword tracking for '\u0631\u0647\u0628\u0631' (leader), '\u0627\u0646\u0642\u0644\u0627\u0628' (revolution), '\u0627\u0639\u062a\u0631\u0627\u0636' (protest), '\u0627\u0646\u062a\u0642\u0627\u0645' (revenge). Threshold: >50% increase in posting frequency or >100K new subscribers on any single channel within 72 hours. Cross-check with Iran International and Radio Farda reporting.",
+          "sources": [
+            {
+              "name": "TGStat (Telegram analytics)",
+              "url": "https://tgstat.com",
+              "access_tier": "freemium",
+              "type": "dashboard",
+              "language": "multi"
+            },
+            {
+              "name": "Iran International Telegram channel",
+              "url": "https://t.me/iranintl",
+              "access_tier": "free",
+              "type": "social",
+              "language": "fa"
+            },
+            {
+              "name": "Radio Farda (RFE/RL Persian Service)",
+              "url": "https://www.radiofarda.com",
+              "access_tier": "free",
+              "type": "news_outlet",
+              "language": "fa"
+            },
+            {
+              "name": "Telepathy (Telegram OSINT tool)",
+              "url": "https://github.com/jordanwildon/Telepathy",
+              "access_tier": "free",
+              "type": "api",
+              "language": "en"
+            },
+            {
+              "name": "Sepah News (IRGC official Telegram)",
+              "url": "https://t.me/sepahnews",
+              "access_tier": "free",
+              "type": "social",
+              "language": "fa"
+            }
+          ],
+          "rationale": "Persian-language Telegram is the primary open-source window into both IRGC internal messaging and Iranian civil society mobilization; over a 1-week horizon, divergence between regime and opposition channel dynamics is the best available proxy for whether internal unrest is reaching a threshold that could alter Iran's negotiating posture or IRGC command coherence.",
+          "novelty_self_score": 0.65
+        }
+      ]
+    }
+  ],
+  "overall_notes": "Several caveats apply to this signal set. First, the scenario involves active information warfare by all parties; Iranian state media, Israeli military spokespeople, and US government statements are all subject to deliberate manipulation and should never be treated as primary evidence without corroboration. Second, the AIS/ADSB maritime signals are particularly vulnerable to spoofing and jamming in the Hormuz theater; SAR satellite cross-checks are essential before drawing conclusions from vessel tracking data alone. Third, the internal Iran signals (internet shutdowns, Telegram sentiment) are subject to significant collection gaps due to Iranian censorship infrastructure; absence of signal should be treated as 'unknown' rather than 'no event.' Fourth, the 24h and 1w horizons are not cleanly separable in a fast-moving conflict; analysts should treat the 24h signals as requiring continuous monitoring rather than single-point checks. Finally, this panel note: the scenario stipulates Khamenei's death as background context \u2014 this is an extraordinary structural variable that makes all Iranian political signals less reliable than in a normal crisis, because the succession dynamics are opaque and the new decision-making hierarchy is not yet legible to open-source analysis.",
+  "signals": {
+    "24h": [
+      {
+        "signal": "IRGC gunboat sortie frequency and geographic pattern in Strait of Hormuz AIS/ADSB gap zones",
+        "signal_class": "maritime",
+        "interpretation": "Increased IRGC fast-boat activity, especially north of the median line or in the TSS (Traffic Separation Scheme) lanes, signals Iran is actively enforcing the closure and escalation risk is high. Decreased sortie tempo or withdrawal to anchorage positions near Bandar Abbas suggests Iran may be signaling a willingness to de-escalate or allow selective passage. False-signal trap: AIS gaps caused by Iranian jamming or spoofing may be misread as vessel compliance or absence of IRGC presence when the reverse is true; cross-check with Sentinel-1 SAR imagery and MarineTraffic anomaly alerts before concluding.",
+        "monitoring_strategy": "Pull MarineTraffic and VesselFinder AIS feeds every 2 hours for the Hormuz chokepoint bounding box (55.5\u201357.5\u00b0E, 25.5\u201327\u00b0N). Flag any vessel broadcasting distress (AIS flag 1) or going dark after entering the TSS. Cross-check with Windward or Pole Star commercial maritime intelligence for IRGC patrol vessel tracks. Threshold: three or more commercial vessels going dark or diverting within a 6-hour window constitutes meaningful movement. Corroborate with Lloyd's List Intelligence vessel-status updates.",
+        "sources": [
+          {
+            "name": "MarineTraffic",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "freemium",
+            "type": "ais_shipping",
+            "language": "en"
+          },
+          {
+            "name": "VesselFinder",
+            "url": "https://www.vesselfinder.com",
+            "access_tier": "freemium",
+            "type": "ais_shipping",
+            "language": "en"
+          },
+          {
+            "name": "Lloyd's List Intelligence",
+            "url": "https://lloydslist.maritimeintelligence.informa.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Windward Maritime AI",
+            "url": "https://windward.ai",
+            "access_tier": "paid",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "Copernicus Emergency Management Service (Sentinel-1 SAR)",
+            "url": "https://emergency.copernicus.eu",
+            "access_tier": "free",
+            "type": "satcom",
+            "language": "en"
+          }
+        ],
+        "rationale": "The Hormuz closure is the single most acute kinetic flashpoint in the SITREP; IRGC sortie patterns are the most direct observable indicator of whether Iran is escalating enforcement or creating space for negotiation. AIS gaps are a known Iranian tactic and must be monitored as a primary signal.",
+        "novelty_self_score": 0.55
+      },
+      {
+        "signal": "Iranian state media (IRNA, Press TV, Tasnim) framing of Ghalibaf statements vs. back-channel diplomatic language from Egypt/Pakistan mediators",
+        "signal_class": "diplomatic",
+        "interpretation": "If Iranian state media shifts from maximalist language ('war must fully end') to conditional framing ('pending verification of blockade suspension'), this signals internal authorization for a compromise. If Egyptian or Pakistani foreign ministry readouts use phrases like 'framework agreement' or 'confidence-building measures,' it suggests mediators have a draft text in circulation. Downward movement \u2014 hardening language, references to 'resistance' or 'martyrdom,' or silence from Ghalibaf \u2014 signals negotiating track is stalling. False-signal trap: Iranian state media is routinely used for domestic audience management and may project hardness even when back-channel progress is real; always triangulate with mediator-side statements.",
+        "monitoring_strategy": "Monitor IRNA and Tasnim RSS feeds every 30 minutes for keyword clusters: 'blockade,' 'ceasefire,' 'Ghalibaf,' 'Hormuz,' 'agreement.' Simultaneously monitor Egypt's MFA (@MFA_Spokesperson on X) and Pakistan's MOFA press releases. Use Google Translate API for Persian-language feeds. Threshold: any shift in conditional language within a 6-hour window warrants escalation to senior analyst. Cross-check with Reuters and AFP wire services for independent confirmation before treating as real.",
+        "sources": [
+          {
+            "name": "IRNA (Islamic Republic News Agency)",
+            "url": "https://en.irna.ir",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Tasnim News Agency",
+            "url": "https://www.tasnimnews.com/en",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Egypt Ministry of Foreign Affairs \u2013 Official Spokesperson",
+            "url": "https://www.mfa.gov.eg",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "ar"
+          },
+          {
+            "name": "Pakistan Ministry of Foreign Affairs",
+            "url": "https://mofa.gov.pk",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Reuters World News RSS",
+            "url": "https://feeds.reuters.com/reuters/worldNews",
+            "access_tier": "free",
+            "type": "rss",
+            "language": "en"
+          }
+        ],
+        "rationale": "The diplomatic track is the primary mechanism by which the Hormuz closure could be resolved without kinetic escalation; state media framing is the fastest open-source indicator of Iranian leadership's authorized negotiating posture.",
+        "novelty_self_score": 0.35
+      },
+      {
+        "signal": "Brent crude front-month vs. 3-month futures spread (contango/backwardation shift) and tanker freight rates (VLCC Middle East Gulf routes)",
+        "signal_class": "economic",
+        "interpretation": "A sudden spike into steep backwardation (spot premium over forward) combined with a surge in VLCC freight rates on the AG-East route (TD3C) signals markets are pricing in sustained Hormuz disruption and supply shock. A flattening or move toward contango signals markets expect the closure to be short-lived or that alternative routing is absorbing supply. False-signal trap: Saudi Arabia or UAE announcing emergency production increases or strategic reserve releases can suppress spot prices even during genuine closure, masking the severity of disruption.",
+        "monitoring_strategy": "Check ICE Brent futures term structure on TradingEconomics or Investing.com every 4 hours. Monitor Baltic Exchange VLCC TD3C (AG-Japan) and TD1 (AG-US Gulf) rates daily via Baltic Exchange or Clarksons. Threshold: backwardation exceeding $3/bbl or VLCC rates rising >20% within 24 hours constitutes meaningful movement. Cross-check with S&P Global Commodity Insights tanker market commentary.",
+        "sources": [
+          {
+            "name": "ICE Brent Futures (via Investing.com)",
+            "url": "https://www.investing.com/commodities/brent-oil",
+            "access_tier": "freemium",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "Baltic Exchange",
+            "url": "https://www.balticexchange.com",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "S&P Global Commodity Insights",
+            "url": "https://www.spglobal.com/commodityinsights",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "TradingEconomics \u2013 Crude Oil",
+            "url": "https://tradingeconomics.com/commodity/crude-oil",
+            "access_tier": "freemium",
+            "type": "market_data",
+            "language": "en"
+          }
+        ],
+        "rationale": "Energy markets are the fastest-reacting open-source signal for how the global financial system is pricing Hormuz disruption severity; divergence between political statements and market pricing reveals which actors have better information.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "CyberAv3ngers and IRGC-linked threat actor activity on industrial control system (ICS) honeypots and CISA/sector ISAC advisories",
+        "signal_class": "cyber",
+        "interpretation": "New CISA emergency directives, WaterISAC or E-ISAC bulletins, or credible reporting of CyberAv3ngers claiming successful ICS intrusions within 24 hours signals Iran is using the kinetic pause to open a cyber escalation track \u2014 consistent with the SITREP's identification of this as an unaddressed ceasefire vector. Silence or absence of new advisories suggests cyber operations remain at persistent-access/pre-positioning phase rather than destructive execution. False-signal trap: hacktivist groups sympathetic to Iran may claim attacks that are exaggerated or fabricated; always require corroboration from the targeted sector's ISAC or a CISA advisory before treating as state-level action.",
+        "monitoring_strategy": "Subscribe to CISA Known Exploited Vulnerabilities (KEV) catalog RSS and CISA Alerts RSS; check every 4 hours. Monitor WaterISAC member alerts (registration required) and E-ISAC portal. Track CyberAv3ngers Telegram channel and affiliated handles on X for claimed operations. Use Shodan or Censys to check for new exposure of vulnerable Unitronics PLCs or similar ICS devices (known CyberAv3ngers targets). Threshold: any new CISA emergency directive or sector ISAC bulletin citing Iranian-linked actors within 24 hours.",
+        "sources": [
+          {
+            "name": "CISA Alerts and Advisories RSS",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "WaterISAC",
+            "url": "https://www.waterisac.org",
+            "access_tier": "registration",
+            "type": "ngo",
+            "language": "en"
+          },
+          {
+            "name": "Shodan",
+            "url": "https://www.shodan.io",
+            "access_tier": "freemium",
+            "type": "api",
+            "language": "en"
+          },
+          {
+            "name": "Recorded Future (Insikt Group blog)",
+            "url": "https://www.recordedfuture.com/research",
+            "access_tier": "freemium",
+            "type": "think_tank",
+            "language": "en"
+          },
+          {
+            "name": "E-ISAC (Electricity ISAC)",
+            "url": "https://www.eisac.com",
+            "access_tier": "registration",
+            "type": "ngo",
+            "language": "en"
+          }
+        ],
+        "rationale": "The ceasefire framework explicitly contains no cyber provisions per the SITREP; Iranian cyber actors have both motive and established capability to escalate destructively during kinetic pauses, making 24-hour monitoring of ICS-focused threat activity load-bearing.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "Hebrew-language social media (X, Telegram) activity tied to IDF reservist call-up orders and unit-level mobilization chatter",
+        "signal_class": "social",
+        "interpretation": "A surge in Hebrew-language posts referencing 'tzav 8' (emergency call-up orders), specific brigade or division designations being activated, or soldiers posting farewell content signals Israel is preparing for a significant kinetic operation \u2014 either in Lebanon or against Iran. Decreased chatter or posts about soldiers returning home signals de-escalation on the Israeli side. False-signal trap: IDF conducts routine readiness exercises that generate similar social signals; cross-check with official IDF Spokesperson statements and whether specific unit types (e.g., naval commandos, air defense) are mentioned, which would indicate operational rather than exercise mobilization.",
+        "monitoring_strategy": "Monitor Hebrew-language X accounts using TweetDeck or Brandwatch with keyword filters: '\u05e6\u05d5 8' (tzav 8), '\u05d2\u05d9\u05d5\u05e1' (mobilization), unit numbers (e.g., '36th Division,' 'Golani'). Monitor key IDF-adjacent Telegram channels (e.g., 'IDF Updates' aggregators). Check IDF Spokesperson (@IDFSpokesperson) every 2 hours. Threshold: five or more independent accounts referencing the same unit or order type within a 4-hour window. Cross-check against Israeli news outlets (Haaretz, Ynet) for corroboration.",
+        "sources": [
+          {
+            "name": "IDF Spokesperson (X / Twitter)",
+            "url": "https://twitter.com/IDFSpokesperson",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "Haaretz",
+            "url": "https://www.haaretz.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Ynet News",
+            "url": "https://www.ynetnews.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Brandwatch (social listening)",
+            "url": "https://www.brandwatch.com",
+            "access_tier": "paid",
+            "type": "dashboard",
+            "language": "multi"
+          },
+          {
+            "name": "Telegram (IDF/Israeli military aggregator channels)",
+            "url": "https://telegram.org",
+            "access_tier": "free",
+            "type": "social",
+            "language": "he"
+          }
+        ],
+        "rationale": "Israeli reservist mobilization is the most reliable leading indicator of imminent IDF offensive action; Hebrew social media has historically leaked mobilization signals hours before official announcements, making it a critical 24-hour watch item given IDF's approved operational plans for both Lebanon and Iran contingencies.",
+        "novelty_self_score": 0.45
+      }
+    ],
+    "1w": [
+      {
+        "signal": "Satellite imagery (commercial SAR and optical) of Bandar Abbas naval base, IRGC fast-boat staging areas, and Iranian air defense radar sites",
+        "signal_class": "satellite",
+        "interpretation": "Increased vessel density at Bandar Abbas, new fast-boat staging on the northern Hormuz shore, or repositioning of S-300/Bavar-373 radar emitters signals Iran is preparing for sustained enforcement of the Hormuz closure or anticipating US/Israeli strikes. Dispersal of naval assets away from Bandar Abbas into smaller Gulf ports (e.g., Jask, Chabahar) signals Iran is hardening against a decapitation strike on its naval force. False-signal trap: Iran routinely conducts naval exercises that look identical to pre-conflict staging; require corroboration with SIGINT-adjacent open sources (e.g., unusual radar emissions reported by amateur radio monitors) before concluding offensive intent.",
+        "monitoring_strategy": "Task Planet Labs PlanetScope or Maxar WorldView for daily revisit of Bandar Abbas (56.28\u00b0E, 27.18\u00b0N) and Jask naval base. Use Sentinel-1 SAR (free, 6-day revisit) for vessel counting in anchorage areas. Subscribe to Middlebury Institute's commercial imagery analysis or follow @detresfa_ on X for crowd-sourced satellite analysis. Threshold: >20% change in vessel count or new construction/revetment activity at any site within 72 hours. Cross-check with OSINT analysts on X (e.g., @Capt_Navy, @MT_Anderson) who routinely annotate Iranian naval imagery.",
+        "sources": [
+          {
+            "name": "Planet Labs (PlanetScope)",
+            "url": "https://www.planet.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "Sentinel Hub (ESA Copernicus)",
+            "url": "https://www.sentinel-hub.com",
+            "access_tier": "freemium",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "@detresfa_ (OSINT satellite analyst, X)",
+            "url": "https://twitter.com/detresfa_",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "Middlebury Institute \u2013 James Martin Center for Nonproliferation Studies",
+            "url": "https://www.nonproliferation.org",
+            "access_tier": "free",
+            "type": "think_tank",
+            "language": "en"
+          },
+          {
+            "name": "Maxar Technologies (SecureWatch)",
+            "url": "https://www.maxar.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          }
+        ],
+        "rationale": "Over a 1-week horizon, satellite imagery of Iranian naval and air defense infrastructure provides the most reliable structural indicator of whether Iran is preparing for sustained conflict or repositioning for a negotiated settlement; changes in physical posture lag political statements by 24\u201372 hours but are harder to fake.",
+        "novelty_self_score": 0.45
+      },
+      {
+        "signal": "Iranian domestic internet shutdown index and mobile data traffic anomalies (IRGC-linked censorship escalation)",
+        "signal_class": "domestic_political",
+        "interpretation": "A nationwide or regional internet shutdown in Iran (particularly in Tehran, Isfahan, or Khuzestan) within the 1-week window signals the IRGC is suppressing protest coordination following Khamenei's death \u2014 consistent with SITREP's high-confidence assessment of imminent unrest. Partial shutdowns targeting specific platforms (Instagram, WhatsApp) signal managed dissent rather than acute crisis. No shutdowns or restoration of previously throttled services signals the regime feels internally secure enough to allow information flow, possibly because protests have not materialized at scale. False-signal trap: Iran routinely throttles internet during Friday prayers or anniversaries; check whether timing correlates with a political event before inferring protest suppression.",
+        "monitoring_strategy": "Monitor NetBlocks (real-time internet disruption tracker) and IODA (Internet Outage Detection and Analysis) dashboards daily. Subscribe to NetBlocks Twitter/X alerts (@netblocks). Cross-check with OONI (Open Observatory of Network Interference) data for Iran. Monitor 1218.ir (Iranian internet freedom tracker) if accessible. Threshold: any nationwide connectivity drop >30% sustained for >2 hours, or blocking of a major platform not previously blocked. Corroborate with Iranian diaspora social media (Persian-language X, Instagram) for protest reporting.",
+        "sources": [
+          {
+            "name": "NetBlocks",
+            "url": "https://netblocks.org",
+            "access_tier": "free",
+            "type": "ngo",
+            "language": "en"
+          },
+          {
+            "name": "IODA (Internet Outage Detection and Analysis \u2013 Georgia Tech)",
+            "url": "https://ioda.inetintel.cc.gatech.edu",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "OONI (Open Observatory of Network Interference)",
+            "url": "https://ooni.org",
+            "access_tier": "free",
+            "type": "ngo",
+            "language": "en"
+          },
+          {
+            "name": "Iran International (Persian-language opposition outlet)",
+            "url": "https://www.iranintl.com/en",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "1420 (YouTube channel \u2013 Iranian street interviews)",
+            "url": "https://www.youtube.com/@1420channel",
+            "access_tier": "free",
+            "type": "social",
+            "language": "fa"
+          }
+        ],
+        "rationale": "Internal Iranian unrest is identified as a load-bearing uncertainty that could disrupt IRGC command coherence; internet shutdowns are the Iranian state's most consistent and observable first response to domestic mobilization, making them the leading indicator of whether the protest threshold has been crossed.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "US military airlift and sealift activity: C-17/C-5 flight patterns into Diego Garcia, Al Udeid, and Ramstein; USNS prepositioning vessel movements",
+        "signal_class": "military",
+        "interpretation": "A sustained increase in heavy airlift (C-17, C-5) sorties into Diego Garcia or Al Udeid Air Base, combined with USNS fast sealift ships departing Diego Garcia or Rota, signals the US is surging additional munitions, equipment, or forces consistent with the reported 10,000-troop deployment. Decreased tempo or return flights of empty airlifters signals the surge is completing rather than accelerating. False-signal trap: routine rotational deployments and scheduled exercises generate similar airlift signatures; cross-check with CENTCOM press releases and Congressional notifications (Section 506 drawdown authority) to distinguish surge from routine.",
+        "monitoring_strategy": "Monitor ADS-B Exchange and FlightAware for USAF special mission callsigns (RCH, REACH, ATLAS) filing to OBBI (Bahrain), OTBH (Al Udeid), DIEG (Diego Garcia). Check daily. Monitor MarineTraffic for USNS vessel movements (T-AKE, T-AOE class). Subscribe to CENTCOM press releases RSS. Threshold: >10 heavy airlift sorties per 24-hour period into any single Gulf base, sustained over 3 days. Cross-check with Haaretz defense reporting and Breaking Defense.",
+        "sources": [
+          {
+            "name": "ADS-B Exchange",
+            "url": "https://www.adsbexchange.com",
+            "access_tier": "freemium",
+            "type": "adsb_flight",
+            "language": "en"
+          },
+          {
+            "name": "FlightAware",
+            "url": "https://www.flightaware.com",
+            "access_tier": "freemium",
+            "type": "adsb_flight",
+            "language": "en"
+          },
+          {
+            "name": "US CENTCOM Press Releases",
+            "url": "https://www.centcom.mil/MEDIA/PRESS-RELEASES",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Breaking Defense",
+            "url": "https://breakingdefense.com",
+            "access_tier": "freemium",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "MarineTraffic (USNS vessel tracking)",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "freemium",
+            "type": "ais_shipping",
+            "language": "en"
+          }
+        ],
+        "rationale": "The SITREP reports a 10,000-troop US deployment surge; tracking the airlift and sealift execution of that surge over 1 week reveals whether the US is genuinely preparing for extended combat operations or using the deployment as diplomatic leverage, which is the key variable for whether talks succeed.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "UNIFIL and Lebanese Armed Forces (LAF) incident reporting frequency and French diplomatic escalation indicators post-peacekeeper killing",
+        "signal_class": "diplomatic",
+        "interpretation": "An increase in UNIFIL daily incident reports citing Hezbollah activity, combined with French diplomatic escalation (emergency UN Security Council session, French naval assets repositioning to eastern Mediterranean), signals the peacekeeper killing is triggering a broader European re-engagement that could either stabilize (more monitoring presence) or escalate (French-Israeli friction) the Lebanon track. Silence from UNIFIL or French de-escalatory statements signals Paris has chosen to absorb the incident rather than escalate. False-signal trap: UNIFIL incident reports are often delayed 24\u201372 hours and may undercount incidents due to access restrictions; absence of reports does not equal absence of incidents.",
+        "monitoring_strategy": "Monitor UNIFIL official website and @UNIFIL_ on X for daily situation reports (SITREPs). Monitor French MFA (@francediplo_EN) and \u00c9lys\u00e9e Palace press releases for language escalation. Check UN Security Council meeting calendar (UN Web TV) for emergency sessions. Monitor French naval vessel movements via MarineTraffic (French Navy hull prefixes 'D' for destroyers, 'L' for amphibious). Threshold: any UNSC emergency session called within 72 hours of the peacekeeper killing, or French naval assets entering Lebanese territorial waters. Cross-check with L'Orient Today (Lebanese English-language outlet).",
+        "sources": [
+          {
+            "name": "UNIFIL Official Website",
+            "url": "https://unifil.unmissions.org",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "UNIFIL (@UNIFIL_ on X)",
+            "url": "https://twitter.com/UNIFIL_",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "French Ministry of Foreign Affairs (@francediplo_EN)",
+            "url": "https://www.diplomatie.gouv.fr/en",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "L'Orient Today",
+            "url": "https://www.lorientlejour.com/en",
+            "access_tier": "freemium",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "UN Web TV (Security Council meetings)",
+            "url": "https://webtv.un.org",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "multi"
+          }
+        ],
+        "rationale": "The killing of a French UNIFIL peacekeeper is a potential escalation trigger that could draw European actors into the conflict and destabilize the Lebanon ceasefire track; over a 1-week horizon, French diplomatic and military responses are the key observable that determines whether this incident is contained or catalytic.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "Persian-language Telegram channel sentiment and content analysis: IRGC-affiliated channels vs. reformist/opposition channels post-Khamenei death",
+        "signal_class": "social",
+        "interpretation": "A shift in IRGC-affiliated Telegram channels toward martyrdom narratives, calls for 'revenge,' or lionization of new leadership figures signals the regime is consolidating around a hardline successor posture and military escalation is more likely. Reformist or opposition channels showing increased coordination, protest call-outs, or sharing of protest logistics signals domestic unrest is approaching an organized threshold. Silence or heavy moderation across both channel types signals active IRGC suppression of the information environment. False-signal trap: IRGC-linked channels are known to run coordinated inauthentic behavior campaigns; a sudden surge in pro-regime content may be astroturfing rather than genuine mobilization.",
+        "monitoring_strategy": "Use Telegram monitoring tools (Telepathy, TGStat) to track follower counts, posting frequency, and engagement rates for 10\u201315 key Persian-language channels spanning IRGC-affiliated (e.g., Tasnim Telegram, Sepah News), reformist (e.g., Kalameh), and diaspora opposition (e.g., Iran International Telegram). Monitor daily. Use keyword tracking for '\u0631\u0647\u0628\u0631' (leader), '\u0627\u0646\u0642\u0644\u0627\u0628' (revolution), '\u0627\u0639\u062a\u0631\u0627\u0636' (protest), '\u0627\u0646\u062a\u0642\u0627\u0645' (revenge). Threshold: >50% increase in posting frequency or >100K new subscribers on any single channel within 72 hours. Cross-check with Iran International and Radio Farda reporting.",
+        "sources": [
+          {
+            "name": "TGStat (Telegram analytics)",
+            "url": "https://tgstat.com",
+            "access_tier": "freemium",
+            "type": "dashboard",
+            "language": "multi"
+          },
+          {
+            "name": "Iran International Telegram channel",
+            "url": "https://t.me/iranintl",
+            "access_tier": "free",
+            "type": "social",
+            "language": "fa"
+          },
+          {
+            "name": "Radio Farda (RFE/RL Persian Service)",
+            "url": "https://www.radiofarda.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "fa"
+          },
+          {
+            "name": "Telepathy (Telegram OSINT tool)",
+            "url": "https://github.com/jordanwildon/Telepathy",
+            "access_tier": "free",
+            "type": "api",
+            "language": "en"
+          },
+          {
+            "name": "Sepah News (IRGC official Telegram)",
+            "url": "https://t.me/sepahnews",
+            "access_tier": "free",
+            "type": "social",
+            "language": "fa"
+          }
+        ],
+        "rationale": "Persian-language Telegram is the primary open-source window into both IRGC internal messaging and Iranian civil society mobilization; over a 1-week horizon, divergence between regime and opposition channel dynamics is the best available proxy for whether internal unrest is reaching a threshold that could alter Iran's negotiating posture or IRGC command coherence.",
+        "novelty_self_score": 0.65
+      }
+    ]
+  },
+  "_member": "Council_Member_Claude",
+  "_model": "anthropic/claude-sonnet-4.6",
+  "_lineage": "Anthropic"
+}

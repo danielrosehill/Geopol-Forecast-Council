@@ -136,6 +136,36 @@ def author_schema(horizons: list[str]) -> dict:
         },
         "required": ["headline", "top_predictions"],
     }
+    delta_block = {
+        "type": "object",
+        "description": "Delta vs the most recent prior council run, if any. Omit if no prior run was supplied.",
+        "properties": {
+            "prior_run_id": {"type": "string"},
+            "prior_run_as_of": {"type": "string"},
+            "circumstance_changes": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "What materially changed in the world between the prior run's SITREP and this one.",
+            },
+            "lens_shifts": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "How the council's framing moved: new predictions raised, dropped predictions, "
+                               "confidence movements on matched predictions, shifts in consensus strength.",
+            },
+            "vindicated_signals": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Prior signals or predictions that have since been corroborated by events.",
+            },
+            "falsified_signals": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Prior signals or predictions that events have since contradicted.",
+            },
+        },
+        "required": ["prior_run_id", "circumstance_changes", "lens_shifts"],
+    }
     return {
         "name": "report_author_output",
         "schema": {
@@ -151,6 +181,7 @@ def author_schema(horizons: list[str]) -> dict:
                 "contested_signals": {"type": "array", "items": {"type": "string"}},
                 "watchlist_triggers": {"type": "array", "items": {"type": "string"}},
                 "calibration_note": {"type": "string"},
+                "delta_vs_prior": delta_block,
             },
             "required": ["by_horizon", "calibration_note"],
         },

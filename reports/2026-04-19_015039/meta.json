@@ -1,0 +1,50 @@
+{
+  "variant": "osint-signals",
+  "scenario": "Ongoing Iran-Israel-US armed conflict. What 5 OSINT signals should be watched over the 24h and 1w horizons, with interpretation and monitoring strategy for each?",
+  "horizons": [
+    "24h",
+    "1w"
+  ],
+  "rss_feeds": [
+    "https://www.timesofisrael.com/feed/",
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "https://feeds.bbci.co.uk/news/world/rss.xml"
+  ],
+  "grounding_tools": [
+    "rss",
+    "sonar",
+    "tavily"
+  ],
+  "council_head": {
+    "name": "Council_Head",
+    "model": "anthropic/claude-sonnet-4.6"
+  },
+  "council_members": [
+    {
+      "name": "Council_Member_GLM",
+      "model": "z-ai/glm-5.1",
+      "lineage": "Zhipu"
+    },
+    {
+      "name": "Council_Member_DeepSeek",
+      "model": "deepseek/deepseek-v3.2",
+      "lineage": "DeepSeek"
+    },
+    {
+      "name": "Council_Member_Gemini",
+      "model": "google/gemini-3-flash-preview",
+      "lineage": "Google"
+    },
+    {
+      "name": "Council_Member_Claude",
+      "model": "anthropic/claude-sonnet-4.6",
+      "lineage": "Anthropic"
+    },
+    {
+      "name": "Council_Member_Kimi",
+      "model": "moonshotai/kimi-k2.5",
+      "lineage": "Moonshot"
+    }
+  ],
+  "created": "2026-04-18T22:50:39+00:00"
+}

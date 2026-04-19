@@ -1,0 +1,392 @@
+{
+  "signals": {
+    "24h": [
+      {
+        "signal": "IRGC Fast-Boat Sortie Density at Strait of Hormuz",
+        "signal_class": "maritime",
+        "interpretation": "Increased IRGC gunboat sorties, vessel interdictions, or firing incidents in the Hormuz corridor signal Iran enforcing closure more aggressively and moving toward wider maritime confrontation. Decreased sorties and zero interdictions over 24-48h signal potential de-escalation, backchannel progress, or tactical repositioning. FALSE-SIGNAL TRAP: Routine patrol rotation or weather-driven sorties can mimic enforcement surges; a single high-profile interception may be performative (staged for media) rather than indicative of sustained closure posture.",
+        "monitoring_strategy": "Monitor AIS data for IRGC-linked vessel transits in the Hormuz corridor (26.0-27.0\u00b0N, 56.0-57.0\u00b0E). Cross-reference with commercial vessel distress/abort reports via TankerTrackers and geolocated social media footage of IRGC gunboat activity. Threshold: >3 confirmed IRGC vessel interdictions or gunboat sorties in 24h = meaningful escalation; 0 interdictions for 48h = meaningful de-escalation. Cross-check social media claims against AIS gaps and commercial operator reports before treating as confirmed.",
+        "sources": [
+          {
+            "name": "TankerTrackers (@TankerTrackers)",
+            "url": "https://twitter.com/tankertrackers",
+            "access_tier": "free",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "MarineTraffic (Live AIS)",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "freemium",
+            "type": "ais_shipping",
+            "language": "multi"
+          },
+          {
+            "name": "Lloyd's List Intelligence",
+            "url": "https://www.lloydslist.com",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "BBC Monitoring",
+            "url": "https://monitoring.bbc.co.uk",
+            "access_tier": "paid",
+            "type": "news_outlet",
+            "language": "multi"
+          }
+        ],
+        "rationale": "Strait of Hormuz is the most acute flashpoint per SITREP; IRGC enforcement posture directly determines whether the maritime confrontation escalates into wider conflict or de-escalates as diplomacy progresses.",
+        "novelty_self_score": 0.3
+      },
+      {
+        "signal": "IDF Reservist Call-Up Notices on Hebrew Telegram Channels",
+        "signal_class": "social",
+        "interpretation": "Surge in reservist call-up notices, emergency assembly messages, or 'tsav 8' (emergency mobilization) references on Hebrew Telegram signals Israel preparing for Lebanon front escalation or Iran contingency operations. Stable or declining call-up chatter indicates Israel maintaining current posture without escalation intent. FALSE-SIGNAL TRAP: Routine training cycle call-ups or panic amplification by non-official channels can mimic mobilization; call-ups for existing Gaza operations could be misattributed to Lebanon/Iran contingencies.",
+        "monitoring_strategy": "Monitor key Hebrew-language Telegram channels used by IDF reservist communities for keyword frequency: '\u05e6\u05d5 8' (tsav 8), '\u05d2\u05d9\u05d5\u05e1' (draft), '\u05d7\u05d9\u05e8\u05d5\u05dd' (emergency), '\u05de\u05d9\u05dc\u05d5\u05d0\u05d9\u05dd' (reserves). Track mention count against 7-day rolling baseline. Threshold: >2x baseline daily mention count sustained over 12h = meaningful signal; confirmed tsav 8 order from IDF spokesperson = critical. Cross-check against official IDF spokesperson statements and mainstream Israeli media (Walla, Ynet, Haaretz) before treating unofficial Telegram notices as confirmed.",
+        "sources": [
+          {
+            "name": "IDF Spokesperson (X/Twitter)",
+            "url": "https://twitter.com/idfspokesperson",
+            "access_tier": "free",
+            "type": "social",
+            "language": "he"
+          },
+          {
+            "name": "Walla News",
+            "url": "https://www.walla.co.il",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "he"
+          },
+          {
+            "name": "Ynetnews",
+            "url": "https://www.ynetnews.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "he"
+          },
+          {
+            "name": "Haaretz",
+            "url": "https://www.haaretz.com",
+            "access_tier": "freemium",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "IDF has approved operational plans for both Lebanon and Iran contingencies per SITREP; reservist mobilization is the most immediate observable precursor to escalation on either front, especially given the fragile Lebanon ceasefire after the UNIFIL killing.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "CyberAv3ngers/IRGC-Linked Hacktivist Telegram Channel Activity Volume",
+        "signal_class": "cyber",
+        "interpretation": "Increased posting frequency, new target claims, or operational 'teaser' content on Iranian hacktivist channels signals cyber actors escalating or preparing destructive campaigns during the kinetic pause. Decreased or routine posting indicates cyber operations remaining at current campaign level. FALSE-SIGNAL TRAP: Hacktivist channels frequently inflate claims or repost old operations; increased chatter could be performative propaganda rather than operational preparation; conversely, quiet channels could indicate OPSEC discipline before a real attack rather than de-escalation.",
+        "monitoring_strategy": "Monitor known CyberAv3ngers and IRGC-linked hacktivist Telegram channels for posting frequency and content type. Categorize: claims of access, DIB claims, ICS targeting claims, recruitment posts. Threshold: >3 new target claims in 24h or any claim of destructive (vs. disruptive) ICS impact = meaningful escalation; shift from water/ICS targeting to grid/gas pipeline claims = critical escalation. Cross-check claimed intrusions against CISA advisories, ICS-CERT alerts, and utility operator statements before treating as confirmed.",
+        "sources": [
+          {
+            "name": "CISA Cybersecurity Advisories",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Mandiant Threat Intelligence",
+            "url": "https://www.mandiant.com",
+            "access_tier": "paid",
+            "type": "think_tank",
+            "language": "en"
+          },
+          {
+            "name": "Recorded Future Threat Intelligence",
+            "url": "https://www.recordedfuture.com",
+            "access_tier": "paid",
+            "type": "api",
+            "language": "en"
+          },
+          {
+            "name": "Hackmageddon",
+            "url": "https://www.hackmageddon.net",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "The ceasefire framework explicitly ignores cyber operations per SITREP; Iranian-linked groups are already targeting ICS, water, and energy infrastructure, making cyber escalation the most likely unaddressed escalation vector during kinetic pauses.",
+        "novelty_self_score": 0.5
+      },
+      {
+        "signal": "Brent Front-Month vs 3-Month Futures Spread (M1-M3)",
+        "signal_class": "economic",
+        "interpretation": "Widening backwardation (front-month premium increasing vs. 3-month) signals the market pricing higher immediate Hormuz disruption risk and expectation of sustained closure or escalation. Narrowing spread or shift toward contango signals market pricing de-escalation or Hormus reopening. FALSE-SIGNAL TRAP: Spread can widen due to non-Hormuz factors (OPEC+ production decisions, China demand revisions, US inventory draws); speculative positioning can distort spreads independent of physical supply risk.",
+        "monitoring_strategy": "Monitor ICE Brent crude M1-M3 spread on 15-minute intervals during trading hours. Track absolute level and rate of change. Threshold: spread >$5/bbl backwardation sustained = meaningful Hormuz risk premium; spread narrowing by >$2/bbl in 24h = meaningful de-escalation signal. Cross-check against Dubai/Oman crude spreads (more directly Hormuz-exposed) and physical VLCC freight rates on Hormuz routes to confirm the move is Hormuz-driven rather than macro-driven.",
+        "sources": [
+          {
+            "name": "ICE Futures Europe",
+            "url": "https://www.theice.com",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "TradingView (BRN1!/BRN3!)",
+            "url": "https://www.tradingview.com",
+            "access_tier": "freemium",
+            "type": "dashboard",
+            "language": "multi"
+          },
+          {
+            "name": "S&P Global Platts",
+            "url": "https://www.spglobal.com/platts",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "Bloomberg Energy Markets",
+            "url": "https://www.bloomberg.com/energy",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          }
+        ],
+        "rationale": "Strait of Hormuz closure is the most acute flashpoint; oil market pricing is the fastest and most honest real-time assessment of whether the market expects escalation or de-escalation, cutting through contradictory diplomatic rhetoric from all parties.",
+        "novelty_self_score": 0.3
+      },
+      {
+        "signal": "Egypt-Pakistan Joint Mediator Statement Frequency and Specificity",
+        "signal_class": "diplomatic",
+        "interpretation": "Increased frequency with more specific language ('final agreement framework,' 'timeline for implementation') signals genuine diplomatic progress toward a binding deal. Decreased frequency or vaguer language ('constructive atmosphere,' 'continued engagement') signals diplomatic stalling or breakdown. FALSE-SIGNAL TRAP: Mediators may issue optimistic statements for domestic/regional audiences even when talks are stalled; silence does not necessarily mean failure\u2014backchannel progress often occurs without public statements.",
+        "monitoring_strategy": "Monitor official statements from Egyptian MFA and Pakistani ISPR/FO for references to Iran-US talks, 'final agreement,' ceasefire extension, Hormuz. Track specificity gradient: vague \u2192 specific timeline language = progress; specific \u2192 vague = regression. Threshold: Any joint Egypt-Pakistan statement referencing a 'timeline' or 'framework' for a final agreement = meaningful progress signal; 72h with no statement from either mediator after previously daily cadence = meaningful stall signal. Cross-check mediator language against concurrent Iranian and US official statements for consistency; if mediators claim progress but Iran denies substantive talks (as per SITREP contradictions), treat mediator claims cautiously.",
+        "sources": [
+          {
+            "name": "Egyptian Ministry of Foreign Affairs",
+            "url": "https://mfa.gov.eg",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "ar"
+          },
+          {
+            "name": "Pakistan ISPR",
+            "url": "https://www.ispr.gov.pk",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Pakistan Ministry of Foreign Affairs",
+            "url": "https://mofa.gov.pk",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "Reuters Diplomatic Coverage",
+            "url": "https://www.reuters.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "Egypt and Pakistan are the named mediators working on a 'final agreement' per SITREP; their public communication cadence and specificity are the most direct OSINT window into whether diplomatic progress is real or performative, especially given the contradiction between Iran denying substantive talks and mediators claiming progress.",
+        "novelty_self_score": 0.4
+      }
+    ],
+    "1w": [
+      {
+        "signal": "Bandar Abbas IRGC Naval Base Berthing Density via Satellite",
+        "signal_class": "satellite",
+        "interpretation": "Increased vessel density at IRGC naval facilities (Bandar Abbas, Bandar Jask) signals Iran sustaining or reinforcing Hormuz closure posture and preparing for extended maritime confrontation. Decreased vessel density or return to pre-crisis baseline signals Iran reducing naval posture, potential precursor to Hormuz reopening. FALSE-SIGNAL TRAP: Vessel count changes could reflect maintenance cycles, weather sheltering, or routine rotation rather than operational posture shifts; IRGC may disperse vessels to smaller bases to reduce satellite-detectable concentration while maintaining operational capability.",
+        "monitoring_strategy": "Acquire Sentinel-2 (10m, 5-day revisit) and Planet Labs (3m, daily) imagery of Bandar Abbas IRGC naval pier areas (27.18\u00b0N, 56.23\u00b0E) and Bandar Jask (25.64\u00b0N, 57.78\u00b0E). Count vessels >15m at IRGC-designated piers vs. pre-crisis baseline (Feb 2026). Threshold: >20% increase in berthed IRGC vessels sustained over 1 week = reinforcement signal; >30% decrease = drawdown signal. Cross-check vessel count trends against AIS data for IRGC-linked vessels and social media footage of base activity.",
+        "sources": [
+          {
+            "name": "Sentinel Hub (Copernicus)",
+            "url": "https://www.sentinel-hub.com",
+            "access_tier": "freemium",
+            "type": "satcom",
+            "language": "multi"
+          },
+          {
+            "name": "Planet Labs",
+            "url": "https://www.planet.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "Maxar SecureWatch",
+            "url": "https://www.maxar.com",
+            "access_tier": "paid",
+            "type": "satcom",
+            "language": "en"
+          },
+          {
+            "name": "Google Earth (historical baseline)",
+            "url": "https://earth.google.com",
+            "access_tier": "free",
+            "type": "satcom",
+            "language": "multi"
+          }
+        ],
+        "rationale": "Iran's Hormuz closure posture is the most acute flashpoint; IRGC naval base activity is the most direct physical indicator of whether Iran is sustaining or reducing its maritime enforcement capability over a weekly horizon, complementing the 24h sortie-count signal with structural force-posture data.",
+        "novelty_self_score": 0.4
+      },
+      {
+        "signal": "Iranian National Internet Throttling and Shutdown Events",
+        "signal_class": "cyber",
+        "interpretation": "Increased throttling or full shutdown events (especially mobile networks, Instagram/WhatsApp blocking) signals IRGC preparing for or responding to internal unrest and regime insecurity about post-Khamenei legitimacy. Stable or improved connectivity signals the internal situation is manageable and IRGC does not anticipate large-scale unrest. FALSE-SIGNAL TRAP: Iran routinely throttles internet during national exams, religious observances, or infrastructure maintenance; targeted local shutdowns (e.g., Sistan-Baluchestan) may not indicate national-level unrest; connectivity improvements could indicate IRGC confidence in control rather than genuine stability.",
+        "monitoring_strategy": "Monitor NetBlocks and IODA for real-time Iranian internet connectivity disruptions. Track AS58224 (Telecommunication Infrastructure Company) metrics at national and per-province level. Differentiate national-level shutdowns from provincial/local disruptions. Threshold: National-level connectivity drop >20% sustained >6h = meaningful unrest signal; 3+ provincial disruptions in 1 week = localized unrest spreading; no disruptions for 7+ days = regime confidence signal. Cross-check with Persian-language diaspora media (Iran International) for protest reports and with ICJ filing activity mentioned in SITREP.",
+        "sources": [
+          {
+            "name": "NetBlocks",
+            "url": "https://netblocks.org",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "IODA (CAIDA/Georgia Tech)",
+            "url": "https://ioda.caida.org",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "en"
+          },
+          {
+            "name": "OONI Explorer",
+            "url": "https://ooni.org",
+            "access_tier": "free",
+            "type": "dashboard",
+            "language": "multi"
+          },
+          {
+            "name": "Iran International",
+            "url": "https://www.iranintl.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "fa"
+          }
+        ],
+        "rationale": "Khamenei's death and infrastructure strikes have created conditions for internal unrest per SITREP; internet shutdown patterns are the most reliable OSINT proxy for IRGC perception of internal threat, which could alter Iran's negotiating posture or disrupt IRGC command coherence\u2014both load-bearing uncertainties.",
+        "novelty_self_score": 0.3
+      },
+      {
+        "signal": "Hezbollah Martyrdom and Operational Notice Frequency on Al-Manar and Affiliated Media",
+        "signal_class": "social",
+        "interpretation": "Increased martyrdom notices (especially for combatants in southern Lebanon rather than Syria) and operational readiness statements signal Hezbollah preparing public opinion for escalation and signaling intent to move beyond IED incidents. Stable or declining notices with focus on political/diplomatic messaging signals Hezbollah maintaining current posture. FALSE-SIGNAL TRAP: Martyrdom notices may increase due to Israeli strikes killing operatives (reactive) rather than Hezbollah-initiated escalation; Hezbollah may suppress notices during OPSEC periods before a planned offensive, making decreased notices ambiguous\u2014quiet could mean preparation rather than de-escalation.",
+        "monitoring_strategy": "Monitor Al-Manar TV website and Hezbollah media unit Telegram channels for martyrdom notices, operational statements, and Nasrallah/Qassem speech frequency. Categorize notices: south Lebanon operatives vs. Syria vs. other; combat vs. accidental deaths. Track Nasrallah speech frequency and rhetoric intensity (coded language for operations). Threshold: >5 south Lebanon martyrdom notices in 1 week (vs. baseline of 1-2) = escalation signal; Nasrallah speech with explicit 'open front' language = critical; shift to purely political messaging = de-escalation. Cross-check against IDF Northern Command statements and UNIFIL incident reports to verify whether increased notices correspond to actual kinetic events or are preparatory propaganda.",
+        "sources": [
+          {
+            "name": "Al-Manar TV",
+            "url": "https://www.almanar.com.lb",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "ar"
+          },
+          {
+            "name": "ACLED Lebanon Conflict Data",
+            "url": "https://acleddata.com",
+            "access_tier": "freemium",
+            "type": "academic",
+            "language": "en"
+          },
+          {
+            "name": "UNIFIL Daily Briefings",
+            "url": "https://unifil.unmissions.org",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "en"
+          },
+          {
+            "name": "The Cradle (Hezbollah-aligned analysis)",
+            "url": "https://thecradle.co",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "ar"
+          }
+        ],
+        "rationale": "Hezbollah retains significant military capabilities including long-range missiles per SITREP; the transition from isolated IED incidents to coordinated offensive would open a second major front, and Hezbollah's own media ecosystem is the most direct window into their escalation intent beyond what IDF or UNIFIL reporting can capture.",
+        "novelty_self_score": 0.6
+      },
+      {
+        "signal": "VLCC Cape of Good Hope Re-routing Volume from Persian Gulf Routes",
+        "signal_class": "maritime",
+        "interpretation": "Increasing VLCC re-routing around Cape of Good Hope (vs. Hormuz/Suez) signals the shipping market pricing sustained Hormuz closure; charterers and owners making structural decisions implying weeks-long disruption expectation. Stable or decreasing Cape re-routing with return to Hormuz routes signals market confidence in reopening. FALSE-SIGNAL TRAP: Some Cape re-routing may be driven by Suez Canal constraints, Red Sea Houthi threat, or charterer cost optimization rather than Hormuz-specific risk; VLCCs take ~6 weeks for Cape vs. ~2 weeks for Suez, so re-routing decisions lag current conditions and may reflect risk-aversion from the initial closure rather than current expectations.",
+        "monitoring_strategy": "Track VLCC vessel counts on Cape of Good Hope route vs. Hormuz/Suez route via AIS. Monitor TankerTrackers weekly re-routing tallies and freight rate differentials. Track VLCC spot rates for Middle East-Asia routes (Hormuz-dependent) vs. West Africa-Asia (Hormuz-independent). Threshold: >30% of Middle East-origin VLCCs re-routing via Cape sustained for 1 week = structural market expectation of prolonged closure; return of >50% of VLCCs to Hormuz transit = meaningful de-escalation. Cross-check against Brent M1-M3 spread (24h signal) and physical Saudi/Russian Pacific-route volumes to isolate Hormuz-specific vs. broader factors.",
+        "sources": [
+          {
+            "name": "TankerTrackers",
+            "url": "https://tankertrackers.com",
+            "access_tier": "freemium",
+            "type": "social",
+            "language": "en"
+          },
+          {
+            "name": "MarineTraffic (VLCC route filtering)",
+            "url": "https://www.marinetraffic.com",
+            "access_tier": "freemium",
+            "type": "ais_shipping",
+            "language": "multi"
+          },
+          {
+            "name": "Clarksons Shipping Intelligence Network",
+            "url": "https://www.clarksons.net",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          },
+          {
+            "name": "Baltic Exchange",
+            "url": "https://www.balticexchange.com",
+            "access_tier": "paid",
+            "type": "market_data",
+            "language": "en"
+          }
+        ],
+        "rationale": "Strait of Hormuz closure is the most acute flashpoint; VLCC re-routing is a structural market signal that captures whether the shipping industry expects prolonged disruption, which is a more honest indicator than diplomatic rhetoric about ceasefire terms and directly bears on whether the maritime confrontation is becoming the new normal.",
+        "novelty_self_score": 0.7
+      },
+      {
+        "signal": "Omani Foreign Ministry Public Engagement Cadence on Iran-US Track",
+        "signal_class": "diplomatic",
+        "interpretation": "Increased Omani FM public statements, meetings with Iranian/US officials, or Muscat-hosted delegations signals Oman activating backchannel mediation\u2014potential breakthrough or crisis management. Decreased Omani engagement or public silence on the Iran-US file signals the backchannel is dormant, with diplomacy shifted to Egypt/Pakistan exclusively or talks stalled beyond Omani rescue. FALSE-SIGNAL TRAP: Oman routinely mediates and may issue statements as part of ongoing process without indicating progress; Oman may go quiet during the most sensitive backchannel negotiations, making silence ambiguous (could mean intense secret talks OR abandonment of the channel).",
+        "monitoring_strategy": "Monitor Omani MFA statements, ministerial travel announcements, and Oman News Agency (ONA) for references to Iran, US, mediation, or hosting delegations. Track Omani FM travel to Tehran, Washington, or neutral venues. Threshold: Omani FM meeting with Iranian or US counterpart + public statement referencing 'progress' or 'framework' = meaningful backchannel signal; 1 week with no Omani engagement on Iran-US file after previously active = backchannel stall. Cross-check against Egypt/Pakistan mediator signals (24h signal #5); if Oman goes quiet while Egypt/Pakistan increase activity, this suggests channel shift rather than diplomatic collapse; if all three go quiet simultaneously, that is a stronger stall signal.",
+        "sources": [
+          {
+            "name": "Oman News Agency (ONA)",
+            "url": "https://www.omannews.gov.om",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "ar"
+          },
+          {
+            "name": "Omani Ministry of Foreign Affairs",
+            "url": "https://mfa.gov.om",
+            "access_tier": "free",
+            "type": "gov_bulletin",
+            "language": "ar"
+          },
+          {
+            "name": "Reuters Gulf/Diplomatic Coverage",
+            "url": "https://www.reuters.com",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          },
+          {
+            "name": "Middle East Eye",
+            "url": "https://www.middleeasteye.net",
+            "access_tier": "free",
+            "type": "news_outlet",
+            "language": "en"
+          }
+        ],
+        "rationale": "Oman has historically been the most consistent backchannel mediator between the US and Iran (JCPOA precursor talks, 2023 prisoner swap); its absence from the current SITREP's named mediators (Egypt/Pakistan) is itself notable, making any Omani engagement a high-signal indicator of whether the diplomatic track has viable backchannel prospects beyond the public channel.",
+        "novelty_self_score": 0.6
+      }
+    ]
+  },
+  "overall_notes": "These signals are designed to be complementary across horizons: the 24h set captures immediate escalation/de-escalation dynamics (kinetic posture, market pricing, real-time cyber chatter, diplomatic cadence), while the 1w set captures structural shifts (force posture via satellite, regime stability via internet shutdowns, escalation preparation via Hezbollah media, market structural adaptation via VLCC re-routing, backchannel viability via Omani engagement). Key methodological caveat: several signals (especially hacktivist Telegram chatter, Hezbollah martyrdom notices, and internet shutdowns) have bidirectional ambiguity where silence can mean either de-escalation or OPSEC before escalation. All such signals require cross-checking against at least one independent source before treating movement as meaningful. The contradiction between Iran denying substantive talks and mediators claiming progress makes diplomatic signals particularly prone to misread\u2014always triangulate mediator claims against both Iranian and US official statements.",
+  "_member": "Council_Member_GLM",
+  "_model": "z-ai/glm-5.1",
+  "_lineage": "Zhipu"
+}

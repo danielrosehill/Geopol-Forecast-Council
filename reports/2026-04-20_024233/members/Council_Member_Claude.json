@@ -1,0 +1,66 @@
+{
+  "horizons": [
+    {
+      "horizon": "24h",
+      "predictions": [
+        {
+          "prediction": "Iran issues a formal government statement (from the Supreme National Security Council or Foreign Ministry, not just parliament) condemning the Touska seizure as a ceasefire violation and threatening specific retaliatory measures, but stops short of ordering military action or withdrawing from Islamabad talks within the 24-hour window.",
+          "supporting_reasoning": "Iran's pattern in this conflict has been to issue escalatory rhetoric while preserving diplomatic off-ramps. Ghalibaf's statements signal deep distrust but not immediate walkout. Tehran has incentive to keep the Islamabad channel alive until April 22 to avoid being blamed for ceasefire collapse, especially with Pakistani PM Sharif actively mediating. A formal condemnation satisfies domestic hardliners without triggering full escalation. The Touska seizure demands a visible Iranian response, but military retaliation before April 22 would hand the US justification for resumed bombing.",
+          "historical_precedent_supporting": "Iran's response to the January 2020 killing of Qasem Soleimani: Tehran issued formal condemnations, declared 'severe revenge,' but calibrated its actual military response (Ain al-Assad missile strikes) to avoid US casualties and further escalation, while maintaining diplomatic signaling channels.",
+          "historical_precedent_counterveiling": "Iran's April 2024 direct drone and missile strike on Israel following the Damascus consulate bombing showed Tehran willing to cross escalatory thresholds when it calculated the reputational cost of inaction exceeded the risk of retaliation.",
+          "change_factor": "If a second Iranian vessel is seized or fired upon by US naval forces within the 24-hour window, the probability of Iran withdrawing from talks and ordering a military response increases sharply.",
+          "confidence": 0.52
+        },
+        {
+          "prediction": "The Islamabad talks do not formally collapse but produce no substantive framework agreement within 24 hours; Pakistani mediators announce a brief extension or recess of talks citing the Touska incident, with both sides nominally remaining at the table.",
+          "supporting_reasoning": "Vance confirmed no agreement as of April 19. Ghalibaf's public statements about distrust signal Iran is not close to a deal. However, Pakistan has strong incentives to prevent talks from collapsing entirely \u2014 a regional war resumption threatens Pakistani stability and its mediator status. A 'talks in recess' outcome allows all parties to save face: Iran can claim it is protesting the Touska seizure, the US can claim it is maintaining pressure, and Pakistan can claim the channel is preserved. This is the path of least resistance for all parties in the immediate 24 hours.",
+          "historical_precedent_supporting": "The 2015 Iran nuclear talks (JCPOA negotiations) repeatedly hit deadlines that were extended rather than broken, with mediating parties (EU3+3) announcing recesses and extensions to preserve the framework even when no deal was imminent.",
+          "historical_precedent_counterveiling": "The 2003 Aqaba Summit collapse: when trust between parties was sufficiently low and a triggering incident occurred, talks broke down rapidly despite mediator efforts, demonstrating that mediator optimism does not always translate to principal compliance.",
+          "change_factor": "If Iran's Supreme Leader Khamenei makes a public statement directly addressing the Touska seizure and characterizing it as grounds for ending negotiations, the probability of formal talk collapse within 24 hours rises substantially.",
+          "confidence": 0.48
+        },
+        {
+          "prediction": "No kinetic military action \u2014 Iranian missile strikes, IDF strikes on Iran, or additional US offensive naval operations beyond blockade enforcement \u2014 occurs within the 24-hour window ending April 20, 2026.",
+          "supporting_reasoning": "The ceasefire formally runs until April 22, giving all parties roughly 48 hours of nominal cover. Iran's military posture, while recovering (per US intelligence), has not been assessed as in an imminent-strike configuration. Israel's refreshed target banks suggest preparation, not imminent action. Trump's April 22 deadline creates a focal point that makes pre-deadline kinetic action by any party strategically costly in terms of blame assignment. The Touska seizure is inflammatory but falls within the US's stated blockade enforcement framework, making it a legal/diplomatic dispute rather than a clear casus belli triggering immediate military response.",
+          "historical_precedent_supporting": "The Cuban Missile Crisis (October 1962): despite extreme escalatory pressure and multiple provocative incidents (U-2 shootdown, naval confrontations), both superpowers avoided kinetic escalation during the active negotiating window, with the deadline structure itself serving as a restraining mechanism.",
+          "historical_precedent_counterveiling": "The July 2006 Lebanon War: Hezbollah's cross-border raid triggered an immediate and disproportionate Israeli military response within hours, demonstrating that even parties with incentives for restraint can escalate rapidly when a triggering incident is sufficiently provocative.",
+          "change_factor": "If Israeli intelligence detects Iran moving mobile missile launchers to pre-launch positions or dispersing ballistic missile assets in patterns consistent with imminent strike preparation, Israel is likely to conduct preemptive strikes regardless of the ceasefire timeline.",
+          "confidence": 0.61
+        }
+      ]
+    }
+  ],
+  "overall_confidence": 0.38,
+  "overall_notes": "This scenario involves a novel conflict configuration (US-Iran direct naval confrontation during a ceasefire, simultaneous Israel-Lebanon truce, Pakistan as mediator) with no close historical analogue. The Touska seizure is the dominant variable and its downstream effects are highly path-dependent on Iranian domestic politics and Khamenei's personal calculus, which are opaque. The April 22 deadline creates artificial urgency that may produce either a framework agreement or rapid escalation \u2014 the 24-hour window is genuinely binary in ways that make calibrated confidence difficult. All three predictions reflect a 'managed tension' baseline, but the tail risk of rapid escalation is non-trivial and underrepresented in confidence scores due to the base rate of ceasefire survival in similar contexts.",
+  "forecasts": {
+    "24h": [
+      {
+        "prediction": "Iran issues a formal government statement (from the Supreme National Security Council or Foreign Ministry, not just parliament) condemning the Touska seizure as a ceasefire violation and threatening specific retaliatory measures, but stops short of ordering military action or withdrawing from Islamabad talks within the 24-hour window.",
+        "supporting_reasoning": "Iran's pattern in this conflict has been to issue escalatory rhetoric while preserving diplomatic off-ramps. Ghalibaf's statements signal deep distrust but not immediate walkout. Tehran has incentive to keep the Islamabad channel alive until April 22 to avoid being blamed for ceasefire collapse, especially with Pakistani PM Sharif actively mediating. A formal condemnation satisfies domestic hardliners without triggering full escalation. The Touska seizure demands a visible Iranian response, but military retaliation before April 22 would hand the US justification for resumed bombing.",
+        "historical_precedent_supporting": "Iran's response to the January 2020 killing of Qasem Soleimani: Tehran issued formal condemnations, declared 'severe revenge,' but calibrated its actual military response (Ain al-Assad missile strikes) to avoid US casualties and further escalation, while maintaining diplomatic signaling channels.",
+        "historical_precedent_counterveiling": "Iran's April 2024 direct drone and missile strike on Israel following the Damascus consulate bombing showed Tehran willing to cross escalatory thresholds when it calculated the reputational cost of inaction exceeded the risk of retaliation.",
+        "change_factor": "If a second Iranian vessel is seized or fired upon by US naval forces within the 24-hour window, the probability of Iran withdrawing from talks and ordering a military response increases sharply.",
+        "confidence": 0.52
+      },
+      {
+        "prediction": "The Islamabad talks do not formally collapse but produce no substantive framework agreement within 24 hours; Pakistani mediators announce a brief extension or recess of talks citing the Touska incident, with both sides nominally remaining at the table.",
+        "supporting_reasoning": "Vance confirmed no agreement as of April 19. Ghalibaf's public statements about distrust signal Iran is not close to a deal. However, Pakistan has strong incentives to prevent talks from collapsing entirely \u2014 a regional war resumption threatens Pakistani stability and its mediator status. A 'talks in recess' outcome allows all parties to save face: Iran can claim it is protesting the Touska seizure, the US can claim it is maintaining pressure, and Pakistan can claim the channel is preserved. This is the path of least resistance for all parties in the immediate 24 hours.",
+        "historical_precedent_supporting": "The 2015 Iran nuclear talks (JCPOA negotiations) repeatedly hit deadlines that were extended rather than broken, with mediating parties (EU3+3) announcing recesses and extensions to preserve the framework even when no deal was imminent.",
+        "historical_precedent_counterveiling": "The 2003 Aqaba Summit collapse: when trust between parties was sufficiently low and a triggering incident occurred, talks broke down rapidly despite mediator efforts, demonstrating that mediator optimism does not always translate to principal compliance.",
+        "change_factor": "If Iran's Supreme Leader Khamenei makes a public statement directly addressing the Touska seizure and characterizing it as grounds for ending negotiations, the probability of formal talk collapse within 24 hours rises substantially.",
+        "confidence": 0.48
+      },
+      {
+        "prediction": "No kinetic military action \u2014 Iranian missile strikes, IDF strikes on Iran, or additional US offensive naval operations beyond blockade enforcement \u2014 occurs within the 24-hour window ending April 20, 2026.",
+        "supporting_reasoning": "The ceasefire formally runs until April 22, giving all parties roughly 48 hours of nominal cover. Iran's military posture, while recovering (per US intelligence), has not been assessed as in an imminent-strike configuration. Israel's refreshed target banks suggest preparation, not imminent action. Trump's April 22 deadline creates a focal point that makes pre-deadline kinetic action by any party strategically costly in terms of blame assignment. The Touska seizure is inflammatory but falls within the US's stated blockade enforcement framework, making it a legal/diplomatic dispute rather than a clear casus belli triggering immediate military response.",
+        "historical_precedent_supporting": "The Cuban Missile Crisis (October 1962): despite extreme escalatory pressure and multiple provocative incidents (U-2 shootdown, naval confrontations), both superpowers avoided kinetic escalation during the active negotiating window, with the deadline structure itself serving as a restraining mechanism.",
+        "historical_precedent_counterveiling": "The July 2006 Lebanon War: Hezbollah's cross-border raid triggered an immediate and disproportionate Israeli military response within hours, demonstrating that even parties with incentives for restraint can escalate rapidly when a triggering incident is sufficiently provocative.",
+        "change_factor": "If Israeli intelligence detects Iran moving mobile missile launchers to pre-launch positions or dispersing ballistic missile assets in patterns consistent with imminent strike preparation, Israel is likely to conduct preemptive strikes regardless of the ceasefire timeline.",
+        "confidence": 0.61
+      }
+    ]
+  },
+  "_member": "Council_Member_Claude",
+  "_model": "anthropic/claude-sonnet-4.6",
+  "_lineage": "Anthropic"
+}

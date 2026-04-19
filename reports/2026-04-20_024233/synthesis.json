@@ -1,0 +1,155 @@
+{
+  "by_horizon": {
+    "24h": {
+      "headline": "Iran issues formal condemnation of the Touska seizure while Islamabad talks survive in recess, with no kinetic military action expected before the April 22 deadline \u2014 but the ceasefire is under its most acute stress since it began.",
+      "top_predictions": [
+        {
+          "prediction": "Iran issues a formal government-level statement (Foreign Ministry or Supreme National Security Council) condemning the Touska seizure as a ceasefire violation and threatening proportional retaliation, but stops short of ordering military action or formally withdrawing from the Islamabad talks within the 24-hour window.",
+          "members_raising": [
+            "Council_Member_Claude",
+            "Council_Member_Grok"
+          ],
+          "mean_confidence": 0.535,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "Iran's established pattern is to issue escalatory rhetoric while preserving diplomatic off-ramps. Ghalibaf's public statements signal deep distrust but not an immediate walkout. Tehran has strong incentive to keep the Islamabad channel alive until April 22 to avoid being blamed for ceasefire collapse, especially with Pakistani PM Sharif actively mediating. A formal condemnation satisfies domestic hardliners without triggering full escalation. The Touska seizure demands a visible Iranian response, but military retaliation before April 22 would hand the US justification for resumed bombing. Iran's response to the January 2020 Soleimani killing \u2014 formal condemnations followed by a calibrated, casualty-avoiding missile strike \u2014 is the closest historical analogue: Tehran signaled resolve while managing escalation risk.",
+          "counterveiling_rationale": "Iran's April 2024 direct drone and missile strike on Israel following the Damascus consulate bombing showed Tehran willing to cross escalatory thresholds when it calculated the reputational cost of inaction exceeded the risk of retaliation. The Touska seizure is a direct kinetic humiliation of Iranian sovereignty that may compress the decision cycle for hardliners around Khamenei.",
+          "watch_trigger": "A second Iranian vessel is seized or fired upon by US naval forces within the 24-hour window, sharply raising the probability of Iran withdrawing from talks and ordering a military response."
+        },
+        {
+          "prediction": "The Islamabad talks do not formally collapse but produce no substantive framework agreement within 24 hours; Pakistani mediators announce a brief extension, recess, or next-session date, with both sides nominally remaining at the table despite the Touska incident.",
+          "members_raising": [
+            "Council_Member_Claude",
+            "Council_Member_Grok"
+          ],
+          "mean_confidence": 0.48,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "Vance confirmed no agreement as of April 19. Ghalibaf's public statements about distrust signal Iran is not close to a deal. Pakistan has strong incentives to prevent talks from collapsing entirely \u2014 a regional war resumption threatens Pakistani stability and its mediator status. A 'talks in recess' outcome allows all parties to save face: Iran can claim it is protesting the Touska seizure, the US can claim it is maintaining pressure, and Pakistan can claim the channel is preserved. The 2015 JCPOA negotiations repeatedly hit deadlines that were extended rather than broken, with mediating parties announcing recesses to preserve the framework even when no deal was imminent.",
+          "counterveiling_rationale": "The 2003 Aqaba Summit collapse demonstrated that when trust between parties is sufficiently low and a triggering incident occurs, talks can break down rapidly despite mediator efforts. If Khamenei makes a public statement characterizing the Touska seizure as grounds for ending negotiations, the probability of formal collapse within 24 hours rises substantially.",
+          "watch_trigger": "Iran's Supreme Leader Khamenei makes a public statement directly addressing the Touska seizure and characterizing it as grounds for ending negotiations."
+        },
+        {
+          "prediction": "No kinetic military action \u2014 Iranian missile strikes, IDF strikes on Iran, or additional US offensive naval operations beyond blockade enforcement \u2014 occurs within the 24-hour window ending April 20, 2026.",
+          "members_raising": [
+            "Council_Member_Claude",
+            "Council_Member_Grok"
+          ],
+          "mean_confidence": 0.615,
+          "consensus_strength": "moderate",
+          "supporting_rationale": "The ceasefire formally runs until April 22, giving all parties roughly 48 hours of nominal cover. Iran's military posture, while recovering per US intelligence, has not been assessed as in an imminent-strike configuration. Israel's refreshed target banks suggest preparation, not imminent action. Trump's April 22 deadline creates a focal point that makes pre-deadline kinetic action by any party strategically costly in terms of blame assignment. The Touska seizure falls within the US's stated blockade enforcement framework, making it a legal/diplomatic dispute rather than a clear casus belli. The Cuban Missile Crisis analogy is instructive: despite extreme escalatory pressure and multiple provocative incidents, both superpowers avoided kinetic escalation during the active negotiating window, with the deadline structure itself serving as a restraining mechanism.",
+          "counterveiling_rationale": "The July 2006 Lebanon War demonstrated that even parties with incentives for restraint can escalate rapidly when a triggering incident is sufficiently provocative. If Israeli intelligence detects Iran moving mobile missile launchers to pre-launch positions, Israel is likely to conduct preemptive strikes regardless of the ceasefire timeline.",
+          "watch_trigger": "Israeli intelligence detects Iran moving mobile missile launchers to pre-launch positions or dispersing ballistic missile assets in patterns consistent with imminent strike preparation."
+        },
+        {
+          "prediction": "Iranian-backed Iraqi militias (Kataib Hezbollah or Asaib Ahl al-Haq) claim responsibility for rocket, drone, or missile attacks against US military facilities in Iraq or Syria as a proxy retaliation for the Touska seizure, providing Tehran plausible deniability while signaling resolve.",
+          "members_raising": [
+            "Council_Member_Kimi"
+          ],
+          "mean_confidence": 0.35,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "Iran has historically used proxy forces for rapid retaliation that provides plausible deniability while signaling resolve. The Touska seizure constitutes a direct kinetic humiliation requiring response to satisfy domestic hardliners, but Tehran risks losing strategic advantage if it expends restored missile stocks prematurely before April 22. Militia attacks satisfy the publicly vowed 'retaliation' without triggering immediate US strategic bombing of Iranian territory. The January 2020 Kataib Hezbollah attacks on the US Embassy Baghdad and subsequent rocket attacks on Al-Asad and Taji bases following the Soleimani strike provide a direct precedent.",
+          "counterveiling_rationale": "September 2019 Aramco attacks showed Iran sometimes conducts direct complex strikes from Iranian territory rather than proxy actions when it wants maximum strategic impact. June 2019 Iranian restraint on proxy actions after the US drone shootdown also shows Tehran can calculate that proxy escalation risks triggering the very war it is trying to avoid.",
+          "watch_trigger": "US Central Command announces a 72-hour suspension of blockade enforcement activities in the Persian Gulf, removing Iran's immediate justification for proxy retaliation."
+        },
+        {
+          "prediction": "The IRGC Navy seizes a commercial tanker vessel flagged to the UK, Israel, or Argentina in the Strait of Hormuz or Persian Gulf as tit-for-tat retaliation for the Touska seizure, holding the crew for at least 24 hours.",
+          "members_raising": [
+            "Council_Member_Kimi"
+          ],
+          "mean_confidence": 0.25,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "The Touska incident creates a symmetry logic Iran has historically exploited \u2014 responding to maritime interdiction with maritime interdiction. The July 2019 seizure of the British-flagged Stena Impero following UK seizure of the Iranian Grace 1 tanker at Gibraltar is the closest precedent. Seizing a vessel flagged to a US ally (particularly Argentina given Milei's April 19 Isaac Accords signing) provides proportional retaliation without immediate kinetic exchange, while satisfying the Supreme Leader's requirement for visible retaliation.",
+          "counterveiling_rationale": "June 2019 Iranian restraint following the US downing of an Iranian drone over the Strait of Hormuz showed Tehran can choose diplomatic protest over maritime interdiction to avoid naval war. Pakistan convening an emergency trilateral meeting could provide a face-saving alternative to a tanker seizure. The prior run's prediction of IRGC harassment continuing was validated, but a full seizure is a higher escalatory threshold.",
+          "watch_trigger": "Pakistan convenes an emergency trilateral meeting in Islamabad including Vice President Vance and Speaker Ghalibaf within 6 hours to address the Touska incident, providing a diplomatic off-ramp that reduces the pressure for maritime retaliation."
+        },
+        {
+          "prediction": "Pakistan announces a ceasefire deadline extension beyond April 22, establishing a new expiry date no earlier than April 25, as a face-saving mechanism following the Touska incident.",
+          "members_raising": [
+            "Council_Member_Kimi"
+          ],
+          "mean_confidence": 0.3,
+          "consensus_strength": "single-source",
+          "supporting_rationale": "Pakistan has invested significant diplomatic capital in the Islamabad talks and faces strong domestic and regional incentives to prevent collapse over the Touska incident. Both Tehran and Washington benefit from appearing open to diplomacy while preparing military options. The November 2023 Gaza humanitarian pause extensions brokered by Qatar and Egypt, where deadlines were repeatedly extended by 24-48 hours under international pressure, provide a precedent.",
+          "counterveiling_rationale": "The January 2020 aftermath of the Soleimani assassination showed Iran can reject diplomatic overtures and conduct direct military retaliation within 72 hours without seeking ceasefire extensions. Ghalibaf's explicit statements about distrust and conditional continuation of talks make a clean extension announcement within 24 hours unlikely.",
+          "watch_trigger": "Iranian Foreign Ministry issues a formal ultimatum demanding immediate release of the Touska and compensation before April 20 12:00 UTC, foreclosing the extension pathway."
+        }
+      ],
+      "sharp_disagreements": [
+        "Council_Member_Kimi predicts active Iranian proxy attacks on US facilities in Iraq/Syria (confidence 0.35) and an IRGC tanker seizure (confidence 0.25) within 24 hours, while Council_Member_Claude and Council_Member_Grok both predict no kinetic military action occurs in the same window (confidence 0.61 and 0.62 respectively) \u2014 a direct contradiction on whether Iran escalates kinetically within the ceasefire window.",
+        "Council_Member_Kimi assigns only 0.30 to a ceasefire deadline extension being announced within 24 hours, while Council_Member_Claude assigns 0.48 to talks surviving in recess without collapse \u2014 reflecting different framings of whether Pakistani mediation produces a visible procedural outcome or merely quiet continuation.",
+        "Council_Member_Grok assigns 0.62 to no additional Iranian vessels being intercepted by the US blockade in the next 24 hours, while Council_Member_Kimi's tanker seizure prediction implies active IRGC maritime operations \u2014 these reflect opposing assessments of whether the maritime environment de-escalates or escalates within the window."
+      ]
+    }
+  },
+  "cross_horizon_themes": [
+    "The April 22 ceasefire deadline remains the single most consequential near-term variable, with the Touska seizure now compressing the decision cycle and raising the probability of pre-deadline escalation.",
+    "Iran's response calculus \u2014 balancing domestic hardliner pressure for visible retaliation against the strategic cost of ceasefire collapse before April 22 \u2014 is the dominant uncertainty across all predictions.",
+    "Pakistani mediation is the primary stabilizing mechanism, but its effectiveness depends entirely on whether principals (especially Khamenei) grant it operational space following the Touska incident.",
+    "The maritime dimension has shifted from IRGC harassment of commercial shipping to direct US-Iran naval confrontation, representing a qualitative escalation in the conflict's character.",
+    "Iran's partial military recovery (70% missile stockpiles, 60% launchers per US intelligence) creates a closing window for the US and Israel to achieve military objectives, adding urgency to the April 22 deadline from the US-Israel side."
+  ],
+  "convergent_signals": [
+    "All three members agree that no large-scale kinetic military action (Iranian ballistic missile strikes, IDF strikes on Iran) is likely within the 24-hour window, with the ceasefire deadline structure serving as a restraining mechanism.",
+    "All three members agree the Islamabad talks will not produce a substantive framework agreement within 24 hours \u2014 at best, procedural continuation or a recess announcement.",
+    "All three members agree Iran will issue some form of formal condemnation of the Touska seizure, with the disagreement being on the form and escalatory content of the response rather than whether a response occurs.",
+    "All three members agree the Touska seizure is the dominant variable shaping the next 24 hours, with all other dynamics subordinate to Iran's formal response to it."
+  ],
+  "contested_signals": [
+    "Whether Iran escalates kinetically within the ceasefire window via proxy attacks or maritime interdiction (Council_Member_Kimi, moderate confidence) versus maintaining restraint until April 22 (Council_Member_Claude and Council_Member_Grok, higher confidence on no kinetic action).",
+    "Whether Pakistani mediation produces a visible procedural outcome (extension announcement or formal recess) within 24 hours or simply continues quietly without a public signal.",
+    "The severity of Iran's formal response to the Touska seizure: whether it includes specific retaliatory threats with timelines (Council_Member_Claude) or remains at the level of general condemnation (Council_Member_Grok).",
+    "Whether the US conducts additional blockade enforcement actions within 24 hours (Council_Member_Grok assigns 0.62 to no additional seizures) or whether the Touska incident is the beginning of a pattern."
+  ],
+  "watchlist_triggers": [
+    "Second Iranian vessel seized or fired upon by US naval forces within 24 hours \u2014 would sharply raise probability of Iran withdrawing from talks and ordering military response.",
+    "Khamenei makes a public statement characterizing the Touska seizure as grounds for ending negotiations \u2014 would collapse the diplomatic track within hours.",
+    "Israeli intelligence detects Iran moving mobile missile launchers to pre-launch positions \u2014 would trigger preemptive IDF strikes regardless of ceasefire timeline.",
+    "Pakistan convenes emergency trilateral meeting including Vance and Ghalibaf within 6 hours \u2014 would provide diplomatic off-ramp reducing pressure for maritime retaliation.",
+    "Iranian Foreign Ministry issues formal ultimatum demanding immediate Touska release and compensation with a specific deadline \u2014 would foreclose the extension pathway and signal imminent escalation.",
+    "Iranian state media or President Pezeshkian explicitly declares talks 'suspended' or 'ended' citing the Touska seizure \u2014 would signal formal diplomatic collapse.",
+    "US Central Command announces a 72-hour suspension of blockade enforcement activities \u2014 would remove Iran's immediate justification for proxy retaliation.",
+    "IDF detects IRGC ballistic missile units dispersing to pre-launch positions \u2014 would trigger Israeli preemptive strike regardless of ceasefire status.",
+    "Kataib Hezbollah or Asaib Ahl al-Haq claims a rocket or drone attack on a US facility in Iraq or Syria \u2014 would signal Iran has chosen the proxy escalation pathway.",
+    "IRGC Navy boards or seizes a commercial tanker in the Strait of Hormuz \u2014 would trigger immediate US naval response and likely collapse the Islamabad talks."
+  ],
+  "calibration_note": "This forecast covers a 24-hour window dominated by a single triggering event (the Touska seizure) whose downstream effects are highly path-dependent on Khamenei's personal calculus and Iranian domestic politics, both of which are opaque to open-source analysis. The three members' predictions cluster around a 'managed tension' baseline \u2014 formal condemnation, no kinetic action, talks surviving in recess \u2014 but the tail risk of rapid escalation is non-trivial and underrepresented in mean confidence scores. Key low-probability, high-consequence risks not captured in the main predictions: (1) A US Navy vessel is struck by an Iranian anti-ship missile or drone in the Persian Gulf \u2014 would trigger massive US military response and end the diplomatic track entirely; (2) Khamenei issues a fatwa or public order for immediate military retaliation against US naval assets \u2014 would compress the decision cycle to hours rather than days; (3) Israel conducts unilateral preemptive strikes on Iranian missile sites citing the Touska incident as evidence of Iranian bad faith \u2014 would reset the entire conflict dynamic independent of US decision-making; (4) An Iranian proxy attack produces mass US casualties \u2014 would eliminate any remaining political space for the April 22 deadline to function as a restraining mechanism. This forecast is NOT a prediction that the ceasefire will survive to April 22 \u2014 it covers only the next 24 hours, and the April 22 deadline dynamics are a separate analytical question. This forecast is also NOT an assessment of the legal merits of the US blockade or the Touska seizure under international maritime law. Confidence scores are deliberately modest throughout, reflecting a genuinely novel conflict configuration with no close historical analogue and multiple simultaneous flashpoints where a single tactical incident could cascade into strategic escalation.",
+  "delta_vs_prior": {
+    "prior_run_id": "2026-04-18_235440",
+    "prior_run_as_of": "2026-04-18T20:54:40+00:00",
+    "circumstance_changes": [
+      "The US seized the Iranian-flagged cargo ship Touska near the Strait of Hormuz, with CENTCOM publishing video of a guided-missile destroyer firing on the vessel \u2014 a direct US-Iran naval confrontation that did not exist in the prior SITREP.",
+      "President Trump publicly confirmed the Touska seizure as blockade enforcement, framing it as a deliberate policy action rather than an incident.",
+      "Iran vowed retaliation over the Touska seizure and accused the US of violating the ceasefire \u2014 a formal escalation in Iranian rhetoric beyond the prior run's Hormuz closure posture.",
+      "Iranian Parliament Speaker Ghalibaf met directly with US Vice President Vance in Islamabad and publicly stated Iran has no trust in American commitments \u2014 the first confirmed face-to-face high-level US-Iran contact reported in the current run.",
+      "VP Vance confirmed no agreement had been reached following face-to-face sessions, providing a definitive negative data point on diplomatic progress.",
+      "A separate 10-day Israel-Lebanon ceasefire began April 17, with the IDF re-establishing a south Lebanon security zone \u2014 this ceasefire track is now distinct from the US-Iran ceasefire expiring April 22.",
+      "Argentine President Milei visited Jerusalem on April 19, signed the Isaac Accords with Israel, and publicly backed the US-Israel war on Iran \u2014 a new diplomatic alignment not present in the prior SITREP.",
+      "Pakistani PM Sharif held a direct phone call with Iranian President Pezeshkian on April 19, confirming Pakistan's active mediation role has intensified.",
+      "An IDF soldier destroying a Jesus statue in Lebanon drew international condemnation, adding a reputational dimension to the Lebanon front.",
+      "Turkey's FM Fidan accused Israel of using security as a pretext to occupy more Lebanese territory while US-Iran talks proceed \u2014 a new public Turkish position.",
+      "Iran's military recovery has been quantified in the current SITREP at approximately 70% missile stockpiles and 60% launchers restored, per US intelligence \u2014 a more specific assessment than the prior run contained.",
+      "The prior run's central maritime flashpoint was Iran's reimposition of Hormuz closure and IRGC gunboat harassment; the current run's central maritime flashpoint has shifted to a direct US seizure of an Iranian vessel, representing a qualitative escalation in the nature of the maritime confrontation."
+    ],
+    "lens_shifts": [
+      "The prior run's dominant 24h prediction cluster was Lebanon ceasefire kinetic incidents (strong consensus, mean confidence ~0.70) \u2014 this cluster has been entirely dropped in the current run, as the Lebanon ceasefire is now a separate track and the Touska seizure has displaced it as the primary flashpoint.",
+      "The prior run predicted continued IRGC harassment of commercial/naval vessels in Hormuz (strong consensus, mean confidence ~0.64) \u2014 the current run has replaced this with predictions about Iranian proxy attacks and IRGC tanker seizures as retaliation for the Touska seizure, reflecting the shift from Iranian-initiated harassment to US-initiated seizure as the maritime dynamic.",
+      "New prediction raised this run not present in prior: Iran issues a formal government-level condemnation of the Touska seizure while preserving diplomatic off-ramps (moderate consensus, mean confidence 0.535).",
+      "New prediction raised this run not present in prior: Pakistani mediation produces a ceasefire deadline extension beyond April 22 (single-source, confidence 0.30).",
+      "New prediction raised this run not present in prior: IRGC Navy seizes a commercial tanker as tit-for-tat retaliation (single-source, confidence 0.25).",
+      "The 'no framework agreement in 24h' prediction persists across both runs with similar confidence (~0.48-0.59), but the framing has shifted from 'talks produce only procedural signals' to 'talks survive in recess despite Touska incident' \u2014 reflecting the new stress on the diplomatic channel.",
+      "The 'no kinetic military action in 24h' prediction is new to this run (mean confidence 0.615) and reflects the specific restraining logic of the April 22 deadline \u2014 this was not explicitly predicted in the prior run because the prior run's 24h window was dominated by Lebanon kinetic incidents rather than the Iran-US direct confrontation.",
+      "Overall council confidence has shifted: prior run members expressed moderate-to-high confidence on Lebanon kinetic incidents; current run members express moderate confidence on managed tension outcomes, reflecting greater uncertainty about Iranian response to a direct US-Iran naval confrontation versus the more predictable Lebanon ceasefire erosion pattern."
+    ],
+    "vindicated_signals": [
+      "Prior prediction: 'No framework agreement announced in 24 hours; talks produce only procedural signals' \u2014 corroborated by VP Vance's confirmation that no agreement was reached following face-to-face sessions in Islamabad.",
+      "Prior prediction: 'Iran does not reopen the Strait of Hormuz within 24 hours' \u2014 corroborated by the current SITREP, which shows the US naval blockade remains in force and no Hormuz reopening has occurred.",
+      "Prior watch trigger: 'Pakistan brokers a specific written US commitment to ease the naval blockade' as a condition for Iranian maritime de-escalation \u2014 corroborated as still unmet, consistent with the prediction that Iran would not de-escalate Hormuz absent such a commitment.",
+      "Prior convergent signal: 'All members agree no comprehensive US-Iran framework agreement will be announced within 24 hours' \u2014 fully corroborated by the current SITREP's confirmation of no agreement.",
+      "Prior prediction: 'IRGC gunboats conduct at least one additional harassment, warning-shot, or boarding incident' \u2014 partially corroborated by the Touska seizure context, though the escalation took the form of a US seizure of an Iranian vessel rather than IRGC harassment of commercial shipping, suggesting the maritime confrontation escalated beyond the predicted form."
+    ],
+    "falsified_signals": [
+      "Prior strong-consensus prediction: 'At least one additional kinetic incident occurs in Lebanon within 24 hours' \u2014 the current SITREP does not report additional Lebanon kinetic incidents in the April 18-19 window beyond what was already known; the Lebanon front has stabilized into a nominal ceasefire track rather than continuing to deteriorate at the predicted rate, though the ceasefire remains fragile.",
+      "Prior prediction: 'France, backed by EU members, publicly calls for an emergency UN Security Council meeting to address the killing of the French UNIFIL peacekeeper' \u2014 not corroborated in the current SITREP, which makes no mention of a UNSC session being called, suggesting France chose bilateral pressure over multilateral escalation.",
+      "Prior watch trigger framing: 'Iran's reimposition of Hormuz closure and IRGC gunboat harassment as the primary maritime flashpoint' \u2014 the current SITREP shows the maritime flashpoint has shifted to a direct US seizure of an Iranian vessel, meaning the prior run's maritime escalation framing (Iran as aggressor, US as responder) has been partially inverted."
+    ]
+  }
+}

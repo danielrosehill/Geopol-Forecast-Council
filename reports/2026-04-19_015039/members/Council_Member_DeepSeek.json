@@ -1,0 +1,392 @@
+{
+  "overall_notes": "Signals are selected to directly inform the load-bearing uncertainties, focusing on observable, open-source events and indicators. The monitoring strategies prioritize actionable thresholds and cross-referencing to mitigate disinformation. Novelty scores reflect a mix of standard diplomatic/military monitoring and more creative use of composite or niche data sources.",
+  "signals": {
+    "1w": [
+      {
+        "interpretation": "A formal, public request from the US State Department or White House to extend the April 8 ceasefire would signal a commitment to maintain the diplomatic track despite the Hormuz closure, buying time for talks. The absence of such a request by the end of the 1-week horizon would indicate the US is prepared to let the informal ceasefire lapse, accepting a return to open conflict. A false signal could be a vague, leaked State Department memo about 'exploring options' that is not followed by a formal diplomatic d\u00e9marche.",
+        "monitoring_strategy": "Monitor official US government websites (State.gov, WhiteHouse.gov) and verified social media accounts of the Secretary of State, National Security Advisor, and US Mission to the UN for press releases, statements, or briefings. A 'meaningful movement' is a clear, on-record statement from a senior official (e.g., Spokesperson Miller) confirming a formal request has been delivered to relevant parties via diplomatic channels. Cross-check with reporting from major wire services (Reuters, AP) and statements from mediator nations (Egypt, Pakistan).",
+        "novelty_self_score": 0.15,
+        "rationale": "The SITREP notes the US had not formally requested a ceasefire extension as of April 16; this diplomatic action is a critical pivot point for the survival of the entire ceasefire framework and the trajectory of US-Iran talks.",
+        "signal": "Formal US diplomatic request for ceasefire extension",
+        "signal_class": "diplomatic",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "U.S. Department of State - Press Releases",
+            "type": "gov_bulletin",
+            "url": "https://www.state.gov/press-releases/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "The White House - Briefing Room",
+            "type": "gov_bulletin",
+            "url": "https://www.whitehouse.gov/briefing-room/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Reuters - Diplomatic News Wire",
+            "type": "news_outlet",
+            "url": "https://www.reuters.com/world/"
+          },
+          {
+            "access_tier": "free",
+            "language": "multi",
+            "name": "Associated Press (AP) Wire",
+            "type": "news_outlet",
+            "url": "https://apnews.com/hub/world-news"
+          }
+        ]
+      },
+      {
+        "interpretation": "A sustained, multi-day increase in the volume of vessels (tankers, bulk carriers) loitering outside the Strait of Hormuz or diverting via the Cape of Good Hope indicates commercial actors are pricing in a prolonged closure, undermining economic pressure on Iran. A decrease back to normal routing would signal that shipping companies assess the closure as temporary or ineffective. A false signal could be a temporary clustering due to unrelated port congestion or weather, not a strategic diversion.",
+        "monitoring_strategy": "Use MarineTraffic or VesselFinder dashboards to track live AIS positions of Very Large Crude Carriers (VLCCs) and other large commercial vessels in the Arabian Sea, Gulf of Oman, and southern Red Sea. Set a geo-fenced area. Count vessels showing 'Stopped' or 'Moored' status outside anchorages for >24h, or those whose destination field changes to a port requiring Cape routing. A meaningful movement is a week-over-week increase of >15% in such vessels. Cross-check with Lloyd's List Intelligence reports on tanker freight rates for Middle East routes.",
+        "novelty_self_score": 0.6,
+        "rationale": "Commercial shipping behavior is a real-time, aggregated market assessment of the Strait's closure risk. Persistent diversion would signal a major, lasting disruption to global energy flows, increasing economic stakes for all parties.",
+        "signal": "Commercial tanker loitering/diverting patterns outside Strait of Hormuz",
+        "signal_class": "maritime",
+        "sources": [
+          {
+            "access_tier": "freemium",
+            "language": "en",
+            "name": "MarineTraffic Live Map",
+            "type": "dashboard",
+            "url": "https://www.marinetraffic.com/en/ais/home"
+          },
+          {
+            "access_tier": "paid",
+            "language": "en",
+            "name": "Lloyd's List Intelligence",
+            "type": "market_data",
+            "url": "https://lloydslist.maritimeintelligence.informa.com/llint"
+          },
+          {
+            "access_tier": "freemium",
+            "language": "en",
+            "name": "VesselFinder",
+            "type": "dashboard",
+            "url": "https://www.vesselfinder.com"
+          },
+          {
+            "access_tier": "paid",
+            "language": "en",
+            "name": "TankerTrackers.com",
+            "type": "other",
+            "url": "https://www.tankertrackers.com"
+          }
+        ]
+      },
+      {
+        "interpretation": "An increase in the number and severity of ICS/SCADA security advisories from CISA and international CERTs regarding Iranian-linked activity, especially targeting water, energy, or transportation in NATO countries, signals cyber escalation exploiting the kinetic pause. A decrease or absence of new advisories suggests cyber actors are adhering to an unspoken ceasefire or are re-tooling. A false signal could be the re-publication of old TTPs without new victimology or a spike in low-skill hacktivist defacements that lack strategic impact.",
+        "monitoring_strategy": "Monitor the CISA Alerts & Advisories RSS feed and the @CISAgov Twitter account for new publications mentioning Iran, APT33, APT34, or CyberAv3ngers. Also check the UK NCSC and EU CERT-EU feeds. A meaningful movement is the issuance of a new, detailed advisory (AA22-xxx or similar) with technical indicators and victim sectors beyond previous reporting. Cross-check with corroborating analysis from private cybersecurity firms like Mandiant or CrowdStrike via their blogs.",
+        "novelty_self_score": 0.3,
+        "rationale": "The SITREP highlights cyber as an unaddressed escalation vector. Official advisories are a high-confidence, publicly observable indicator of state-linked cyber activity moving from espionage to potential disruptive attacks.",
+        "signal": "CISA/NCSC ICS-SCADA security advisories citing Iranian actors",
+        "signal_class": "cyber",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "CISA Alerts and Advisories (RSS)",
+            "type": "rss",
+            "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/feed"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "UK NCSC Advisories",
+            "type": "gov_bulletin",
+            "url": "https://www.ncsc.gov.uk/section/advice-guidance/all-advisories"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Mandiant (Google Cloud) Threat Intelligence Blog",
+            "type": "other",
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "CrowdStrike Blog",
+            "type": "other",
+            "url": "https://www.crowdstrike.com/blog/"
+          }
+        ]
+      },
+      {
+        "interpretation": "A surge in geolocated video posts from multiple Iranian cities showing large, sustained crowds (>10k) and direct anti-government or anti-war chants would signal the internal unrest forecast in the SITREP is materializing, potentially pressuring the regime. A decline in such content, especially if coupled with reports of nationwide internet throttling/shutdowns from NetBlocks, would signal a regime crackdown is in effect. A false signal could be a viral but isolated protest from a specific group (e.g., bazaar merchants) that does not generalize, or old footage recirculated.",
+        "monitoring_strategy": "Monitor the Twitter/X accounts of reliable Persian-language citizen journalists and researchers (e.g., @1500tasvir_en, @IranIntl) for video content. Use hashtag tracking (#\u0627\u0639\u062a\u0631\u0627\u0636\u0627\u062a, #\u0627\u06cc\u0631\u0627\u0646). Look for multiple, independent videos from different cities timestamped within the same 24-48h period. A meaningful movement is >50 distinct, geolocated protest videos from >=5 major cities over a week. Cross-check with NetBlocks data on internet disruptions and Reuters/AP text reports.",
+        "novelty_self_score": 0.4,
+        "rationale": "Internal Iranian unrest is a key uncertainty that could disrupt IRGC coherence and alter Iran's negotiating posture. Social media is the primary real-time vector for observing such events given state media blackouts.",
+        "signal": "Volume/geographic spread of Persian-language protest videos on social media",
+        "signal_class": "social",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "fa, en",
+            "name": "1500tasvir (English)",
+            "type": "social",
+            "url": "https://twitter.com/1500tasvir_en"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Iran International (English)",
+            "type": "news_outlet",
+            "url": "https://www.iranintl.com/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "NetBlocks Real-time Network Data",
+            "type": "dashboard",
+            "url": "https://netblocks.org/reports"
+          },
+          {
+            "access_tier": "free",
+            "language": "fa, en",
+            "name": "Radio Farda",
+            "type": "news_outlet",
+            "url": "https://www.radiofarda.com/"
+          }
+        ]
+      },
+      {
+        "interpretation": "An official, public statement from the French Ministry of Armed Forces or \u00c9lys\u00e9e Palace announcing the deployment of additional naval assets (e.g., a frigate, aircraft carrier group) to the Eastern Mediterranean or off Lebanon would signal a tangible European military response to the UNIFIL killing, raising the stakes. A statement reaffirming commitment to UNIFIL but announcing no new deployments would signal a desire to contain the incident. A false signal could be the routine, pre-scheduled rotation of a French vessel already in the region, misreported as a new deployment.",
+        "monitoring_strategy": "Monitor the French Ministry of Armed Forces press release page and the Twitter/X account of the French Navy (@MarineNationale). Also track the \u00c9lys\u00e9e Palace statements. A meaningful movement is a press release explicitly linking a new deployment decision to the security of UNIFIL or stability in Lebanon. Cross-check with shipping data (MarineTraffic ADS-B for military transponders) and reporting from French outlets like Le Monde.",
+        "novelty_self_score": 0.5,
+        "rationale": "Macron has directly blamed Hezbollah for the French peacekeeper's death. A European military reinforcement would be a major development, potentially drawing a NATO member more directly into the Lebanon front and altering Hezbollah's risk calculus.",
+        "signal": "French naval deployment announcements to Eastern Mediterranean",
+        "signal_class": "military",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "fr",
+            "name": "Minist\u00e8re des Arm\u00e9es - Actualit\u00e9s",
+            "type": "gov_bulletin",
+            "url": "https://www.defense.gouv.fr/actualites"
+          },
+          {
+            "access_tier": "free",
+            "language": "fr, en",
+            "name": "Marine nationale (Twitter)",
+            "type": "social",
+            "url": "https://twitter.com/MarineNationale"
+          },
+          {
+            "access_tier": "free",
+            "language": "fr",
+            "name": "\u00c9lys\u00e9e - D\u00e9clarations",
+            "type": "gov_bulletin",
+            "url": "https://www.elysee.fr/declarations"
+          },
+          {
+            "access_tier": "registration",
+            "language": "en",
+            "name": "Janes Defence News",
+            "type": "news_outlet",
+            "url": "https://www.janes.com/defence-news"
+          }
+        ]
+      }
+    ],
+    "24h": [
+      {
+        "interpretation": "An increase in the number of vessels broadcasting 'Not Under Command' (NUC), 'Restricted Maneuverability' (RAM), or distress signals via AIS within the Strait of Hormuz or adjacent waters would signal active harassment or attacks on shipping is intensifying. A return to normal traffic with no such signals would suggest a lull in IRGC naval activity, possibly for diplomatic reasons. A false signal could be a cluster of vessels turning off AIS for sanctions evasion (common with Iranian tankers) rather than due to coercion.",
+        "monitoring_strategy": "Use the MarineTraffic Live Map with a geo-fence around the Strait of Hormuz (approx. 25-27N, 56-57E). Filter AIS data for vessels with special status codes (NUC, RAM) or those that suddenly stop transmitting. Monitor in near real-time, with meaningful movement defined as >3 such incidents within a 12-hour period. Cross-check with alerts from the UK Maritime Trade Operations (UKMTO) and the U.S. Navy's Fifth Fleet/NAVCENT public statements.",
+        "novelty_self_score": 0.25,
+        "rationale": "The Strait of Hormuz closure is the most acute flashpoint. Real-time AIS anomalies are the most direct open-source indicator of incidents at sea, providing immediate warning of escalation or de-escalation.",
+        "signal": "AIS anomalies (NUC/RAM/distress) in Strait of Hormuz",
+        "signal_class": "maritime",
+        "sources": [
+          {
+            "access_tier": "freemium",
+            "language": "en",
+            "name": "MarineTraffic Live Map",
+            "type": "dashboard",
+            "url": "https://www.marinetraffic.com/en/ais/home"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "UK Maritime Trade Operations (UKMTO) Advisory Notices",
+            "type": "gov_bulletin",
+            "url": "https://www.ukmto.org/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "U.S. Naval Forces Central Command (NAVCENT) News",
+            "type": "gov_bulletin",
+            "url": "https://www.navy.mil/NAVCENT/"
+          },
+          {
+            "access_tier": "paid",
+            "language": "en",
+            "name": "Windward Maritime AI Platform",
+            "type": "dashboard",
+            "url": "https://windward.ai/"
+          }
+        ]
+      },
+      {
+        "interpretation": "A formal, on-record statement from the IDF Spokesperson or Israeli PMO confirming a targeted killing of a senior Hezbollah commander (e.g., Jihad Mughniyeh-level) in Lebanon would signal a major Israeli escalation beyond retaliatory strikes on operatives, likely collapsing the Lebanon ceasefire. The absence of such announcements, despite continued lower-level clashes, would indicate Israel is adhering to the ceasefire's self-defense provisions. A false signal could be social media rumors of a senior figure's death that are not confirmed by official Israeli or Hezbollah channels for 6+ hours.",
+        "monitoring_strategy": "Monitor the official Twitter/X account of the IDF Spokesperson (@IDF) and the Israel Prime Minister's Office website for press releases in Hebrew and English. A meaningful movement is a clear, attributed statement naming a specific high-value Hezbollah military or security official. Cross-check with Hezbollah's own media arm (Al-Manar) for confirmation or denial, and with major wire services (Reuters, AP) which would have their own sourcing.",
+        "novelty_self_score": 0.2,
+        "rationale": "Following the first post-ceasefire IDF strikes and the killing of an IDF reservist, the next major escalation on the Lebanon front would likely be a high-value targeted assassination, which would severely test the fragile ceasefire.",
+        "signal": "IDF announcements of senior Hezbollah commander targeted killings",
+        "signal_class": "military",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "en, he",
+            "name": "IDF Spokesperson (Twitter)",
+            "type": "social",
+            "url": "https://twitter.com/IDF"
+          },
+          {
+            "access_tier": "free",
+            "language": "he, en",
+            "name": "Prime Minister's Office of Israel",
+            "type": "gov_bulletin",
+            "url": "https://www.gov.il/en/departments/prime_ministers_office"
+          },
+          {
+            "access_tier": "free",
+            "language": "ar, en",
+            "name": "Al-Manar TV Website",
+            "type": "news_outlet",
+            "url": "https://english.almanar.com.lb/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Reuters Israel-Lebanon Wire",
+            "type": "news_outlet",
+            "url": "https://www.reuters.com/world/middle-east/"
+          }
+        ]
+      },
+      {
+        "interpretation": "A spike in the daily trading volume of the Tehran Stock Exchange (TSE) Total Index, particularly if coupled with a sharp price move (>5%), could signal either panic selling by domestic investors fearing escalation or a coordinated effort by state-backed actors to stabilize the market ahead of anticipated unrest. A flat, low-volume market would suggest capital controls are effective or that the public is in a 'wait-and-see' mode. A false signal could be a technical glitch or a single large block trade in a state-owned company that distorts the index.",
+        "monitoring_strategy": "Monitor the TSE Total Index (TEDPIX) data on the TSE website or via financial data aggregators like TradingView. Check at market close (Tehran time, ~12:30 UTC). A meaningful movement is a daily volume increase of >30% over the 5-day average AND an absolute index move of >\u00b13%. Cross-check with analysis from financial news outlets covering Iran (e.g., Bourse & Bazaar) for context on specific sector moves and potential government intervention rumors.",
+        "novelty_self_score": 0.7,
+        "rationale": "The Iranian stock market is a sensitive, albeit manipulated, barometer of domestic economic anxiety and regime stability efforts. A sharp move in the next 24h could provide early warning of the internal unrest forecast in the SITREP or of regime preparations for it.",
+        "signal": "Tehran Stock Exchange (TSE) daily trading volume & price spike",
+        "signal_class": "economic",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "fa",
+            "name": "Tehran Stock Exchange (TSE) Market Watch",
+            "type": "market_data",
+            "url": "http://www.tsetmc.com/Loader.aspx?ParTree=15131F"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "TradingView - TEDPIX Chart",
+            "type": "market_data",
+            "url": "https://www.tradingview.com/symbols/TEDPIX/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Bourse & Bazaar",
+            "type": "news_outlet",
+            "url": "https://www.bourseandbazaar.com/"
+          },
+          {
+            "access_tier": "paid",
+            "language": "en",
+            "name": "Bloomberg Terminal (Ticker: TEDPUSD Index)",
+            "type": "market_data",
+            "url": "https://www.bloomberg.com/professional"
+          }
+        ]
+      },
+      {
+        "interpretation": "An increase in the number of flight tracks from Iranian soil (especially from known IRGC/IRIAF bases like Bandar Abbas, Shiraz) heading west over Iraq/Syria toward Israel/Lebanon, as detected by ADS-B/Mode-S, would signal a potential drone or missile launch campaign is imminent or underway. A decrease to normal civilian traffic levels would suggest no immediate aerial escalation. A false signal could be a civilian airliner flying a normal route, or military aircraft with transponders on for a training exercise unrelated to the conflict.",
+        "monitoring_strategy": "Use ADS-B Exchange's military filter and FR24's playback feature to monitor air traffic originating from Iran. Focus on aircraft squawking non-commercial codes (e.g., MIL codes) or showing erratic flight paths (e.g., circling in launch areas). A meaningful movement is >3 distinct military-type tracks heading on a westerly vector from Iranian bases within a 6-hour period. Cross-check with reports of air raid sirens in Israel or northern Iraq from local social media and news.",
+        "novelty_self_score": 0.55,
+        "rationale": "Iran has previously launched drones and missiles directly at Israel. Real-time flight tracking provides a crucial 1-2 hour warning window for such attacks, which would constitute a major breach of the ceasefire and trigger massive retaliation.",
+        "signal": "Military aircraft/drone tracks from Iran heading west via ADS-B",
+        "signal_class": "air",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "ADS-B Exchange Military Filter",
+            "type": "dashboard",
+            "url": "https://globe.adsbexchange.com/?showMil=1"
+          },
+          {
+            "access_tier": "freemium",
+            "language": "en",
+            "name": "Flightradar24 Playback & Alerts",
+            "type": "dashboard",
+            "url": "https://www.flightradar24.com/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en, he",
+            "name": "IL Red Alert (Twitter Bot)",
+            "type": "social",
+            "url": "https://twitter.com/ILRedAlert"
+          },
+          {
+            "access_tier": "free",
+            "language": "ar",
+            "name": "Syrian Observatory for Human Rights (SOHR) Telegram",
+            "type": "social",
+            "url": "https://t.me/SyriaOHR"
+          }
+        ]
+      },
+      {
+        "interpretation": "A joint press conference or simultaneous statements from the Egyptian and Pakistani Foreign Ministers announcing a agreed-upon text or a date for the next round of US-Iran talks would signal tangible diplomatic progress, potentially offsetting the Hormuz tension. Contradictory statements from the two mediators, or a clear downplaying of progress by either side, would signal the diplomatic track is stalling. A false signal could be a vague, optimistic statement from one mediator that is not corroborated by the other or by the principals.",
+        "monitoring_strategy": "Monitor the official websites and social media accounts of the Egyptian Ministry of Foreign Affairs and Pakistan's Ministry of Foreign Affairs. Also watch the Twitter/X accounts of their respective Foreign Ministers. A meaningful movement is a coordinated release (within 1-2 hours) of statements explicitly referencing a 'draft agreement,' 'final text,' or a confirmed meeting date. Cross-check with the US State Department daily press briefing for confirmation.",
+        "novelty_self_score": 0.25,
+        "rationale": "Egypt and Pakistan are the key mediators working on a 'final agreement.' Their coordinated public messaging is a high-reliability, short-term indicator of whether the diplomatic track is moving forward or breaking down.",
+        "signal": "Coordinated Egypt-Pakistan FM statements on US-Iran talks progress",
+        "signal_class": "diplomatic",
+        "sources": [
+          {
+            "access_tier": "free",
+            "language": "ar, en",
+            "name": "Egypt Ministry of Foreign Affairs",
+            "type": "gov_bulletin",
+            "url": "https://www.mfa.gov.eg/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en, ur",
+            "name": "Pakistan Ministry of Foreign Affairs",
+            "type": "gov_bulletin",
+            "url": "https://mofa.gov.pk/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "U.S. Department of State Daily Press Briefing (Transcripts)",
+            "type": "gov_bulletin",
+            "url": "https://www.state.gov/briefings/department-press-briefing/"
+          },
+          {
+            "access_tier": "free",
+            "language": "en",
+            "name": "Al Jazeera English - Live Blog",
+            "type": "news_outlet",
+            "url": "https://www.aljazeera.com/news/liveblog/"
+          }
+        ]
+      }
+    ]
+  },
+  "_member": "Council_Member_DeepSeek",
+  "_model": "deepseek/deepseek-v3.2",
+  "_lineage": "DeepSeek"
+}

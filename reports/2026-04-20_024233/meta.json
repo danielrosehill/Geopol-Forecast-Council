@@ -1,0 +1,46 @@
+{
+  "scenario": "How will the Iran-Israel-US conflict evolve over the next 24 hours?",
+  "horizons": [
+    "24h"
+  ],
+  "rss_feeds": [
+    "https://www.timesofisrael.com/feed/",
+    "https://www.aljazeera.com/xml/rss/all.xml",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://www.maariv.co.il/rss/rsschadashot",
+    "https://en.mehrnews.com/rss",
+    "https://www.centcom.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1075&max=10",
+    "https://www.twz.com/feed"
+  ],
+  "grounding_tools": [
+    "rss",
+    "sonar",
+    "tavily"
+  ],
+  "council_head": {
+    "name": "Council_Head",
+    "model": "anthropic/claude-sonnet-4.6"
+  },
+  "council_members": [
+    {
+      "name": "Council_Member_Claude",
+      "model": "anthropic/claude-sonnet-4.6",
+      "lineage": "Anthropic"
+    },
+    {
+      "name": "Council_Member_Kimi",
+      "model": "moonshotai/kimi-k2.5",
+      "lineage": "Moonshot"
+    },
+    {
+      "name": "Council_Member_Grok",
+      "model": "x-ai/grok-4.20",
+      "lineage": "xAI"
+    }
+  ],
+  "report_author": {
+    "name": "Report_Author",
+    "model": "anthropic/claude-sonnet-4.6"
+  },
+  "created": "2026-04-19T23:42:33+00:00"
+}

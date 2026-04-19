@@ -33,6 +33,9 @@ _MODEL_STYLE = [
     (r"google/",     ("GEM", "Gemini",   'rgb("#4285f4")')),
     (r"moonshotai/", ("KMI", "Kimi",     'rgb("#8b5cf6")')),
     (r"z-ai/",       ("GLM", "GLM",      'rgb("#10b981")')),
+    (r"x-ai/",       ("GRK", "Grok",     'rgb("#0ea5e9")')),
+    (r"mistralai/",  ("MST", "Mistral",  'rgb("#f97316")')),
+    (r"openai/",     ("OAI", "OpenAI",   'rgb("#000000")')),
 ]
 _DEFAULT_STYLE = ("???", "Unknown", 'rgb("#6b7280")')
 
@@ -285,8 +288,10 @@ def _confidence_chart(members: list[dict], horizons: list[str],
 
 def _tone_analysis(members: list[dict], horizons: list[str],
                    tone_tally: dict[str, dict[str, int]]) -> list[str]:
+    n_members = len([m for m in members if "_error" not in m])
+    n_total = sum(tone_tally[horizons[0]].values()) if horizons else 0
     L = ['== Predicted tone by horizon', '',
-         'Each of the 15 predictions per horizon (5 members × 3) is classified by keyword heuristic '
+         f'Each of the {n_total} predictions per horizon ({n_members} members × 3) is classified by keyword heuristic '
          'as *escalatory* (strikes, attacks, enrichment, blockade…), *conciliatory* (ceasefire, '
          'talks, framework, de-escalation…), or *mixed* (both or neither). The heuristic is coarse '
          'but transparent — see methodology appendix.',
@@ -303,7 +308,7 @@ def _tone_analysis(members: list[dict], horizons: list[str],
         lean = "escalatory" if e > c else ("conciliatory" if c > e else "balanced")
         lean_color = _TONE_COLOR.get(lean, 'rgb("#6b7280")') if lean != "balanced" else 'rgb("#6b7280")'
         L.append(
-            f'  [{_esc(h)}], [{e}/15], [{c}/15], [{mx}/15], '
+            f'  [{_esc(h)}], [{e}/{n_total}], [{c}/{n_total}], [{mx}/{n_total}], '
             f'text(fill: {lean_color}, weight: "bold")[{_esc(lean)}],'
         )
     L += [')']
@@ -444,6 +449,33 @@ def _sitrep_section(head_out: dict) -> list[str]:
     return L
 
 
+def _delta_section(synthesis: dict) -> list[str]:
+    delta = synthesis.get("delta_vs_prior")
+    if not isinstance(delta, dict) or not delta:
+        return []
+    L = ['#pagebreak()', '= Delta vs prior run', '',
+         f'_Compared against run `{_esc(delta.get("prior_run_id",""))}` '
+         f'(as of {_esc(delta.get("prior_run_as_of","?"))})._', '']
+    sections = [
+        ("circumstance_changes", "Circumstance changes",
+         "What materially changed in the world between the two runs."),
+        ("lens_shifts", "Analytical lens shifts",
+         "How the council's framing, predictions, and confidences moved."),
+        ("vindicated_signals", "Vindicated prior signals",
+         "Prior predictions or watch-triggers corroborated by intervening events."),
+        ("falsified_signals", "Falsified prior signals",
+         "Prior predictions or watch-triggers contradicted by intervening events."),
+    ]
+    for key, title, blurb in sections:
+        items = delta.get(key) or []
+        if not items:
+            continue
+        L += ['', f'== {title}', '', _esc(blurb), '']
+        for it in items:
+            L.append(f'- {_esc(it)}')
+    return L
+
+
 def _watchlist_and_calibration(synthesis: dict) -> list[str]:
     L = []
     tr = synthesis.get("watchlist_triggers", []) or []
@@ -519,7 +551,7 @@ def _methodology(run_ts_readable: str, horizons: list[str], abs_times: dict[str,
         n = len(g.get("items", []) or [])
         L.append(f'- `{_esc(g.get("tool",""))}` — {_esc(status)} ({n} items)')
 
-    L += ['', '*Panel.* Five models from different training lineages, polled in parallel with '
+    L += ['', f'*Panel.* {len(members)} models from different training lineages, polled in parallel with '
           'identical prompts. Members do not see each other\'s outputs.', '']
     for m in members:
         code, label, color = _style_for(m.get("_model", ""))
@@ -672,6 +704,8 @@ def _build_typst(
     for h in horizons:
         entry = by_h.get(h, {}) or {}
         L += [f'*{_esc(h)} — by {_esc(abs_times.get(h,"?"))}.* {_esc(entry.get("headline",""))}', '']
+
+    L += _delta_section(synthesis)
 
     L += ['#pagebreak()', '= Comparative analysis', '']
     L += _confidence_chart(members, horizons, per_h_conf)

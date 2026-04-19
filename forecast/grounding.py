@@ -14,7 +14,7 @@ from typing import Callable
 
 import httpx
 
-from .config import OPENROUTER_URL, DEFAULT_RSS_FEEDS
+from .config import OPENROUTER_URL, DEFAULT_RSS_FEEDS, GROUNDING_DOMAINS_IRAN_ISRAEL
 from .rss import fetch_feeds, format_items
 
 
@@ -83,7 +83,8 @@ def tavily_tool(query: str, max_results: int = 8) -> dict:
         from tavily import TavilyClient
         client = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
         res = client.search(query=query, search_depth="advanced", max_results=max_results,
-                            topic="news", days=7)
+                            topic="news", days=7,
+                            include_domains=GROUNDING_DOMAINS_IRAN_ISRAEL)
         results = res.get("results", [])
         lines = []
         items = []
